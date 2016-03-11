@@ -1,0 +1,11 @@
+From the root
+- go to blockquote
+  - Start working down each <p tag>
+  - keep all the text within each line to be the text for the node.
+    -if number isn't a prime (X'), look to the next line.
+      -if the next line is not the prime of the previous line, add it as a child.
+      - if the next line is it's prime then(it will end in a link (see below), or end of the line)
+    - if the number is a prime, and the previous line doesn't share its numeral (not siblings), then find it's sibling and mark accordingly (.parent.children).
+  - within each p tag look for a 3rd anchor <a>[2].
+    if there's a third click through
+for groups repeat earlier steps
