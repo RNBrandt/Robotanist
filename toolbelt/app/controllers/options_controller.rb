@@ -1,6 +1,6 @@
 class OptionsController < ApplicationController
   def index
-    @Options = Option.where(head:'root')
+    @options = Option.where(head:'root')
   end
 
   def show

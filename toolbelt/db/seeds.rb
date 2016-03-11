@@ -28,8 +28,6 @@ end
 
 def fill_tree(dichotomies)
   i = 2
-
-
   while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}\./)} != nil
     parent_index = dichotomies.find_index {|dic| dic.match(/^#{Regexp.quote(i.to_s)}\./)} - 1
     text = dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}\./)}
