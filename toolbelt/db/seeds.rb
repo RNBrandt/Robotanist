@@ -5,15 +5,47 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-class Scraper
-  include Wombat::Crawler
+Option.destroy_all
 
-  base_url "http://ucjeps.berkeley.edu"
-  path "/eflora"
+def scrape
+  doc = File.open('/Users/apprentice/Desktop/pete/Jepson-2/ucjeps.berkeley.edu/IJM_fam_key.html') { |f| Nokogiri::XML(f)}
+  blockquote = doc.css('blockquote').inner_text
+  dichotomies =  blockquote.split("\n")
+  dichotomies.delete("")
+  return dichotomies
 end
 
-Wombat.crawl do
-  base_url "http://ucjeps.berkeley.edu"
-  path "/eflora"
+def make_first_nodes(dichotomies)
+  dichotomies.each do |dichotomy|
+    if dichotomy[0] == "1" && dichotomy[1] == '.'
+      first = Option.create(text:dichotomy, head: "root")
+    end
+    if dichotomy[0] == "1" && dichotomy[1] == "'"
+      Option.first.siblings << Option.create(text:dichotomy, head: "root")
+    end
+  end
 end
+
+def fill_tree(dichotomies)
+  i = 2
+
+
+  while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}\./)} != nil
+    parent_index = dichotomies.find_index {|dic| dic.match(/^#{Regexp.quote(i.to_s)}\./)} - 1
+    text = dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}\./)}
+    parent = Option.find_by(text: dichotomies[parent_index])
+    parent.children << Option.create(text: text)
+    text_prime = dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}'/)}
+    parent.children << Option.create(text: text_prime)
+    i += 1
+  end
+end
+
+dichotomies = scrape
+
+
+make_first_nodes(dichotomies)
+
+fill_tree(dichotomies)
+
 
