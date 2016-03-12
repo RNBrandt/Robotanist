@@ -1,5 +1,5 @@
-Option.destroy_all
-Glossary.destroy_all
+# Option.destroy_all
+# Glossary.destroy_all
 
 @curent_page = 'index'
 # key_site variable should be dynamically created and sent in
@@ -81,18 +81,22 @@ def add_tool_tip_span(text)
   return text
 end
 
-def find_links(dichotomies)
-  page_links = []
-
+def find_links(key_site)
+  doc = File.open(key_site) { |f| Nokogiri::XML(f)}
+  links = doc.css('blockquote').css('a')
+  hrefs = links.map {|link| (link.attribute("href").to_s)}
+  useful_hrefs = hrefs.select {|href| href.match(/.*.html/)}
+  return useful_hrefs
+  git
 end
-nokogiri_glossary
-parse_definitions(@glossary_doc)
-parse_words(@glossary_doc)
-create_glossary_hash
-create_glossary_record
-dichotomies = scrape(key_site)
-make_first_nodes(dichotomies)
-fill_tree(dichotomies)
+# nokogiri_glossary
+# parse_definitions(@glossary_doc)
+# parse_words(@glossary_doc)
+# create_glossary_hash
+# create_glossary_record
+# dichotomies = scrape(key_site)
+# make_first_nodes(dichotomies)
+# fill_tree(dichotomies)
 
-
+find_links(key_site)
 
