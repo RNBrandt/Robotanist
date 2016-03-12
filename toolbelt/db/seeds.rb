@@ -8,7 +8,7 @@
 Option.destroy_all
 
 def scrape
-  doc = File.open('/Users/apprentice/Desktop/pete/Jepson-2/ucjeps.berkeley.edu/IJM_fam_key.html') { |f| Nokogiri::XML(f)}
+  doc = File.open('/Users/timurcatakli/Dropbox/Corporate/Macbook-15/DevbootCamp/DBC/phase-3/week-3/Botanists-toolbelt/jepson/ucjeps.berkeley.edu/IJM_fam_key.html') { |f| Nokogiri::XML(f)}
   blockquote = doc.css('blockquote').inner_text
   dichotomies =  blockquote.split("\n")
   dichotomies.delete("")
