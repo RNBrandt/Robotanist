@@ -68,8 +68,12 @@ end
 def add_tool_tip_span(text)
   text_array = text.split(" ")
   text_array.each do |word|
-    if Glossary.where(word: word)[0]
-      entry = Glossary.find_by(word: word)
+    search_word = word.chomp(",").chomp(".")
+    if Glossary.where(word: search_word)[0]
+      entry = Glossary.find_by(word: search_word)
+      text.gsub!(/#{Regexp.quote(word)}/, "<span data-tooltip aria-haspopup='true' class='has-tip [tip-top tip-bottom tip-left tip-right] [radius round]' title=#{entry.definition}>#{word}</span>")
+    elsif Glossary.where(search_word.chomp("s"))[0]
+      entry = Glossary.find_by(word: search_word.chomp("s"))
       text.gsub!(/#{Regexp.quote(word)}/, "<span data-tooltip aria-haspopup='true' class='has-tip [tip-top tip-bottom tip-left tip-right] [radius round]' title=#{entry.definition}>#{word}</span>")
     end
   end
