@@ -1,4 +1,5 @@
 Option.destroy_all
+
 # key_site variable should be dynamically created and sent in
 key_site = '/Users/apprentice/Desktop/pete/Jepson-2/ucjeps.berkeley.edu/IJM_fam_key.html'
 def scrape(key_site)
