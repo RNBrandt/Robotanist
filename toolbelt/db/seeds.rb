@@ -72,7 +72,7 @@ def add_tool_tip_span(text)
     if Glossary.where(word: search_word)[0]
       entry = Glossary.find_by(word: search_word)
       text.gsub!(/#{Regexp.quote(word)}/, "<span data-tooltip aria-haspopup='true' class='has-tip [tip-top tip-bottom tip-left tip-right] [radius round]' title=#{entry.definition}>#{word}</span>")
-    elsif Glossary.where(search_word.chomp("s"))[0]
+    elsif Glossary.where(wrod: search_word.chomp("s"))[0]
       entry = Glossary.find_by(word: search_word.chomp("s"))
       text.gsub!(/#{Regexp.quote(word)}/, "<span data-tooltip aria-haspopup='true' class='has-tip [tip-top tip-bottom tip-left tip-right] [radius round]' title=#{entry.definition}>#{word}</span>")
     end
