@@ -5,4 +5,3 @@ class Glossary
   field :word, type: String
   field :definition, type: String
 end
-
