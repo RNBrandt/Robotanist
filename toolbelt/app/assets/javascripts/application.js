@@ -27,7 +27,7 @@ $(function(){
     var optionID = $(this).attr('data-id')
     
     //Fade out once complete run ajax
-    $('#panel-right').css('border', '4px dotted #ec5840');
+    $('#panel-left').css('border', '4px dotted #ec5840');
     $("#dataCarousel").animate({opacity: '0'}, function(){
       // ajax request starts
       $.ajax({
