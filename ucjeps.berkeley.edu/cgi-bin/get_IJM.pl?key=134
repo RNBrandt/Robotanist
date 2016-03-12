@@ -1,0 +1,469 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora Keys</title> 
+<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27128382-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43909100-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body onload="initialize()">
+<!-- Begin banner -->
+<table class="banner" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="5" align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+    <td rowspan="3" width="120" align="center" valign="middle">&nbsp;</td>
+    <td align="center">&nbsp;</td>
+    <td rowspan="3" width="120" align="center" valign="middle">
+      <a href="http://ucjeps.berkeley.edu/jeps/"><img src="http://ucjeps.berkeley.edu/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS)" width="100" height="100" border="0" /></a></td>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="middle"><span class="bannerTitle">The Jepson Herbarium</span><br /></td>
+  </tr>
+
+  <tr>
+     <td align="center" valign="top"><a href="http://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">&nbsp;</td>
+    <td height="14" align="center"></td>
+    <td align="center"><a href="http://ucjeps.berkeley.edu/jeps/" class="logoText">Jepson&nbsp;Herbarium</a></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" align="center"></td>
+  </tr>
+  
+  <tr>
+    <td height="8" colspan="5" align="center">&nbsp;</td>
+  </tr>
+
+  <tr class="bannerBottomBorder">
+  	<td colspan="6" height="3"></td>
+  </tr>
+
+  <tr>
+    <td colspan="6"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+</table>  
+<!-- End banner -->
+
+  <!-- Beginning of horizontal menu -->
+<table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<nav>
+	<ul>
+    	<li><a href="http://ucjeps.berkeley.edu/">Home</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/main/collections.html">About &#x25BE;</a>
+        	<ul>
+            	<!--<li><a href="#">University Herbarium</a></li>
+                <li><a href="#">Jepson Herbarium</a></li></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/main/collections.html#UC">About the Collections</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/directory.html">People</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/volunteer.html">Volunteering</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/policies.html">Policies</a></li>
+               <!-- <li><a href="http://ucjeps.berkeley.edu/main/questions.html">Herbaria FAQs</a></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/history/">History</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jepsonflora/index.html">Jepson Flora Project</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+                <!--<li><a href="http://ucjeps.berkeley.edu/bryolab/Bryolab.html">Mishler Lab</a></li>-->
+                <!--<li><a href="http://ucjeps.berkeley.edu/Baldwin-Lab.html">Baldwin Lab</a></li>-->
+                <!--<li><a href="#">American-Iranian<br /> Botanical Program</a></li>-->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/specimens/">UC/JEPS Specimen Portal</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/consortium/">Consortium of California Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/UC_bryophytes.html">Bryophyte Specimen Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/interchange/">Jepson Online Interchange</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/icpn/">Index of California Plant Names</a></li>
+		
+                <li><a href="http://ucjeps.berkeley.edu/INA.html">Index Nominum Algarum</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/JPNI.html">Jepson Place Name Index</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/efloras.html">eFloras &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/IJM.html">Jepson eFlora</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li><a href="http://ucjeps.berkeley.edu/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
+              <li><a href="http://ucjeps.berkeley.edu/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/workshops/">Public Workshops</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/opportunities.html">Academic Opportunities</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jeps/globe/"><i>The Jepson Globe</i></a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/archives/index.html">Archives &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/archon/">Archives Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/archives/images.html">Images</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+<!--                <li><a href="#">Inventory Report</a></li>
+                <li><a href="#">Archives Policies</a></li>
+                <li><a href="#">Library Collection</a></li> -->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/directory.html">Contact</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/jeps/friends/index.html">Donate</a></li>
+    </ul>
+</nav>
+</td>
+</tr>
+</table>
+ 
+<!-- End of horizontal menu -->
+
+ <table border="0">
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+     </tr>
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a></span>
+<span class="pageAuthorLine">
+<br>
+<a href="/IJM_fam_key.html">Key to families</a>
+|
+<a href="http://ucjeps.berkeley.edu/IJM_toc.html">Table of families and genera</a>
+</span>
+   	  
+<P class="bodyText">
+<!--Specimen numbers are hyperlinked to records in the Consortium of California Herbaria data view where possible. Taxa are hyperlinked to entries in the Jepson Interchange via the "[Online Interchange]" link. --> 
+
+</td>
+</tr>
+</table>
+
+<h2>Key to Fabaceae</h2><a href='http://herbaria4.herb.berkeley.edu/eflora_display.php?tid=134'><h3>View taxon page for Fabaceae</h3></a><blockquote><h3>Key to Groups</h3></blockquote><blockquote><h3></h3>
+<P class="keyText" style="padding-left : 0 ;"><a href="#RG1'">1.</a><a name="RG1."> </a> Flower radial; calyx, corolla generally inconspicuous; petals free or fused, lobes not overlapped in bud; stamens 10 or generally many, often long-exserted; leaf 2-pinnate (simple in alien <I>Acacia</I>) <a href="#Group1: Mimosoideae">.....&nbsp;Group 1: Mimosoideae</a>
+
+<P class="keyText" style="padding-left : 0 ;"><a href="#RG1.">1'</a><a name="RG1'"> </a> Flower generally bilateral, less often &plusmn; radial; calyx, corolla generally conspicuous; petals overlapped in bud, free or 2 lowermost &plusmn; fused; stamens 10 (or 5, 6, 7, 9), generally &plusmn; included; leaf 1- or 2-pinnate (less often simple or palmately compound)
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RG2'">2.</a><a name="RG2."> </a> Flower &plusmn; radial to &plusmn; bilateral; sepals fused only at very base; leaf 1- or 2-pinnate <a href="#Group2: Caesalpinioideae (except <I>Cercis</I>)">.....&nbsp;Group 2: Caesalpinioideae (except <I>Cercis</I>)</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RG2.">2'</a><a name="RG2'"> </a> Flower bilateral; sepals free to &plusmn; entirely fused; leaf simple, 1-pinnate, or palmate
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RG3'">3.</a><a name="RG3."> </a> Upper petal (banner) inside lateral ones (wings) in bud; stamens free; leaf simple, reniform or bi-lobed <a href="#Group2: Caesalpinioideae (<I>Cercis</I> only)">.....&nbsp;Group 2: Caesalpinioideae (<I>Cercis</I> only)</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RG3.">3'</a><a name="RG3'"> </a> Upper petal (banner) outside lateral ones (wings) in bud (only banner present in <I>Amorpha</I>, petal position not evident in some <I>Dalea</I>); stamens generally with all or 9 filaments fused (free in <I>Thermopsis</I>, <I>Pickeringia</I>, <I>Calia</I>); leaf 1-pinnate (leaflets often 3), some palmately compound (especially <I>Lupinus</I>) or simple <a href="#Group3: Papilionoideae">.....&nbsp;Group 3: Papilionoideae</a></blockquote><blockquote><h3><a name=Group1>Group 1</a>: Mimosoideae</h3></blockquote><blockquote><h3></h3>
+<P class="keyText" style="padding-left : 0 ;"><a href="#RI1'">1.</a><a name="RI1."> </a> Stamens 10; 1&deg; leaflets generally 2&ndash;4 <a href="/cgi-bin/get_IJM.pl?tid=9406">.....&nbsp;PROSOPIS</a>
+
+<P class="keyText" style="padding-left : 0 ;"><a href="#RI1.">1'</a><a name="RI1'"> </a> Stamens > 10; 1&deg; leaflets generally > 4, or leaf simple
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RI2'">2.</a><a name="RI2."> </a> Filaments fused below, free above; leaf 2-pinnate
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RI3'">3.</a><a name="RI3."> </a> Inflorescence axillary spike-like racemes or &plusmn; terminal panicle of head-like racemes; petiole with a gland; fruit not or slowly dehiscent, valves not recurving; Sacramento Valley, Central Coast, San Francisco Bay Area, Outer South Coast Ranges, Southwestern California <a href="/cgi-bin/get_IJM.pl?tid=9281">.....&nbsp;ALBIZIA</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RI3.">3'</a><a name="RI3'"> </a> Inflorescence axillary heads; petiole without a gland; fruit dehiscent, valves recurving; Sonoran Desert <a href="/cgi-bin/get_IJM.pl?tid=9299">.....&nbsp;CALLIANDRA</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RI2.">2'</a><a name="RI2'"> </a> Filaments free; leaf 2-pinnate or simple
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RI4'">4.</a><a name="RI4."> </a> Plant unarmed <a href="/cgi-bin/get_IJM.pl?tid=9278">.....&nbsp;ACACIA</a> (2)
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RI4.">4'</a><a name="RI4'"> </a> Plant armed with prickles or stipular spines
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RI5'">5.</a><a name="RI5."> </a> Plant armed with prickles <a href="/cgi-bin/get_IJM.pl?tid=79835">.....&nbsp;SENEGALIA</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RI5.">5'</a><a name="RI5'"> </a> Plant armed with stipular spines
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RI6'">6.</a><a name="RI6."> </a> Leaf simple <a href="/cgi-bin/get_IJM.pl?tid=9278">.....&nbsp;ACACIA</a> (2)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RI6.">6'</a><a name="RI6'"> </a> Leaf 2-pinnate <a href="/cgi-bin/get_IJM.pl?tid=69416">.....&nbsp;VACHELLIA</a></blockquote><blockquote><h3><a name=Group2>Group 2</a>: Caesalpinioideae</h3></blockquote><blockquote><h3></h3>
+<P class="keyText" style="padding-left : 0 ;"><a href="#RK1'">1.</a><a name="RK1."> </a> Leaf simple; corolla pink-purple <a href="/cgi-bin/get_IJM.pl?tid=9306">.....&nbsp;CERCIS</a>
+
+<P class="keyText" style="padding-left : 0 ;"><a href="#RK1.">1'</a><a name="RK1'"> </a> Leaf compound; corolla generally &plusmn; yellow
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RK2'">2.</a><a name="RK2."> </a> Leaf 1-pinnate, plant unarmed or main leaf axis generally > 2 cm, a weak spine at tip; corolla generally yellow <a href="/cgi-bin/get_IJM.pl?tid=9416">.....&nbsp;SENNA</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RK2.">2'</a><a name="RK2'"> </a> Leaf generally 2-pinnate (both 1- and 2-pinnate in some), plant armed, main leaf axis generally &lt; 2 cm (except <I>Gleditsia</I>), a strong spine at tip, or (if leaf interpreted as 1-pinnate; see <I>Parkinsonia</I>), leaf subtended by a strong spine generally &lt; 2 cm and main leaf axis not a spine at tip; corolla &plusmn; yellow to orange, less often &plusmn; red or with orange to &plusmn; red marks
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RK3'">3.</a><a name="RK3."> </a> Flower &plusmn; 3&ndash;5 mm; sepals, petals &plusmn; alike in color, texture; plant tree, generally armed <a href="/cgi-bin/get_IJM.pl?tid=9345">.....&nbsp;GLEDITSIA</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RK3.">3'</a><a name="RK3'"> </a> Flower > 5 mm; sepals, petals not alike in color, texture; plant perennial herb, shrub, small tree, armed or not
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RK4'">4.</a><a name="RK4."> </a> Plant unarmed
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RK5'">5.</a><a name="RK5."> </a> Shrub, small tree, &lt; 4 m; 2&deg; leaflets 14&ndash;22 <a href="/cgi-bin/get_IJM.pl?tid=9297">.....&nbsp;CAESALPINIA</a> (2)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RK5.">5'</a><a name="RK5'"> </a> Perennial herb, shrub, &lt; 30 cm or &lt; 2.5 m; 2&deg; leaflets 3&ndash;13 <a href="/cgi-bin/get_IJM.pl?tid=9356">.....&nbsp;HOFFMANNSEGGIA</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RK4.">4'</a><a name="RK4'"> </a> Plant armed
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RK6'">6.</a><a name="RK6."> </a> Plant with scattered prickles; sepals not alike; fruit indehiscent <a href="/cgi-bin/get_IJM.pl?tid=9297">.....&nbsp;CAESALPINIA</a> (2)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RK6.">6'</a><a name="RK6'"> </a> Plant with stipular spines at nodes or thorns in leaf axils (see leaf scars) or main leaf axis a strong spine; sepals alike; fruit indehiscent to partly dehiscent late <a href="/cgi-bin/get_IJM.pl?tid=9394">.....&nbsp;PARKINSONIA</a></blockquote><blockquote><h3><a name=Group3>Group 3</a>: Papilionoideae</h3></blockquote><blockquote><h3></h3>
+<P class="keyText" style="padding-left : 0 ;"><a href="#RM1'">1.</a><a name="RM1."> </a> Shrub to tree
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RM2'">2.</a><a name="RM2."> </a> Plant generally armed with prickles, spines, or thorns
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RM3'">3.</a><a name="RM3."> </a> Leaves simple, sometimes small or falling early
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM4'">4.</a><a name="RM4."> </a> Plant gland-dotted; corolla indigo blue to pink-purple; seed 1 <a href="/cgi-bin/get_IJM.pl?tid=9408">.....&nbsp;PSOROTHAMNUS</a> (4)
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM4.">4'</a><a name="RM4'"> </a> Plant not gland-dotted; corolla yellow to &plusmn; red; seeds (1)2&ndash;several
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM5'">5.</a><a name="RM5."> </a> Corolla red-purple; fruit narrowed between seeds, glabrous <a href="/cgi-bin/get_IJM.pl?tid=9282">.....&nbsp;ALHAGI</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM5.">5'</a><a name="RM5'"> </a> Corolla yellow; fruit not narrowed between seeds, densely hairy <a href="/cgi-bin/get_IJM.pl?tid=10385">.....&nbsp;ULEX</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RM3.">3'</a><a name="RM3'"> </a> Leaves all or mostly compound, generally persistent
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM6'">6.</a><a name="RM6."> </a> Leaf simple or palmately compound; all filaments free <a href="/cgi-bin/get_IJM.pl?tid=9400">.....&nbsp;PICKERINGIA</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM6.">6'</a><a name="RM6'"> </a> Leaf pinnately compound; all or 9 filaments fused
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM7'">7.</a><a name="RM7."> </a> Plant gland-dotted; fruit indehiscent; seed 1 <a href="/cgi-bin/get_IJM.pl?tid=9408">.....&nbsp;PSOROTHAMNUS</a> (4)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM7.">7'</a><a name="RM7'"> </a> Plant not gland-dotted; fruit dehiscent (sometimes slowly so); seeds generally several
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM8'">8.</a><a name="RM8."> </a> Leaf even-pinnate; corolla wings purple-pink suffused with white, banner, keel yellow-white to pink or purple; fruit not flat, generally narrowed between seeds <a href="/cgi-bin/get_IJM.pl?tid=9384">.....&nbsp;OLNEYA</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM8.">8'</a><a name="RM8'"> </a> Leaf odd-pinnate; corolla white or pink; fruit flat, not narrowed between seeds <a href="/cgi-bin/get_IJM.pl?tid=9412">.....&nbsp;ROBINIA</a> (2)
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RM2.">2'</a><a name="RM2'"> </a> Plant unarmed
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RM9'">9.</a><a name="RM9."> </a> Petal 1 (the banner) &mdash; inflorescence spike-like; fruit indehiscent; seed 1 <a href="/cgi-bin/get_IJM.pl?tid=9284">.....&nbsp;AMORPHA</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RM9.">9'</a><a name="RM9'"> </a> Petals 5
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM10'">10.</a><a name="RM10."> </a> Filaments all fused; leaves simple or ternately or palmately compound
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM11'">11.</a><a name="RM11."> </a> Leaves simple, &lt; 2.5 cm; stems generally &plusmn; leafless <a href="/cgi-bin/get_IJM.pl?tid=9419">.....&nbsp;SPARTIUM</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM11.">11'</a><a name="RM11'"> </a> Leaves simple or generally compound, generally > 2.5 cm; stems leafy
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM12'">12.</a><a name="RM12."> </a> Leaf of 3&ndash;17 leaflets, palmately compound; corolla blue, purple, white, or yellow, banner glabrous to densely hairy, keel generally beaked <a href="/cgi-bin/get_IJM.pl?tid=9370">.....&nbsp;LUPINUS</a> (2)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM12.">12'</a><a name="RM12'"> </a> Leaf of 1&ndash;3 leaflets, appearing simple or not; corolla yellow or white, banner generally glabrous, keel obtuse
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM13'">13.</a><a name="RM13."> </a> Style generally abruptly curved at &plusmn; middle or gently curved &plusmn; throughout; upper lip of calyx &plusmn; 2-lobed <a href="/cgi-bin/get_IJM.pl?tid=9324">.....&nbsp;CYTISUS</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM13.">13'</a><a name="RM13'"> </a> Style &plusmn; abruptly bent at tip; upper lip of calyx 2-lobed <a href="/cgi-bin/get_IJM.pl?tid=9343">.....&nbsp;GENISTA</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM10.">10'</a><a name="RM10'"> </a> Filaments all free or 9 fused, 1 (uppermost) free or 0; leaves generally odd-pinnately compound (or leaflet number, arrangement generally irregular, as sometimes in <I>Acmispon</I>)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM14'">14.</a><a name="RM14."> </a> Inflorescence generally an umbel or flowers 1&ndash;2; corolla generally yellow <a href="/cgi-bin/get_IJM.pl?tid=67950">.....&nbsp;ACMISPON</a> (3)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM14.">14'</a><a name="RM14'"> </a> Inflorescence a raceme; corolla yellow or not
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM15'">15.</a><a name="RM15."> </a> Corolla yellow with dark marks; fruit papery, inflated <a href="/cgi-bin/get_IJM.pl?tid=9317">.....&nbsp;COLUTEA</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM15.">15'</a><a name="RM15'"> </a> Corolla white or pink to purple; fruit not papery, not inflated
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM16'">16.</a><a name="RM16."> </a> Flower 6&ndash;10 mm; plant gland-dotted; fruit indehiscent; seed 1 (see also <I>Marina</I>) <a href="/cgi-bin/get_IJM.pl?tid=9408">.....&nbsp;PSOROTHAMNUS</a> (4)
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM16.">16'</a><a name="RM16'"> </a> Flower 14&ndash;25 mm; plant not gland-dotted; fruit dehiscent or not; seeds several
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM17'">17.</a><a name="RM17."> </a> Fruit dehiscent, flat, not narrowed between seeds; filaments 9 fused, 1 free; corolla &plusmn; white to pink <a href="/cgi-bin/get_IJM.pl?tid=9412">.....&nbsp;ROBINIA</a> (2)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM17.">17'</a><a name="RM17'"> </a> Fruit indehiscent, not flat, &plusmn; narrowed between seeds; filaments all free; corolla &plusmn; blue-purple <a href="/cgi-bin/get_IJM.pl?tid=82492">.....&nbsp;[Calia secundiflora]</a>
+
+<P class="keyText" style="padding-left : 0 ;"><a href="#RM1.">1'</a><a name="RM1'"> </a> Annual, biennial, perennial herb, vine, subshrub
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RM18'">18.</a><a name="RM18."> </a> Leaflets 0, but stipules leaflet-like &mdash; leaf axis ending as a tendril <a href="/cgi-bin/get_IJM.pl?tid=9364">.....&nbsp;[Lathyrus aphaca]</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RM18.">18'</a><a name="RM18'"> </a> Leaflets 2&ndash;many
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RM19'">19.</a><a name="RM19."> </a> Leaf palmately compound, leaflets generally 3&ndash;9
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM20'">20.</a><a name="RM20."> </a> All filaments free; corolla yellow, 15&ndash;25 mm <a href="/cgi-bin/get_IJM.pl?tid=10382">.....&nbsp;THERMOPSIS</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM20.">20'</a><a name="RM20'"> </a> All or 9 filaments fused; corolla not yellow or, if so, generally &lt; 15 mm
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM21'">21.</a><a name="RM21."> </a> Leaflets gland-dotted; fruit indehiscent or transversely dehiscent; seed 1
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM22'">22.</a><a name="RM22."> </a> Leaves &plusmn; basal or clustered near stem tips; leaflets elliptic to oblanceolate or widely obovate; fruit included in calyx except for beak <a href="/cgi-bin/get_IJM.pl?tid=9396">.....&nbsp;PEDIOMELUM</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM22.">22'</a><a name="RM22'"> </a> Leaves cauline; leaflets obovate to linear; fruit exserted from calyx <a href="/cgi-bin/get_IJM.pl?tid=91793">.....&nbsp;LADEANIA</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM21.">21'</a><a name="RM21'"> </a> Leaflets not gland-dotted; fruit indehiscent or dehiscent through longitudinal sutures; seeds generally several
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM23'">23.</a><a name="RM23."> </a> Filaments of all stamens fused; leaflets generally 5&ndash;9, entire <a href="/cgi-bin/get_IJM.pl?tid=9370">.....&nbsp;LUPINUS</a> (2)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM23.">23'</a><a name="RM23'"> </a> Filaments of 9 stamens fused, the 10th (uppermost) free; leaflets 3&ndash;5, entire, toothed, or wavy
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM24'">24.</a><a name="RM24."> </a> Leaflets 3&ndash;9, lower 2 in stipular position or not, others &plusmn; palmately arranged, stipules gland-like, reduced to bumps, or inconspicuous, inflorescence an umbel or 1&ndash;3-flowered, corolla generally yellow (see also <I>Acmispon</I>) <a href="/cgi-bin/get_IJM.pl?tid=9369">.....&nbsp;LOTUS</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM24.">24'</a><a name="RM24'"> </a> Leaflets generally 3, lower 2 not in stipular position, stipules generally papery or membranous, not reduced to bumps, not inconspicuous, rarely leaflet-like, if so then inflorescence not an umbel and corolla not yellow
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM25'">25.</a><a name="RM25."> </a> Leaflet entire; fruit not enclosed in corolla <a href="/cgi-bin/get_IJM.pl?tid=9291">.....&nbsp;ASTRAGALUS</a> (3)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM25.">25'</a><a name="RM25'"> </a> Leaflet &plusmn; toothed or wavy; fruit generally enclosed in corolla <a href="/cgi-bin/get_IJM.pl?tid=10383">.....&nbsp;TRIFOLIUM</a> (2)
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RM19.">19'</a><a name="RM19'"> </a> Leaf pinnately to subpalmately compound (axis apparent beyond lowermost leaflets), leaflets 2&ndash;many
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM26'">26.</a><a name="RM26."> </a> Leaflets 2; main leaf axis ending as tendril or bristle <a href="/cgi-bin/get_IJM.pl?tid=9364">.....&nbsp;LATHYRUS</a> (2)
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RM26.">26'</a><a name="RM26'"> </a> Leaflets >= 3; main leaf axis ending as leaflet, tendril, or bristle
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM27'">27.</a><a name="RM27."> </a> Leaflets 3; fruit generally indehiscent (generally dehiscent in <I>Phaseolus</I>)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM28'">28.</a><a name="RM28."> </a> Keel petals spirally coiled; leaflet generally lobed &mdash; trailing or twining vine <a href="/cgi-bin/get_IJM.pl?tid=9399">.....&nbsp;PHASEOLUS</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM28.">28'</a><a name="RM28'"> </a> Keel petals not spirally coiled; leaflet entire, toothed, or wavy
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM29'">29.</a><a name="RM29."> </a> Leaflet toothed or wavy &mdash; fruit ovate or reniform, generally 1-seeded, or &plusmn; coiled, several-seeded
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM30'">30.</a><a name="RM30."> </a> Corolla persistent, enclosing fruit, yellow, 3.5&ndash;5 mm <a href="/cgi-bin/get_IJM.pl?tid=10383">.....&nbsp;TRIFOLIUM</a> (2)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM30.">30'</a><a name="RM30'"> </a> Corolla deciduous, yellow or not, 3.5&ndash;5 mm or not
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM31'">31.</a><a name="RM31."> </a> Fruit spirally coiled (or sickle-shaped or straight), generally prickly; seeds 1&ndash;several <a href="/cgi-bin/get_IJM.pl?tid=9375">.....&nbsp;MEDICAGO</a> (2)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM31.">31'</a><a name="RM31'"> </a> Fruit not spirally coiled, not prickly; seeds 1&ndash;2
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM32'">32.</a><a name="RM32."> </a> Fruit reniform, ridges generally net-like; corolla 2&ndash;3 mm <a href="/cgi-bin/get_IJM.pl?tid=9375">.....&nbsp;MEDICAGO</a> (2)
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM32.">32'</a><a name="RM32'"> </a> Fruit ovate, ridges transverse to finely net-like; corolla 2.5&ndash;7 mm <a href="/cgi-bin/get_IJM.pl?tid=9376">.....&nbsp;MELILOTUS</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM29.">29'</a><a name="RM29'"> </a> Leaflet not toothed, not wavy
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM33'">33.</a><a name="RM33."> </a> Plant not gland-dotted; seeds generally 2&ndash;several; fruit exserted from calyx or included except for beak
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM34'">34.</a><a name="RM34."> </a> Inflorescence an umbel; fruit exserted from calyx or included except for beak <a href="/cgi-bin/get_IJM.pl?tid=67950">.....&nbsp;ACMISPON</a> (3)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM34.">34'</a><a name="RM34'"> </a> Inflorescence a raceme; fruit exserted from calyx <a href="/cgi-bin/get_IJM.pl?tid=9291">.....&nbsp;ASTRAGALUS</a> (3)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM33.">33'</a><a name="RM33'"> </a> Plant &plusmn; gland-dotted; seed 1; fruit generally included in calyx except for beak
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM35'">35.</a><a name="RM35."> </a> Corolla cream to yellow; calyx conspicuously swollen in fruit <a href="/cgi-bin/get_IJM.pl?tid=9413">.....&nbsp;RUPERTIA</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM35.">35'</a><a name="RM35'"> </a> Corolla at least partly blue to purple; calyx swollen or not in fruit
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM36'">36.</a><a name="RM36."> </a> Calyx swollen in fruit; bracts at each node, especially lower, of inflorescence united into fan-shaped, 3&ndash;5 toothed blade <a href="/cgi-bin/get_IJM.pl?tid=9294">.....&nbsp;BITUMINARIA</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM36.">36'</a><a name="RM36'"> </a> Calyx not (or only &plusmn;) swollen in fruit; bracts at nodes of inflorescence not united <a href="/cgi-bin/get_IJM.pl?tid=9357">.....&nbsp;HOITA</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RM27.">27'</a><a name="RM27'"> </a> Leaflets > 3 on all or most leaves; fruit dehiscent or not
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM37'">37.</a><a name="RM37."> </a> Leaf even-pinnate, main axis ending as a bristle or tendril or not
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM38'">38.</a><a name="RM38."> </a> Leaflets &plusmn; 20&ndash;60; fruit 4&ndash;8 cm or 15&ndash;20 cm; plant annual, shrub, small tree <a href="/cgi-bin/get_IJM.pl?tid=9417">.....&nbsp;SESBANIA</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM38.">38'</a><a name="RM38'"> </a> Leaflets &lt; 30; fruit generally &lt; 8 cm; plant annual, perennial herb
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM39'">39.</a><a name="RM39."> </a> Stipules leaflet-like, often > leaflets; style longitudinally folded; leaflets 4&ndash;6, glabrous <a href="/cgi-bin/get_IJM.pl?tid=9404">.....&nbsp;PISUM</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM39.">39'</a><a name="RM39'"> </a> Stipules generally not leaflet-like but sometimes &plusmn; = leaflets; style not longitudinally folded; leaflets 4&ndash;many, hairy or glabrous
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM40'">40.</a><a name="RM40."> </a> Style &plusmn; flat, puberulent near &plusmn; middle for &plusmn; 1/3&ndash;1/2 length adaxially; leaflets &plusmn; rolled in bud <a href="/cgi-bin/get_IJM.pl?tid=9364">.....&nbsp;LATHYRUS</a> (2)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM40.">40'</a><a name="RM40'"> </a> Style generally not &plusmn; flat, puberulent at tip, all around or especially abaxially; leaflets folded in bud <a href="/cgi-bin/get_IJM.pl?tid=10386">.....&nbsp;VICIA</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RM37.">37'</a><a name="RM37'"> </a> Leaf odd-pinnate, main axis ending as a leaflet
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM41'">41.</a><a name="RM41."> </a> Corolla wings &lt;&lt; keel; leaflets adaxially finely red-dotted; fruit 1-seeded, leathery, strongly net-ridged <a href="/cgi-bin/get_IJM.pl?tid=9385">.....&nbsp;ONOBRYCHIS</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RM41.">41'</a><a name="RM41'"> </a> Corolla wings &plusmn; = keel; leaflets adaxially dark gland-dotted or not, not red-dotted; fruit not simultaneously 1-seeded, leathery, and strongly net-ridged
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM42'">42.</a><a name="RM42."> </a> Plant gland-dotted on stems, leaflets, or both; fruit indehiscent
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM43'">43.</a><a name="RM43."> </a> Fruit several-seeded, long-exserted from calyx, glabrous or with bristles or prickles; leaflets 6&ndash;10 mm wide <a href="/cgi-bin/get_IJM.pl?tid=9349">.....&nbsp;GLYCYRRHIZA</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM43.">43'</a><a name="RM43'"> </a> Fruit 1-seeded, included in calyx, glandular; leaflets generally &lt; 6 mm wide
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM44'">44.</a><a name="RM44."> </a> Petals from receptacle; stamens 10; inflorescence head-like or not <a href="/cgi-bin/get_IJM.pl?tid=9408">.....&nbsp;PSOROTHAMNUS</a> (4)
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM44.">44'</a><a name="RM44'"> </a> Petals, except banner, from side or top of column of fused filaments; stamens 5 or 9&ndash;10; inflorescence not head-like
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#RM45'">45.</a><a name="RM45."> </a> Plant prostrate to decumbent
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#RM46'">46.</a><a name="RM46."> </a> Stem gland-dotted <a href="/cgi-bin/get_IJM.pl?tid=9326">.....&nbsp;DALEA</a> (2)
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#RM46.">46'</a><a name="RM46'"> </a> Stem not gland-dotted <a href="/cgi-bin/get_IJM.pl?tid=9374">.....&nbsp;MARINA</a> (3)
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#RM45.">45'</a><a name="RM45'"> </a> Plant ascending to erect
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#RM47'">47.</a><a name="RM47."> </a> Inflorescence a dense spike; stamens 5 <a href="/cgi-bin/get_IJM.pl?tid=9326">.....&nbsp;DALEA</a> (2)
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#RM47.">47'</a><a name="RM47'"> </a> Inflorescence an open raceme; stamens 9&ndash;10 <a href="/cgi-bin/get_IJM.pl?tid=9374">.....&nbsp;MARINA</a> (3)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RM42.">42'</a><a name="RM42'"> </a> Plant not obviously gland-dotted; fruit dehiscent or not
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM48'">48.</a><a name="RM48."> </a> Flowers 1&ndash;2 or several to many in umbel
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM49'">49.</a><a name="RM49."> </a> Stipules gland-like, often not apparent; fruit exserted or not, ovate to oblong <a href="/cgi-bin/get_IJM.pl?tid=67950">.....&nbsp;ACMISPON</a> (3)
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM49.">49'</a><a name="RM49'"> </a> Stipules conspicuous, scarious or leaflet-like; fruit exserted, generally linear to lanceolate
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#RM50'">50.</a><a name="RM50."> </a> Inflorescence generally 10&ndash;20-flowered umbel; fruit indehiscent, segments 1&ndash;12 <a href="/cgi-bin/get_IJM.pl?tid=9318">.....&nbsp;CORONILLA</a>
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#RM50.">50'</a><a name="RM50'"> </a> Inflorescence several-flowered umbel or 1&ndash;2-flowered; fruit dehiscent, segments 0 <a href="/cgi-bin/get_IJM.pl?tid=68646">.....&nbsp;HOSACKIA</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RM48.">48'</a><a name="RM48'"> </a> Flowers (1&ndash;2 or) many in spike to raceme that is head-like or not
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM51'">51.</a><a name="RM51."> </a> Seed 1; leaflet tip with gland; inflorescence a spike, dense, &plusmn; 1 cm <a href="/cgi-bin/get_IJM.pl?tid=9374">.....&nbsp;MARINA</a> (3)
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RM51.">51'</a><a name="RM51'"> </a> Seeds several; leaflet tip without gland; inflorescence a spike or raceme, dense or not, generally > 1 cm
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#RM52'">52.</a><a name="RM52."> </a> Fruit indehiscent, breaking into 1-seeded segments; corolla 6&ndash;9 mm; leaflet generally &lt; 6 mm <a href="/cgi-bin/get_IJM.pl?tid=9389">.....&nbsp;ORNITHOPUS</a>
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#RM52.">52'</a><a name="RM52'"> </a> Fruit generally dehiscent (sometimes slowly so), not breaking into 1-seeded segments; corolla often > 9 mm; leaflet often > 6 mm
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#RM53'">53.</a><a name="RM53."> </a> Style tip or stigma finely hairy; stipules spiny, free <a href="/cgi-bin/get_IJM.pl?tid=9398">.....&nbsp;PETERIA</a>
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#RM53.">53'</a><a name="RM53'"> </a> Style tip and stigma glabrous; stipules not spiny, free or fused
+
+<P class="keyText" style="padding-left : 84 ;"><a href="#RM54'">54.</a><a name="RM54."> </a> Keel tip rounded to acute (or short-beaked); fruit 1-chambered, if &plusmn; 2-chambered then septum from lower suture, rarely fusing with narrow flange from upper suture <a href="/cgi-bin/get_IJM.pl?tid=9291">.....&nbsp;ASTRAGALUS</a> (3)
+
+<P class="keyText" style="padding-left : 84 ;"><a href="#RM54.">54'</a><a name="RM54'"> </a> Keel tip beaked; fruit &plusmn; 2-chambered, septum from upper suture, partial to complete <a href="/cgi-bin/get_IJM.pl?tid=9391">.....&nbsp;OXYTROPIS</a></blockquote><P>
+<a href="&#109;&#97;&#105;&#108;to:rosatti&#064;berkeley.edu?subject=eFlora comment"><font size=3 color="red">Contact/Feedback</font></a>
+<P class=bodyText>
+Citation for the whole project: Jepson Flora Project (eds.) [year] <em>Jepson eFlora</em>,  http://ucjeps.berkeley.edu/IJM.html [accessed on month, day, year]
+<br>
+Citation for an individual treatment:  [Author of taxon treatment] [year]. [Taxon name] in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, [URL for treatment]. Accessed on [month, day, year].
+<br>
+We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The Jepson Herbarium.
+
+        
+<hr>
+

@@ -1,0 +1,457 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora Keys</title> 
+<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27128382-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43909100-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body onload="initialize()">
+<!-- Begin banner -->
+<table class="banner" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="5" align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+    <td rowspan="3" width="120" align="center" valign="middle">&nbsp;</td>
+    <td align="center">&nbsp;</td>
+    <td rowspan="3" width="120" align="center" valign="middle">
+      <a href="http://ucjeps.berkeley.edu/jeps/"><img src="http://ucjeps.berkeley.edu/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS)" width="100" height="100" border="0" /></a></td>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="middle"><span class="bannerTitle">The Jepson Herbarium</span><br /></td>
+  </tr>
+
+  <tr>
+     <td align="center" valign="top"><a href="http://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">&nbsp;</td>
+    <td height="14" align="center"></td>
+    <td align="center"><a href="http://ucjeps.berkeley.edu/jeps/" class="logoText">Jepson&nbsp;Herbarium</a></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" align="center"></td>
+  </tr>
+  
+  <tr>
+    <td height="8" colspan="5" align="center">&nbsp;</td>
+  </tr>
+
+  <tr class="bannerBottomBorder">
+  	<td colspan="6" height="3"></td>
+  </tr>
+
+  <tr>
+    <td colspan="6"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+</table>  
+<!-- End banner -->
+
+  <!-- Beginning of horizontal menu -->
+<table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<nav>
+	<ul>
+    	<li><a href="http://ucjeps.berkeley.edu/">Home</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/main/collections.html">About &#x25BE;</a>
+        	<ul>
+            	<!--<li><a href="#">University Herbarium</a></li>
+                <li><a href="#">Jepson Herbarium</a></li></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/main/collections.html#UC">About the Collections</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/directory.html">People</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/volunteer.html">Volunteering</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/policies.html">Policies</a></li>
+               <!-- <li><a href="http://ucjeps.berkeley.edu/main/questions.html">Herbaria FAQs</a></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/history/">History</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jepsonflora/index.html">Jepson Flora Project</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+                <!--<li><a href="http://ucjeps.berkeley.edu/bryolab/Bryolab.html">Mishler Lab</a></li>-->
+                <!--<li><a href="http://ucjeps.berkeley.edu/Baldwin-Lab.html">Baldwin Lab</a></li>-->
+                <!--<li><a href="#">American-Iranian<br /> Botanical Program</a></li>-->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/specimens/">UC/JEPS Specimen Portal</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/consortium/">Consortium of California Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/UC_bryophytes.html">Bryophyte Specimen Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/interchange/">Jepson Online Interchange</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/icpn/">Index of California Plant Names</a></li>
+		
+                <li><a href="http://ucjeps.berkeley.edu/INA.html">Index Nominum Algarum</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/JPNI.html">Jepson Place Name Index</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/efloras.html">eFloras &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/IJM.html">Jepson eFlora</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li><a href="http://ucjeps.berkeley.edu/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
+              <li><a href="http://ucjeps.berkeley.edu/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/workshops/">Public Workshops</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/opportunities.html">Academic Opportunities</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jeps/globe/"><i>The Jepson Globe</i></a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/archives/index.html">Archives &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/archon/">Archives Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/archives/images.html">Images</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+<!--                <li><a href="#">Inventory Report</a></li>
+                <li><a href="#">Archives Policies</a></li>
+                <li><a href="#">Library Collection</a></li> -->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/directory.html">Contact</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/jeps/friends/index.html">Donate</a></li>
+    </ul>
+</nav>
+</td>
+</tr>
+</table>
+ 
+<!-- End of horizontal menu -->
+
+ <table border="0">
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+     </tr>
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a></span>
+<span class="pageAuthorLine">
+<br>
+<a href="/IJM_fam_key.html">Key to families</a>
+|
+<a href="http://ucjeps.berkeley.edu/IJM_toc.html">Table of families and genera</a>
+</span>
+   	  
+<P class="bodyText">
+<!--Specimen numbers are hyperlinked to records in the Consortium of California Herbaria data view where possible. Taxa are hyperlinked to entries in the Jepson Interchange via the "[Online Interchange]" link. --> 
+
+</td>
+</tr>
+</table>
+
+<h2>Key to Euphorbia</h2>	<FORM>
+	<SELECT WIDTH=20 onChange="window.location=this.value">
+	<OPTION VALUE="None">List of species in Euphorbia
+	<OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25401">Euphorbia abramsiana
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25405">Euphorbia albomarginata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25407">Euphorbia arizonica
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25535">Euphorbia crenulata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25537">Euphorbia cyathophora
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=79300">Euphorbia davidii
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25539">Euphorbia dendroides
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25540">Euphorbia dentata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25543">Euphorbia eriantha
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=58994">Euphorbia exstipulata var. exstipulata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25444">Euphorbia fendleri
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25448">Euphorbia glyptosperma
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25557">Euphorbia helioscopia
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25455">Euphorbia hooveri
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=98678">Euphorbia jaegeri
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25571">Euphorbia lathyris
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25575">Euphorbia lurida
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25467">Euphorbia maculata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25469">Euphorbia melanadenia
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25473">Euphorbia micromera
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25581">Euphorbia misera
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25582">Euphorbia myrsinites
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25480">Euphorbia nutans
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25585">Euphorbia oblongata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25482">Euphorbia ocellata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50505">Euphorbia ocellata subsp. arenicola
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=70181">Euphorbia ocellata subsp. ocellata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=98679">Euphorbia ocellata subsp. rattanii
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25486">Euphorbia parishii
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25487">Euphorbia parryi
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25488">Euphorbia pediculifera
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25591">Euphorbia peplus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25491">Euphorbia platysperma
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25492">Euphorbia polycarpa
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25497">Euphorbia prostrata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25499">Euphorbia revoluta
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=86335">Euphorbia rigida
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=91901">Euphorbia schizoloba
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25501">Euphorbia serpens
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25503">Euphorbia serpyllifolia
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=80659">Euphorbia serpyllifolia subsp. hirtula
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=70182">Euphorbia serpyllifolia subsp. serpyllifolia
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25505">Euphorbia setiloba
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25609">Euphorbia spathulata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25615">Euphorbia terracina
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25516">Euphorbia vallis-mortae
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=81342">Euphorbia virgata
+
+	</SELECT>
+	</FORM>
+<a href='http://herbaria4.herb.berkeley.edu/eflora_display.php?tid=9260'><h3>View taxon page for Euphorbia</h3></a><blockquote><h3></h3>
+<P class="keyText" style="padding-left : 0 ;"><a href="#RD1'">1.</a><a name="RD1."> </a> Proximal leaves alternate, bases generally symmetric
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RD2'">2.</a><a name="RD2."> </a> Involucre gland appendage petal-like, white; shrub <a href="/cgi-bin/get_IJM.pl?tid=25581">.....&nbsp;E. misera</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RD2.">2'</a><a name="RD2'"> </a> Involucre gland appendage 0; annual to perennial herb (<I>E. dendroides</I> a shrub)
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RD3'">3.</a><a name="RD3."> </a> Involucre glands 1&ndash;3, less often 4(5), &plusmn; cupped
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD4'">4.</a><a name="RD4."> </a> Involucre, fruit densely hairy; seed oblong, flattened <a href="/cgi-bin/get_IJM.pl?tid=25543">.....&nbsp;E. eriantha</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD4.">4'</a><a name="RD4'"> </a> Involucre, fruit generally glabrous or &plusmn; so; seed ellipsoid to oblong or ovoid, not flattened
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD5'">5.</a><a name="RD5."> </a> Bracts subtending cyathia each red proximally, green distally; stem glabrous <a href="/cgi-bin/get_IJM.pl?tid=25537">.....&nbsp;[E. cyathophora]</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD5.">5'</a><a name="RD5'"> </a> Bracts subtending cyathia each green or &plusmn; white proximally or throughout; stem hairy or glabrous
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD6'">6.</a><a name="RD6."> </a> Hairs recurved on distal stems, abaxial leaf faces; seed >= 2.2 mm wide, coarsely tubercled <a href="/cgi-bin/get_IJM.pl?tid=79300">.....&nbsp;[E. davidii]</a> (2)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD6.">6'</a><a name="RD6'"> </a> Hairs &plusmn; straight, spreading on distal stems, abaxial leaf faces; seed &lt;= 2.1 mm wide, finely tubercled <a href="/cgi-bin/get_IJM.pl?tid=25540">.....&nbsp;[E. dentata]</a> (2)
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RD3.">3'</a><a name="RD3'"> </a> Involucre glands 4(5), &plusmn; flat
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD7'">7.</a><a name="RD7."> </a> Leaf margin finely to coarsely toothed
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD8'">8.</a><a name="RD8."> </a> Leaf tip &plusmn; acute <a href="/cgi-bin/get_IJM.pl?tid=25615">.....&nbsp;E. terracina</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD8.">8'</a><a name="RD8'"> </a> Leaf tip rounded, obtuse, or notched
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD9'">9.</a><a name="RD9."> </a> Perennial herb; stem densely hairy <a href="/cgi-bin/get_IJM.pl?tid=25585">.....&nbsp;E. oblongata</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD9.">9'</a><a name="RD9'"> </a> Annual; stem glabrous or sparsely hairy
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD10'">10.</a><a name="RD10."> </a> Whorled inflorescence branches 5; fruit smooth; staminate flowers 8&ndash;15 <a href="/cgi-bin/get_IJM.pl?tid=25557">.....&nbsp;E. helioscopia</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD10.">10'</a><a name="RD10'"> </a> Whorled inflorescence branches 3; fruit tubercled especially near tip and on lobes; staminate flowers 5&ndash;10 <a href="/cgi-bin/get_IJM.pl?tid=25609">.....&nbsp;E. spathulata</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD7.">7'</a><a name="RD7'"> </a> Leaf margin generally entire (&plusmn; entire to minutely crenate)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD11'">11.</a><a name="RD11."> </a> Shrub <a href="/cgi-bin/get_IJM.pl?tid=25539">.....&nbsp;E. dendroides</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD11.">11'</a><a name="RD11'"> </a> Annual to perennial herb
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD12'">12.</a><a name="RD12."> </a> Annual (biennial)
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD13'">13.</a><a name="RD13."> </a> Fruit lobes 2-keeled <a href="/cgi-bin/get_IJM.pl?tid=25591">.....&nbsp;E. peplus</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD13.">13'</a><a name="RD13'"> </a> Fruit lobes not keeled <a href="/cgi-bin/get_IJM.pl?tid=25535">.....&nbsp;E. crenulata</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD12.">12'</a><a name="RD12'"> </a> Perennial herb
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD14'">14.</a><a name="RD14."> </a> Seed smooth
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD15'">15.</a><a name="RD15."> </a> Seed &plusmn; white; leaves lanceolate <a href="/cgi-bin/get_IJM.pl?tid=86335">.....&nbsp;[E. rigida]</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD15.">15'</a><a name="RD15'"> </a> Seed gray to tan or &plusmn; brown; leaves linear to (ob)lanceolate <a href="/cgi-bin/get_IJM.pl?tid=81342">.....&nbsp;E. virgata</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD14.">14'</a><a name="RD14'"> </a> Seed rarely smooth
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD16'">16.</a><a name="RD16."> </a> Seed with &plusmn; worm-like papillae (smooth), gray-brown; leaves obovate to &plusmn; round <a href="/cgi-bin/get_IJM.pl?tid=25582">.....&nbsp;[E. myrsinites]</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD16.">16'</a><a name="RD16'"> </a> Seed generally pitted or surface shallowly net-like, occasionally &plusmn; smooth; leaves elliptic to (ob)ovate or spoon-shaped
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD17'">17.</a><a name="RD17."> </a> Leaf sessile; stem ascending to erect; gland shortly 2-horned, entire to scalloped between horns <a href="/cgi-bin/get_IJM.pl?tid=25575">.....&nbsp;E. lurida</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD17.">17'</a><a name="RD17'"> </a> Leaf &plusmn; sessile to short petioled; stem decumbent to erect; gland transversely obovate or fan-shaped, scalloped or incised but not 2-horned <a href="/cgi-bin/get_IJM.pl?tid=91901">.....&nbsp;E. schizoloba</a>
+
+<P class="keyText" style="padding-left : 0 ;"><a href="#RD1.">1'</a><a name="RD1'"> </a> Proximal leaves opposite
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RD18'">18.</a><a name="RD18."> </a> Leaves 4-ranked on proximal stem, bases symmetric; stems not forked, not 2-faced
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RD19'">19.</a><a name="RD19."> </a> Distal cauline leaves alternate
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD20'">20.</a><a name="RD20."> </a> Hairs recurved on distal stems, abaxial leaf faces; seed >= 2.2 mm wide, coarsely tubercled <a href="/cgi-bin/get_IJM.pl?tid=79300">.....&nbsp;[E. davidii]</a> (2)
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD20.">20'</a><a name="RD20'"> </a> Hairs &plusmn; straight on distal stems, abaxial leaf faces; seed &lt;= 2.1 mm wide, finely tubercled <a href="/cgi-bin/get_IJM.pl?tid=25540">.....&nbsp;[E. dentata]</a> (2)
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RD19.">19'</a><a name="RD19'"> </a> Distal cauline leaves opposite or whorled
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD21'">21.</a><a name="RD21."> </a> Glands of involucre transversely oblong, without horn-like lobes, white petal-like appendages present; leaves serrate; 1&deg; inflorescence branches not whorled; fruit 2.5&ndash;3.4 mm <a href="/cgi-bin/get_IJM.pl?tid=58994">.....&nbsp;E. exstipulata var. exstipulata</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD21.">21'</a><a name="RD21'"> </a> Glands of involucre crescent-shaped, with 2 horn-like lobes, petal-like appendages 0; leaves entire; 1&deg; inflorescence branches whorled; fruit 8&ndash;15 mm <a href="/cgi-bin/get_IJM.pl?tid=25571">.....&nbsp;E. lathyris</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#RD18.">18'</a><a name="RD18'"> </a> Leaves 2-ranked, bases generally asymmetric; stems repeatedly forked, 2-faced
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RD22'">22.</a><a name="RD22."> </a> Glands of involucre without white to pink or red petal-like appendages (appendages &plusmn; 0 on some glands in <I>E. pediculifera</I>)
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD23'">23.</a><a name="RD23."> </a> Perennial herb
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD24'">24.</a><a name="RD24."> </a> Fruit glabrous <a href="/cgi-bin/get_IJM.pl?tid=25486">.....&nbsp;E. parishii</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD24.">24'</a><a name="RD24'"> </a> Fruit hairy <a href="/cgi-bin/get_IJM.pl?tid=25488">.....&nbsp;E. pediculifera</a> (3)
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD23.">23'</a><a name="RD23'"> </a> Annual
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD25'">25.</a><a name="RD25."> </a> Fruit hairy
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD26'">26.</a><a name="RD26."> </a> Involucre &lt; 1 mm, glands &lt;&lt; 0.5 mm; staminate flowers 2&ndash;5; fruit &lt; 1.5 mm <a href="/cgi-bin/get_IJM.pl?tid=25473">.....&nbsp;E. micromera</a> (2)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD26.">26'</a><a name="RD26'"> </a> Involucre 1.5&ndash;2 mm, glands 0.5 mm; staminate flowers 22&ndash;25; fruit 2 mm <a href="/cgi-bin/get_IJM.pl?tid=25488">.....&nbsp;E. pediculifera</a> (3)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD25.">25'</a><a name="RD25'"> </a> Fruit glabrous
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD27'">27.</a><a name="RD27."> </a> Leaf linear, base &plusmn; symmetric; stem proximally erect <a href="/cgi-bin/get_IJM.pl?tid=25499">.....&nbsp;E. revoluta</a> (2)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD27.">27'</a><a name="RD27'"> </a> Leaf oblong, lanceolate to (ob-)ovate to round, base asymmetric; stem prostrate to decumbent
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD28'">28.</a><a name="RD28."> </a> Seed &plusmn; 2-angled, flattened, smooth; involucre glands transversely obovate <a href="/cgi-bin/get_IJM.pl?tid=25491">.....&nbsp;E. platysperma</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD28.">28'</a><a name="RD28'"> </a> Seed 3&ndash;4-angled, not flattened, smooth, wrinkled, or transversely ridged; involucre glands round or transversely elliptic
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD29'">29.</a><a name="RD29."> </a> Fruit &lt; 1.5 mm; seed 1&ndash;1.5 mm; staminate flowers 2&ndash;5 <a href="/cgi-bin/get_IJM.pl?tid=25473">.....&nbsp;E. micromera</a> (2)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD29.">29'</a><a name="RD29'"> </a> Fruit 2&ndash;2.5 mm; seed 1.5&ndash;2 mm; staminate flowers 40&ndash;60 <a href="/cgi-bin/get_IJM.pl?tid=25482">.....&nbsp;E. ocellata</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD30'">30.</a><a name="RD30."> </a> Leaf &lt;= 15 mm, lanceolate to ovate; Desert <a href="/cgi-bin/get_IJM.pl?tid=50505">.....&nbsp;subsp. arenicola</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD30.">30'</a><a name="RD30'"> </a> Leaf &lt; 10 mm, ovate to sickle-shaped; California Floristic Province (except Peninsular Ranges) <a href="/cgi-bin/get_IJM.pl?tid=70181">.....&nbsp;subsp. ocellata</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#RD22.">22'</a><a name="RD22'"> </a> Glands of involucre with white to pink or red petal-like appendages (appendages &plusmn; 0 on some glands in <I>E. pediculifera</I>)
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD31'">31.</a><a name="RD31."> </a> Cyathia generally in dense axillary cyme-like clusters, occasionally 1 per node; leaves 8&ndash;35 mm; stem generally &plusmn; erect (decumbent) <a href="/cgi-bin/get_IJM.pl?tid=25480">.....&nbsp;E. nutans</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#RD31.">31'</a><a name="RD31'"> </a> Cyathia 1 per node, occasionally dense on lateral branches or 1 at branch tips; leaves 1&ndash;40 mm; stem prostrate to ascending, occasionally erect
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD32'">32.</a><a name="RD32."> </a> Fruit glabrous; stem, leaves, involucre generally glabrous (stem, leaves glabrous to hairy in <I>E. abramsiana</I>)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD33'">33.</a><a name="RD33."> </a> Stipules fused into wide, membranous scale
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD34'">34.</a><a name="RD34."> </a> Perennial herb; fruit 2&ndash;2.5 mm; staminate flowers 15&ndash;30 <a href="/cgi-bin/get_IJM.pl?tid=25405">.....&nbsp;E. albomarginata</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD34.">34'</a><a name="RD34'"> </a> Annual; fruit &plusmn; 1.5 mm; staminate flowers 3&ndash;8(10) <a href="/cgi-bin/get_IJM.pl?tid=25501">.....&nbsp;E. serpens</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD33.">33'</a><a name="RD33'"> </a> Stipules free or fused, but not a wide, membranous scale
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD35'">35.</a><a name="RD35."> </a> Perennial herb
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD36'">36.</a><a name="RD36."> </a> Fruit, seed 2&ndash;2.5 mm; proximal stipules free <a href="/cgi-bin/get_IJM.pl?tid=25444">.....&nbsp;E. fendleri</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD36.">36'</a><a name="RD36'"> </a> Fruit, seed 1&ndash;1.5 mm; proximal stipules free or fused <a href="/cgi-bin/get_IJM.pl?tid=25492">.....&nbsp;E. polycarpa</a> (2)
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD35.">35'</a><a name="RD35'"> </a> Annual
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD37'">37.</a><a name="RD37."> </a> Leaves linear, base &plusmn; symmetric; stem prostrate to erect
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD38'">38.</a><a name="RD38."> </a> Involucre glands 1&ndash;4, ovate, appendage narrower than gland; fruit, seed &plusmn; 2 mm; seed smooth; stem prostrate to ascending <a href="/cgi-bin/get_IJM.pl?tid=25487">.....&nbsp;E. parryi</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD38.">38'</a><a name="RD38'"> </a> Involucre glands &plusmn; 4, &plusmn; round, appendage wider than gland; fruit, seed &lt;= 1.5 mm; seed transversely ridged; stem proximally erect <a href="/cgi-bin/get_IJM.pl?tid=25499">.....&nbsp;E. revoluta</a> (2)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD37.">37'</a><a name="RD37'"> </a> Leaves elliptic, oblong, lanceolate, ovate, round, or spoon-shaped, base asymmetric; stem prostrate to decumbent
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD39'">39.</a><a name="RD39."> </a> Leaf margin entire <a href="/cgi-bin/get_IJM.pl?tid=25401">.....&nbsp;E. abramsiana</a> (2)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD39.">39'</a><a name="RD39'"> </a> Leaf margin toothed, at least toward tip, sometimes finely so
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RD40'">40.</a><a name="RD40."> </a> Styles simple; involucre gland appendages deeply 3&ndash;5-lobed <a href="/cgi-bin/get_IJM.pl?tid=25455">.....&nbsp;E. hooveri</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RD40.">40'</a><a name="RD40'"> </a> Styles divided; involucre gland appendages entire, scalloped, or shallowly lobed
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#RD41'">41.</a><a name="RD41."> </a> Stem subglabrous to hairy; seed transversely 4&ndash;6-ridged <a href="/cgi-bin/get_IJM.pl?tid=25401">.....&nbsp;E. abramsiana</a> (2)
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#RD41.">41'</a><a name="RD41'"> </a> Stem glabrous; seed transversely 3&ndash;4-ridged or smooth to wrinkled
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#RD42'">42.</a><a name="RD42."> </a> Seed transversely 3&ndash;4-ridged; involucre gland appendage wider than gland <a href="/cgi-bin/get_IJM.pl?tid=25448">.....&nbsp;E. glyptosperma</a>
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#RD42.">42'</a><a name="RD42'"> </a> Seed smooth to wrinkled; involucre gland appendage narrower than gland <a href="/cgi-bin/get_IJM.pl?tid=70182">.....&nbsp;E. serpyllifolia subsp. serpyllifolia</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#RD32.">32'</a><a name="RD32'"> </a> Fruit with hairs, at least on lobes; stem, leaves, involucre generally with hairs
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD43'">43.</a><a name="RD43."> </a> Perennial herb or shrub
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD44'">44.</a><a name="RD44."> </a> Plant soft glandular-hairy with jointed hairs; staminate flowers 5&ndash;10; involucre urn-shaped &mdash; Sonoran Desert <a href="/cgi-bin/get_IJM.pl?tid=25407">.....&nbsp;E. arizonica</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD44.">44'</a><a name="RD44'"> </a> Plant puberulent to finely tomentose, strigose, or short-stiff-hairy with non-jointed hairs; staminate flowers >= 15; involucre urn- or bell-shaped or obconic
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD45'">45.</a><a name="RD45."> </a> Seed 3-angled, ridged transversely <a href="/cgi-bin/get_IJM.pl?tid=25488">.....&nbsp;E. pediculifera</a> (3)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD45.">45'</a><a name="RD45'"> </a> Seed 0- or 4-angled (sometimes &plusmn; 3-angled in <I>E. jaegeri</I>), smooth to wrinkled or irregularly dimpled or faintly ridged transversely
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD46'">46.</a><a name="RD46."> </a> Leaf hairs straight
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RD47'">47.</a><a name="RD47."> </a> Shrub; involucre gland appendage wider than gland, irregularly divided from halfway to &plusmn; base into 4&ndash;8 &plusmn; triangular to awl-shaped segments <a href="/cgi-bin/get_IJM.pl?tid=98678">.....&nbsp;E. jaegeri</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RD47.">47'</a><a name="RD47'"> </a> Perennial herb; involucre gland appendage narrower to wider than gland, entire to scalloped <a href="/cgi-bin/get_IJM.pl?tid=25492">.....&nbsp;E. polycarpa</a> (2)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD46.">46'</a><a name="RD46'"> </a> Leaf hairs not straight
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RD48'">48.</a><a name="RD48."> </a> Involucre 1&ndash;1.5 mm; glands dark red to &plusmn; black <a href="/cgi-bin/get_IJM.pl?tid=25469">.....&nbsp;E. melanadenia</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RD48.">48'</a><a name="RD48'"> </a> Involucre 2&ndash;2.5 mm; glands green to yellow or &plusmn; red <a href="/cgi-bin/get_IJM.pl?tid=25516">.....&nbsp;E. vallis-mortae</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#RD43.">43'</a><a name="RD43'"> </a> Annual
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD49'">49.</a><a name="RD49."> </a> Involucre 1.5&ndash;2 mm; fruit 2&ndash;2.5 mm; staminate flowers 40&ndash;60 <a href="/cgi-bin/get_IJM.pl?tid=98679">.....&nbsp;E. ocellata subsp. rattanii</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#RD49.">49'</a><a name="RD49'"> </a> Involucre &lt; 1.5 mm; fruit 1&ndash;2 mm; staminate flowers &lt; 20
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD50'">50.</a><a name="RD50."> </a> Involucre gland appendage deeply 3&ndash;5-lobed; involucre urn-shaped <a href="/cgi-bin/get_IJM.pl?tid=25505">.....&nbsp;E. setiloba</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#RD50.">50'</a><a name="RD50'"> </a> Involucre gland appendage entire to scalloped; involucre bell-shaped or obconic
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD51'">51.</a><a name="RD51."> </a> Fruit 1.5&ndash;2 mm; seed wrinkled; involucre gland appendage narrower than gland <a href="/cgi-bin/get_IJM.pl?tid=80659">.....&nbsp;E. serpyllifolia subsp. hirtula</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#RD51.">51'</a><a name="RD51'"> </a> Fruit &lt;= 1.5 mm; seed transversely ridged or wrinkled; involucre gland appendage as wide as to wider than gland
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RD52'">52.</a><a name="RD52."> </a> Seeds transversely wrinkled; fruit evenly strigose; involucre gland appendage as wide as gland <a href="/cgi-bin/get_IJM.pl?tid=25467">.....&nbsp;E. maculata</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#RD52.">52'</a><a name="RD52'"> </a> Seeds transversely ridged; fruit hairy only on lobes; involucre gland appendage as wide as to wider than gland <a href="/cgi-bin/get_IJM.pl?tid=25497">.....&nbsp;E. prostrata</a></blockquote><P>
+<a href="&#109;&#97;&#105;&#108;to:rosatti&#064;berkeley.edu?subject=eFlora comment"><font size=3 color="red">Contact/Feedback</font></a>
+<P class=bodyText>
+Citation for the whole project: Jepson Flora Project (eds.) [year] <em>Jepson eFlora</em>,  http://ucjeps.berkeley.edu/IJM.html [accessed on month, day, year]
+<br>
+Citation for an individual treatment:  [Author of taxon treatment] [year]. [Taxon name] in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, [URL for treatment]. Accessed on [month, day, year].
+<br>
+We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The Jepson Herbarium.
+
+        
+<hr>
+
