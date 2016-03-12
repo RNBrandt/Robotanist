@@ -34,20 +34,42 @@ def fill_tree(dichotomies)
   end
 end
 
-def scrape_glossary
+def nokogiri_glossary
   glossary_uri = URI("http://ucjeps.berkeley.edu/eflora/glossary.html")
-  glossary_doc = Nokogiri.parse(Net::HTTP.get(glossary_uri))
-  definitions = []
-  glossary_doc.css('dd').each {|x| definitions << x.inner_text}
-  words = glossary_doc.css('dt').inner_text
-  p definitions
+  @glossary_doc = Nokogiri.parse(Net::HTTP.get(glossary_uri))
+  return @glossary_doc
 end
 
-# dichotomies = scrape(key_site)
+def parse_definitions(glossary_doc)
+  @definitions = []
+  @glossary_doc.css('dd').each {|x| @definitions << x.inner_text}
+  return @definitions
+end
 
-# make_first_nodes(dichotomies)
+def parse_words(glossary_doc)
+  @words = []
+  @glossary_doc.css('dt').each {|x| @words << x.inner_text}
+  return @words
+end
 
-# fill_tree(dichotomies)
+def create_glossary_hash
+  @glossary = Hash[@words.zip @definitions]
+end
 
-scrape_glossary
+def create_glossary_record
+  @glossary.each do |word, definition|
+    Glossary.create(word: word, definition: definition)
+  end
+end
+
+
+dichotomies = scrape(key_site)
+make_first_nodes(dichotomies)
+fill_tree(dichotomies)
+nokogiri_glossary
+parse_definitions(@glossary_doc)
+parse_words(@glossary_doc)
+create_glossary_hash
+create_glossary_record
+
 

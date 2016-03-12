@@ -1,5 +1,3 @@
-require 'nokogiri'
-
 class Option
   include Mongoid::Document
   include Mongoid::Tree
