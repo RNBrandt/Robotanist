@@ -1,0 +1,307 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora Keys</title> 
+<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27128382-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43909100-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body onload="initialize()">
+<!-- Begin banner -->
+<table class="banner" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="5" align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+    <td rowspan="3" width="120" align="center" valign="middle">&nbsp;</td>
+    <td align="center">&nbsp;</td>
+    <td rowspan="3" width="120" align="center" valign="middle">
+      <a href="http://ucjeps.berkeley.edu/jeps/"><img src="http://ucjeps.berkeley.edu/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS)" width="100" height="100" border="0" /></a></td>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="middle"><span class="bannerTitle">The Jepson Herbarium</span><br /></td>
+  </tr>
+
+  <tr>
+     <td align="center" valign="top"><a href="http://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">&nbsp;</td>
+    <td height="14" align="center"></td>
+    <td align="center"><a href="http://ucjeps.berkeley.edu/jeps/" class="logoText">Jepson&nbsp;Herbarium</a></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" align="center"></td>
+  </tr>
+  
+  <tr>
+    <td height="8" colspan="5" align="center">&nbsp;</td>
+  </tr>
+
+  <tr class="bannerBottomBorder">
+  	<td colspan="6" height="3"></td>
+  </tr>
+
+  <tr>
+    <td colspan="6"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+</table>  
+<!-- End banner -->
+
+  <!-- Beginning of horizontal menu -->
+<table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<nav>
+	<ul>
+    	<li><a href="http://ucjeps.berkeley.edu/">Home</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/main/collections.html">About &#x25BE;</a>
+        	<ul>
+            	<!--<li><a href="#">University Herbarium</a></li>
+                <li><a href="#">Jepson Herbarium</a></li></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/main/collections.html#UC">About the Collections</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/directory.html">People</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/volunteer.html">Volunteering</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/policies.html">Policies</a></li>
+               <!-- <li><a href="http://ucjeps.berkeley.edu/main/questions.html">Herbaria FAQs</a></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/history/">History</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jepsonflora/index.html">Jepson Flora Project</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+                <!--<li><a href="http://ucjeps.berkeley.edu/bryolab/Bryolab.html">Mishler Lab</a></li>-->
+                <!--<li><a href="http://ucjeps.berkeley.edu/Baldwin-Lab.html">Baldwin Lab</a></li>-->
+                <!--<li><a href="#">American-Iranian<br /> Botanical Program</a></li>-->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/specimens/">UC/JEPS Specimen Portal</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/consortium/">Consortium of California Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/UC_bryophytes.html">Bryophyte Specimen Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/interchange/">Jepson Online Interchange</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/icpn/">Index of California Plant Names</a></li>
+		
+                <li><a href="http://ucjeps.berkeley.edu/INA.html">Index Nominum Algarum</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/JPNI.html">Jepson Place Name Index</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/efloras.html">eFloras &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/IJM.html">Jepson eFlora</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li><a href="http://ucjeps.berkeley.edu/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
+              <li><a href="http://ucjeps.berkeley.edu/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/workshops/">Public Workshops</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/opportunities.html">Academic Opportunities</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jeps/globe/"><i>The Jepson Globe</i></a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/archives/index.html">Archives &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/archon/">Archives Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/archives/images.html">Images</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+<!--                <li><a href="#">Inventory Report</a></li>
+                <li><a href="#">Archives Policies</a></li>
+                <li><a href="#">Library Collection</a></li> -->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/directory.html">Contact</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/jeps/friends/index.html">Donate</a></li>
+    </ul>
+</nav>
+</td>
+</tr>
+</table>
+ 
+<!-- End of horizontal menu -->
+
+ <table border="0">
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+     </tr>
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a></span>
+<span class="pageAuthorLine">
+<br>
+<a href="/IJM_fam_key.html">Key to families</a>
+|
+<a href="http://ucjeps.berkeley.edu/IJM_toc.html">Table of families and genera</a>
+</span>
+   	  
+<P class="bodyText">
+<!--Specimen numbers are hyperlinked to records in the Consortium of California Herbaria data view where possible. Taxa are hyperlinked to entries in the Jepson Interchange via the "[Online Interchange]" link. --> 
+
+</td>
+</tr>
+</table>
+
+<h2>Key to Festuca</h2>	<FORM>
+	<SELECT WIDTH=20 onChange="window.location=this.value">
+	<OPTION VALUE="None">List of species in Festuca
+	<OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25783">Festuca arundinacea
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50518">Festuca brachyphylla subsp. breviculmis
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25855">Festuca bromoides
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25791">Festuca californica
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25798">Festuca elmeri
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25808">Festuca idahoensis
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25812">Festuca kingii
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25865">Festuca microstachys
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25817">Festuca minutiflora
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25869">Festuca myuros
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25818">Festuca occidentalis
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25872">Festuca octoflora
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=91964">Festuca perennis
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25822">Festuca pratensis
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25825">Festuca rubra
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25833">Festuca saximontana
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25835">Festuca subulata
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25836">Festuca subuliflora
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=93753">Festuca temulenta
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25840">Festuca trachyphylla
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=25845">Festuca viridula
+
+	</SELECT>
+	</FORM>
+<a href='http://herbaria4.herb.berkeley.edu/eflora_display.php?tid=11066'><h3>View taxon page for Festuca</h3></a><blockquote><h3></h3>
+<P class="keyText" style="padding-left : 0 ;"><a href="#AMV1'">1.</a><a name="AMV1."> </a> Inflorescence spike-like (sometimes sparingly branched); glume 1 except 0 in uppermost spikelet (subg. <I>Lolium</I>)
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AMV2'">2.</a><a name="AMV2."> </a> Glume &lt; rest of spikelet; lower lemma firmly membranous, flat to rounded at base <a href="/cgi-bin/get_IJM.pl?tid=91964">.....&nbsp;F. perennis</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AMV2.">2'</a><a name="AMV2'"> </a> Glume >= rest of spikelet; lower lemma becoming hard and thick at base <a href="/cgi-bin/get_IJM.pl?tid=93753">.....&nbsp;F. temulenta</a>
+
+<P class="keyText" style="padding-left : 0 ;"><a href="#AMV1.">1'</a><a name="AMV1'"> </a> Inflorescence panicle-like, branches dense and appressed to open and spreading, or raceme-like; glumes 2, lower sometimes minute
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AMV3'">3.</a><a name="AMV3."> </a> Dioecious; spikelets staminate or pistillate; reduced, sterile pistils sometimes present (subg. <I>Leucopoa</I>) <a href="/cgi-bin/get_IJM.pl?tid=25812">.....&nbsp;F. kingii</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AMV3.">3'</a><a name="AMV3'"> </a> Bisexual; florets generally bisexual
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AMV4'">4.</a><a name="AMV4."> </a> Leaf blade with prominent claw-like or clasping basal auricles (subg. <I>Schedonorus</I>)
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AMV5'">5.</a><a name="AMV5."> </a> Auricles hairy (sometimes reduced to only 1 or 2 hairs); lemma generally minutely hairy, awn 0.5&ndash;4 mm or 0 <a href="/cgi-bin/get_IJM.pl?tid=25783">.....&nbsp;F. arundinacea</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AMV5.">5'</a><a name="AMV5'"> </a> Auricles glabrous; lemma generally smooth, awn &lt;&lt; 0.5 mm or 0 <a href="/cgi-bin/get_IJM.pl?tid=25822">.....&nbsp;F. pratensis</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AMV4.">4'</a><a name="AMV4'"> </a> Leaf blade generally without prominent claw-like, clasping basal auricles (inconspicuous flap-like auricles sometimes present)
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AMV6'">6.</a><a name="AMV6."> </a> Annual; stamen 1 (subg. <I>Vulpia</I>)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AMV7'">7.</a><a name="AMV7."> </a> Lower glume generally &lt; 2 mm, &lt; 1/2 upper glume, sometimes minute <a href="/cgi-bin/get_IJM.pl?tid=25869">.....&nbsp;F. myuros</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AMV7.">7'</a><a name="AMV7'"> </a> Lower glume generally > 3 mm, >= 1/2 upper glume (2&ndash;3 mm, &lt; 1/2 upper glume in some <I>Festuca microstachys</I>)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AMV8'">8.</a><a name="AMV8."> </a> Florets (5)7&ndash;12, closely overlapping, spikelet axis hidden; lemma awn 0.5&ndash;5 mm <a href="/cgi-bin/get_IJM.pl?tid=25872">.....&nbsp;F. octoflora</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AMV8.">8'</a><a name="AMV8'"> </a> Florets generally 1&ndash;7, loosely overlapping, spikelet axis visible, each internode > 1 mm; lemma awn 3.5&ndash;12 mm
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMV9'">9.</a><a name="AMV9."> </a> Lowest inflorescence branches appressed to erect at maturity; branches without basal swellings <a href="/cgi-bin/get_IJM.pl?tid=25855">.....&nbsp;F. bromoides</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMV9.">9'</a><a name="AMV9'"> </a> Lowest inflorescence branches spreading or reflexed at maturity; branches with basal swellings <a href="/cgi-bin/get_IJM.pl?tid=25865">.....&nbsp;F. microstachys</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AMV6.">6'</a><a name="AMV6'"> </a> Perennial herb; stamens generally 3 (subg. <I>Festuca</I>)
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AMV10'">10.</a><a name="AMV10."> </a> Leaf sheath closed, &plusmn; red, hairs &plusmn; downward-pointing <a href="/cgi-bin/get_IJM.pl?tid=25825">.....&nbsp;F. rubra</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AMV10.">10'</a><a name="AMV10'"> </a> Leaf sheath open at least 1/2 its length, generally green, glabrous or hairy, hairs not downward-pointing
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AMV11'">11.</a><a name="AMV11."> </a> Florets long-stalked, spikelet axis jointed below florets <a href="/cgi-bin/get_IJM.pl?tid=25836">.....&nbsp;F. subuliflora</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AMV11.">11'</a><a name="AMV11'"> </a> Florets not long-stalked, spikelet axis not jointed
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMV12'">12.</a><a name="AMV12."> </a> Leaf blade generally (1)2&ndash;10 mm wide, flat or rolled longitudinally
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMV13'">13.</a><a name="AMV13."> </a> Collar generally densely hairy (glabrous); lemma awn (0)1.5&ndash;2.5 mm, generally &lt; 1/3 lemma; plants densely cespitose, with persistent dead leaf sheaths at base <a href="/cgi-bin/get_IJM.pl?tid=25791">.....&nbsp;F. californica</a> (2)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMV13.">13'</a><a name="AMV13'"> </a> Collar glabrous; lemma awn 2&ndash;20 mm, generally > 1/3 lemma; plants loosely cespitose, dead leaf sheaths inconspicuous or 0
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMV14'">14.</a><a name="AMV14."> </a> Lemma distinctly 5-veined, awned from between 2 short teeth <a href="/cgi-bin/get_IJM.pl?tid=25798">.....&nbsp;F. elmeri</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMV14.">14'</a><a name="AMV14'"> </a> Lemma indistinctly veined, awn terminal <a href="/cgi-bin/get_IJM.pl?tid=25835">.....&nbsp;F. subulata</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMV12.">12'</a><a name="AMV12'"> </a> Leaf blade &lt; 2.5 mm wide, folded or rolled inward toward upper side
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMV15'">15.</a><a name="AMV15."> </a> Collar generally densely hairy, rarely glabrous; plants densely cespitose, with persistent dead leaf sheaths at base <a href="/cgi-bin/get_IJM.pl?tid=25791">.....&nbsp;F. californica</a> (2)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMV15.">15'</a><a name="AMV15'"> </a> Collar glabrous; plants loosely to densely cespitose, without persistent dead leaf sheaths at base (except <I>Festuca idahoensis</I>)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMV16'">16.</a><a name="AMV16."> </a> Lemma awns 3&ndash;12 mm
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMV17'">17.</a><a name="AMV17."> </a> Ovary tip glabrous; awn &lt; lemma body; leaf blade often glaucous or &plusmn; blue <a href="/cgi-bin/get_IJM.pl?tid=25808">.....&nbsp;F. idahoensis</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMV17.">17'</a><a name="AMV17'"> </a> Ovary tip hairy; awn generally > lemma body; leaf blade green <a href="/cgi-bin/get_IJM.pl?tid=25818">.....&nbsp;F. occidentalis</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMV16.">16'</a><a name="AMV16'"> </a> Lemma awns 0&ndash;2.5 mm
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMV18'">18.</a><a name="AMV18."> </a> Spikelets 9&ndash;12 mm; lower cauline leaf blades much shorter and stiffer than the upper <a href="/cgi-bin/get_IJM.pl?tid=25845">.....&nbsp;F. viridula</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMV18.">18'</a><a name="AMV18'"> </a> Spikelets 2.5&ndash;9 mm; upper and lower cauline leaf blades similar
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#AMV19'">19.</a><a name="AMV19."> </a> Anthers when dry 2&ndash;3.5 mm; plants of forested sites, generally 1100&ndash;1800 m <a href="/cgi-bin/get_IJM.pl?tid=25840">.....&nbsp;F. trachyphylla</a>
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#AMV19.">19'</a><a name="AMV19'"> </a> Anthers when dry 0.5&ndash;2 mm; plants of subalpine or lower alpine habitats, generally > 3000 m
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#AMV20'">20.</a><a name="AMV20."> </a> Anthers 0.9&ndash;1.2 mm when dry <a href="/cgi-bin/get_IJM.pl?tid=25833">.....&nbsp;F. saximontana</a>
+
+<P class="keyText" style="padding-left : 77 ;"><a href="#AMV20.">20'</a><a name="AMV20'"> </a> Anthers 0.4&ndash;0.8(0.9) mm when dry
+
+<P class="keyText" style="padding-left : 84 ;"><a href="#AMV21'">21.</a><a name="AMV21."> </a> Inflorescence branches at lowest node 0&ndash;1; ovary tip glabrous <a href="/cgi-bin/get_IJM.pl?tid=50518">.....&nbsp;F. brachyphylla subsp. breviculmis</a>
+
+<P class="keyText" style="padding-left : 84 ;"><a href="#AMV21.">21'</a><a name="AMV21'"> </a> Inflorescence branches at lowest node (1)2 or 3; ovary tip sparsely short-hairy <a href="/cgi-bin/get_IJM.pl?tid=25817">.....&nbsp;F. minutiflora</a></blockquote><P>
+<a href="&#109;&#97;&#105;&#108;to:rosatti&#064;berkeley.edu?subject=eFlora comment"><font size=3 color="red">Contact/Feedback</font></a>
+<P class=bodyText>
+Citation for the whole project: Jepson Flora Project (eds.) [year] <em>Jepson eFlora</em>,  http://ucjeps.berkeley.edu/IJM.html [accessed on month, day, year]
+<br>
+Citation for an individual treatment:  [Author of taxon treatment] [year]. [Taxon name] in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, [URL for treatment]. Accessed on [month, day, year].
+<br>
+We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The Jepson Herbarium.
+
+        
+<hr>
+
