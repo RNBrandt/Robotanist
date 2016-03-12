@@ -1,0 +1,320 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora Keys</title> 
+<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27128382-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43909100-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body onload="initialize()">
+<!-- Begin banner -->
+<table class="banner" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="5" align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+    <td rowspan="3" width="120" align="center" valign="middle">&nbsp;</td>
+    <td align="center">&nbsp;</td>
+    <td rowspan="3" width="120" align="center" valign="middle">
+      <a href="http://ucjeps.berkeley.edu/jeps/"><img src="http://ucjeps.berkeley.edu/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS)" width="100" height="100" border="0" /></a></td>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="middle"><span class="bannerTitle">The Jepson Herbarium</span><br /></td>
+  </tr>
+
+  <tr>
+     <td align="center" valign="top"><a href="http://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">&nbsp;</td>
+    <td height="14" align="center"></td>
+    <td align="center"><a href="http://ucjeps.berkeley.edu/jeps/" class="logoText">Jepson&nbsp;Herbarium</a></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" align="center"></td>
+  </tr>
+  
+  <tr>
+    <td height="8" colspan="5" align="center">&nbsp;</td>
+  </tr>
+
+  <tr class="bannerBottomBorder">
+  	<td colspan="6" height="3"></td>
+  </tr>
+
+  <tr>
+    <td colspan="6"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+</table>  
+<!-- End banner -->
+
+  <!-- Beginning of horizontal menu -->
+<table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<nav>
+	<ul>
+    	<li><a href="http://ucjeps.berkeley.edu/">Home</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/main/collections.html">About &#x25BE;</a>
+        	<ul>
+            	<!--<li><a href="#">University Herbarium</a></li>
+                <li><a href="#">Jepson Herbarium</a></li></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/main/collections.html#UC">About the Collections</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/directory.html">People</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/volunteer.html">Volunteering</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/policies.html">Policies</a></li>
+               <!-- <li><a href="http://ucjeps.berkeley.edu/main/questions.html">Herbaria FAQs</a></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/history/">History</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jepsonflora/index.html">Jepson Flora Project</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+                <!--<li><a href="http://ucjeps.berkeley.edu/bryolab/Bryolab.html">Mishler Lab</a></li>-->
+                <!--<li><a href="http://ucjeps.berkeley.edu/Baldwin-Lab.html">Baldwin Lab</a></li>-->
+                <!--<li><a href="#">American-Iranian<br /> Botanical Program</a></li>-->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/specimens/">UC/JEPS Specimen Portal</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/consortium/">Consortium of California Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/UC_bryophytes.html">Bryophyte Specimen Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/interchange/">Jepson Online Interchange</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/icpn/">Index of California Plant Names</a></li>
+		
+                <li><a href="http://ucjeps.berkeley.edu/INA.html">Index Nominum Algarum</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/JPNI.html">Jepson Place Name Index</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/efloras.html">eFloras &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/IJM.html">Jepson eFlora</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li><a href="http://ucjeps.berkeley.edu/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
+              <li><a href="http://ucjeps.berkeley.edu/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/workshops/">Public Workshops</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/opportunities.html">Academic Opportunities</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jeps/globe/"><i>The Jepson Globe</i></a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/archives/index.html">Archives &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/archon/">Archives Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/archives/images.html">Images</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+<!--                <li><a href="#">Inventory Report</a></li>
+                <li><a href="#">Archives Policies</a></li>
+                <li><a href="#">Library Collection</a></li> -->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/directory.html">Contact</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/jeps/friends/index.html">Donate</a></li>
+    </ul>
+</nav>
+</td>
+</tr>
+</table>
+ 
+<!-- End of horizontal menu -->
+
+ <table border="0">
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+     </tr>
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a></span>
+<span class="pageAuthorLine">
+<br>
+<a href="/IJM_fam_key.html">Key to families</a>
+|
+<a href="http://ucjeps.berkeley.edu/IJM_toc.html">Table of families and genera</a>
+</span>
+   	  
+<P class="bodyText">
+<!--Specimen numbers are hyperlinked to records in the Consortium of California Herbaria data view where possible. Taxa are hyperlinked to entries in the Jepson Interchange via the "[Online Interchange]" link. --> 
+
+</td>
+</tr>
+</table>
+
+<h2>Key to Eriastrum</h2>	<FORM>
+	<SELECT WIDTH=20 onChange="window.location=this.value">
+	<OPTION VALUE="None">List of species in Eriastrum
+	<OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24587">Eriastrum abramsii
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24588">Eriastrum brandegeeae
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24589">Eriastrum densifolium
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50328">Eriastrum densifolium subsp. austromontanum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50329">Eriastrum densifolium subsp. densifolium
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50330">Eriastrum densifolium subsp. elongatum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50331">Eriastrum densifolium subsp. mohavense
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50332">Eriastrum densifolium subsp. sanctorum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24590">Eriastrum diffusum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50335">Eriastrum eremicum subsp. eremicum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24592">Eriastrum filifolium
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=86188">Eriastrum harwoodii
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24593">Eriastrum hooveri
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24594">Eriastrum luteum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24595">Eriastrum pluriflorum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50337">Eriastrum pluriflorum subsp. pluriflorum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50338">Eriastrum pluriflorum subsp. sherman-hoytiae
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=99215">Eriastrum rosamondense
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24596">Eriastrum sapphirinum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50339">Eriastrum sapphirinum subsp. dasyanthum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50340">Eriastrum sapphirinum subsp. sapphirinum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=100456">
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24597">Eriastrum sparsiflorum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24598">Eriastrum tracyi
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24599">Eriastrum virgatum
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24600">Eriastrum wilcoxii
+
+	</SELECT>
+	</FORM>
+<a href='http://herbaria4.herb.berkeley.edu/eflora_display.php?tid=8865'><h3>View taxon page for Eriastrum</h3></a><blockquote><h3></h3>
+<P class="keyText" style="padding-left : 0 ;"><a href="#AAR1'">1.</a><a name="AAR1."> </a> Perennial herb <a href="/cgi-bin/get_IJM.pl?tid=24589">.....&nbsp;E. densifolium</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AAR2'">2.</a><a name="AAR2."> </a> Corolla 20&ndash;37 mm
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AAR3'">3.</a><a name="AAR3."> </a> Corolla 20&ndash;25 mm, lobes 1/3&ndash;1/2 corolla; leaves glabrous to subglabrous; coastal dunes, San Luis Obispo, Santa Barbara cos. <a href="/cgi-bin/get_IJM.pl?tid=50329">.....&nbsp;subsp. densifolium</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AAR3.">3'</a><a name="AAR3'"> </a> Corolla 25&ndash;37 mm, lobes &plusmn; 1/3 corolla; leaves woolly; Santa Ana River drainage, sw San Bernardino Co. <a href="/cgi-bin/get_IJM.pl?tid=50332">.....&nbsp;subsp. sanctorum</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AAR2.">2'</a><a name="AAR2'"> </a> Corolla &lt; 20 mm
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AAR4'">4.</a><a name="AAR4."> </a> Leaves strongly recurved, blade wider at base than tip, lobes spine-tipped &mdash; East of Sierra Nevada, Mojave Desert <a href="/cgi-bin/get_IJM.pl?tid=50331">.....&nbsp;subsp. mohavense</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AAR4.">4'</a><a name="AAR4'"> </a> Leaves not recurved, blade generally equally wide at base, tip, generally not spine-tipped
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AAR5'">5.</a><a name="AAR5."> </a> Bracts generally 5&ndash;9 lobed; inflorescence generally terminal, 10&ndash;20 flowered; leaves subglabrous to &plusmn; canescent <a href="/cgi-bin/get_IJM.pl?tid=50328">.....&nbsp;subsp. austromontanum</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AAR5.">5'</a><a name="AAR5'"> </a> Bracts generally (0)3&ndash;5(7)-lobed; inflorescences generally terminal and axillary, 1&ndash;10(15)-flowered; leaves &plusmn; canescent to woolly <a href="/cgi-bin/get_IJM.pl?tid=50330">.....&nbsp;subsp. elongatum</a>
+
+<P class="keyText" style="padding-left : 0 ;"><a href="#AAR1.">1'</a><a name="AAR1'"> </a> Annual (occasionally short-lived perennial herb)
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AAR6'">6.</a><a name="AAR6."> </a> Stamens attached at or just below corolla sinus, corolla 11&ndash;24 mm <a href="/cgi-bin/get_IJM.pl?tid=24595">.....&nbsp;E. pluriflorum</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AAR7'">7.</a><a name="AAR7."> </a> Plant &plusmn; open; leaves thread-like; corolla generally salverform, tube + throat generally > 2 &times; lobes; chaparral, grassland, savanna, woodland, pine forest <a href="/cgi-bin/get_IJM.pl?tid=50337">.....&nbsp;subsp. pluriflorum</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AAR7.">7'</a><a name="AAR7'"> </a> Plant generally dense, occasionally cespitose; leaves linear; corolla narrowly funnel-shaped, tube + throat generally &lt;= 2 &times; lobes; open sandy flats, deserts <a href="/cgi-bin/get_IJM.pl?tid=50338">.....&nbsp;subsp. sherman-hoytiae</a>
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AAR6.">6'</a><a name="AAR6'"> </a> Stamens attached well below corolla sinus, if higher, corolla &lt; 15 mm
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AAR8'">8.</a><a name="AAR8."> </a> Stamens exserted > 1/2 length of corolla lobes
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AAR9'">9.</a><a name="AAR9."> </a> Corolla lobes bright yellow <a href="/cgi-bin/get_IJM.pl?tid=24594">.....&nbsp;E. luteum</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AAR9.">9'</a><a name="AAR9'"> </a> Corolla lobes white, lavender, or variously blue
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AAR10'">10.</a><a name="AAR10."> </a> Corolla generally bilateral; stamens generally unequal <a href="/cgi-bin/get_IJM.pl?tid=50335">.....&nbsp;E. eremicum subsp. eremicum</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AAR10.">10'</a><a name="AAR10'"> </a> Corolla &plusmn; radial (or bilateral from unequal sinuses in <I>Eriastrum sapphirinum</I>), stamens generally equal
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AAR11'">11.</a><a name="AAR11."> </a> Stamens exceeded by tips of corolla lobes; corolla lobes &lt; 4 mm <a href="/cgi-bin/get_IJM.pl?tid=24592">.....&nbsp;E. filifolium</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AAR11.">11'</a><a name="AAR11'"> </a> Stamens equaling to exceeding tips of corolla lobes (almost equaling to exceeding in <I>Eriastrum sapphirinum</I> subsp. <I>dasyanthum</I>); corolla lobes >= 4 mm
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AAR12'">12.</a><a name="AAR12."> </a> Corolla tube > 3 &times; throat, tube + throat generally >= 1.5 &times; lobes; plants &plusmn; not glandular; Central Coast, n South Coast Ranges (Monterey, San Benito cos.) <a href="/cgi-bin/get_IJM.pl?tid=24599">.....&nbsp;E. virgatum</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AAR12.">12'</a><a name="AAR12'"> </a> Corolla tube &lt; 3 &times; throat, tube + throat generally &lt;= 1.5 &times; lobes; plants often glandular; s Sierra Nevada Foothills, Southwestern California (except Channel Islands), w Desert <a href="/cgi-bin/get_IJM.pl?tid=24596">.....&nbsp;E. sapphirinum</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AAR13'">13.</a><a name="AAR13."> </a> Flowers 3+ per cluster; corolla lobes dark to royal blue, pale blue, or white; calyx, bracts occasionally &plusmn; glandular, woolly <a href="/cgi-bin/get_IJM.pl?tid=50339">.....&nbsp;subsp. dasyanthum</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AAR13.">13'</a><a name="AAR13'"> </a> Flowers 1&ndash;3 per cluster; corolla lobes bright blue to lavender; calyx, bracts glandular, &plusmn; woolly to subglabrous <a href="/cgi-bin/get_IJM.pl?tid=50340">.....&nbsp;subsp. sapphirinum</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AAR8.">8'</a><a name="AAR8'"> </a> Stamens included or exserted &lt; 1/2 length of corolla lobes
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AAR14'">14.</a><a name="AAR14."> </a> Anthers included
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AAR15'">15.</a><a name="AAR15."> </a> Upper leaves, bracts generally pinnate-3&ndash;7-lobed; inflorescence many-flowered, densely bracted, densely woolly <a href="/cgi-bin/get_IJM.pl?tid=24587">.....&nbsp;E. abramsii</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AAR15.">15'</a><a name="AAR15'"> </a> Upper leaves, bracts entire, pinnate-1&ndash;4-lobed, or palmate-5-lobed; inflorescence few-flowered, few-bracted, &plusmn; woolly
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AAR16'">16.</a><a name="AAR16."> </a> Corolla 5&ndash;7 mm; seeds (1)2&ndash;4 per chamber
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AAR17'">17.</a><a name="AAR17."> </a> Corolla white with blue tint or streaks; anthers just at sinus <a href="/cgi-bin/get_IJM.pl?tid=99214">.....&nbsp;E. ertterae</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AAR17.">17'</a><a name="AAR17'"> </a> Corolla white; anthers not reaching sinus <a href="/cgi-bin/get_IJM.pl?tid=24593">.....&nbsp;E. hooveri</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AAR16.">16'</a><a name="AAR16'"> </a> Corolla >= 7 mm, white, pink, lavender, or light blue; seeds 1(2) per chamber
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AAR18'">18.</a><a name="AAR18."> </a> Stamens 1.5&ndash;2 mm, filaments &plusmn; 2 &times; anther; corolla lobes narrowly elliptic, &plusmn; 3 &times; longer than wide <a href="/cgi-bin/get_IJM.pl?tid=24588">.....&nbsp;E. brandegeeae</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AAR18.">18'</a><a name="AAR18'"> </a> Stamens 0.5&ndash;1.5 mm, filaments &plusmn; = anther; corolla lobes widely elliptic, &plusmn; 2 &times; longer than wide <a href="/cgi-bin/get_IJM.pl?tid=24598">.....&nbsp;E. tracyi</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AAR14.">14'</a><a name="AAR14'"> </a> Anthers exserted
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AAR19'">19.</a><a name="AAR19."> </a> Stamens unequal; corolla lobes generally > 1.25 mm wide
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AAR20'">20.</a><a name="AAR20."> </a> Corolla generally 6&ndash;9 mm; stem wiry; plants erect or spreading, generally subglabrous; leaves generally 1&ndash;3-lobed near base; East of Sierra Nevada, Desert <a href="/cgi-bin/get_IJM.pl?tid=24590">.....&nbsp;E. diffusum</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AAR20.">20'</a><a name="AAR20'"> </a> Corolla 9&ndash;14 mm; stem generally not wiry; plants erect, woolly-hairy to occasionally subglabrous; leaves entire or 1&ndash;7-lobed near base; High Sierra Nevada, Great Basin Floristic Province, n Desert Mountains <a href="/cgi-bin/get_IJM.pl?tid=24600">.....&nbsp;E. wilcoxii</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AAR19.">19'</a><a name="AAR19'"> </a> Stamens equal; corolla lobes generally &lt;= 1.25 mm wide
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AAR21'">21.</a><a name="AAR21."> </a> Plant minutely glandular-hairy <a href="/cgi-bin/get_IJM.pl?tid=24597">.....&nbsp;E. sparsiflorum</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AAR21.">21'</a><a name="AAR21'"> </a> Plant &plusmn; glabrous to woolly-hairy or woolly, generally &plusmn; not glandular
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AAR22'">22.</a><a name="AAR22."> </a> Corolla lobes pale yellow to white <a href="/cgi-bin/get_IJM.pl?tid=86188">.....&nbsp;E. harwoodii</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AAR22.">22'</a><a name="AAR22'"> </a> Corolla lobes pale blue to pink
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AAR23'">23.</a><a name="AAR23."> </a> Corolla generally &lt; 7 mm, corolla lobes without spot <a href="/cgi-bin/get_IJM.pl?tid=99215">.....&nbsp;E. rosamondense</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AAR23.">23'</a><a name="AAR23'"> </a> Corolla >= 7 mm, corolla lobe base generally with maroon spot, occasionally faint <a href="/cgi-bin/get_IJM.pl?tid=100456">.....&nbsp;E. signatum</a></blockquote><P>
+<a href="&#109;&#97;&#105;&#108;to:rosatti&#064;berkeley.edu?subject=eFlora comment"><font size=3 color="red">Contact/Feedback</font></a>
+<P class=bodyText>
+Citation for the whole project: Jepson Flora Project (eds.) [year] <em>Jepson eFlora</em>,  http://ucjeps.berkeley.edu/IJM.html [accessed on month, day, year]
+<br>
+Citation for an individual treatment:  [Author of taxon treatment] [year]. [Taxon name] in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, [URL for treatment]. Accessed on [month, day, year].
+<br>
+We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The Jepson Herbarium.
+
+        
+<hr>
+

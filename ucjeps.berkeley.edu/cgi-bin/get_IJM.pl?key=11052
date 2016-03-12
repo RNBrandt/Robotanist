@@ -1,0 +1,344 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora Keys</title> 
+<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27128382-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43909100-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body onload="initialize()">
+<!-- Begin banner -->
+<table class="banner" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="5" align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+    <td rowspan="3" width="120" align="center" valign="middle">&nbsp;</td>
+    <td align="center">&nbsp;</td>
+    <td rowspan="3" width="120" align="center" valign="middle">
+      <a href="http://ucjeps.berkeley.edu/jeps/"><img src="http://ucjeps.berkeley.edu/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS)" width="100" height="100" border="0" /></a></td>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="middle"><span class="bannerTitle">The Jepson Herbarium</span><br /></td>
+  </tr>
+
+  <tr>
+     <td align="center" valign="top"><a href="http://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">&nbsp;</td>
+    <td height="14" align="center"></td>
+    <td align="center"><a href="http://ucjeps.berkeley.edu/jeps/" class="logoText">Jepson&nbsp;Herbarium</a></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" align="center"></td>
+  </tr>
+  
+  <tr>
+    <td height="8" colspan="5" align="center">&nbsp;</td>
+  </tr>
+
+  <tr class="bannerBottomBorder">
+  	<td colspan="6" height="3"></td>
+  </tr>
+
+  <tr>
+    <td colspan="6"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+</table>  
+<!-- End banner -->
+
+  <!-- Beginning of horizontal menu -->
+<table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<nav>
+	<ul>
+    	<li><a href="http://ucjeps.berkeley.edu/">Home</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/main/collections.html">About &#x25BE;</a>
+        	<ul>
+            	<!--<li><a href="#">University Herbarium</a></li>
+                <li><a href="#">Jepson Herbarium</a></li></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/main/collections.html#UC">About the Collections</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/directory.html">People</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/volunteer.html">Volunteering</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/policies.html">Policies</a></li>
+               <!-- <li><a href="http://ucjeps.berkeley.edu/main/questions.html">Herbaria FAQs</a></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/history/">History</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jepsonflora/index.html">Jepson Flora Project</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+                <!--<li><a href="http://ucjeps.berkeley.edu/bryolab/Bryolab.html">Mishler Lab</a></li>-->
+                <!--<li><a href="http://ucjeps.berkeley.edu/Baldwin-Lab.html">Baldwin Lab</a></li>-->
+                <!--<li><a href="#">American-Iranian<br /> Botanical Program</a></li>-->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/specimens/">UC/JEPS Specimen Portal</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/consortium/">Consortium of California Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/UC_bryophytes.html">Bryophyte Specimen Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/interchange/">Jepson Online Interchange</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/icpn/">Index of California Plant Names</a></li>
+		
+                <li><a href="http://ucjeps.berkeley.edu/INA.html">Index Nominum Algarum</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/JPNI.html">Jepson Place Name Index</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/efloras.html">eFloras &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/IJM.html">Jepson eFlora</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li><a href="http://ucjeps.berkeley.edu/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
+              <li><a href="http://ucjeps.berkeley.edu/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/workshops/">Public Workshops</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/opportunities.html">Academic Opportunities</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jeps/globe/"><i>The Jepson Globe</i></a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/archives/index.html">Archives &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/archon/">Archives Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/archives/images.html">Images</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+<!--                <li><a href="#">Inventory Report</a></li>
+                <li><a href="#">Archives Policies</a></li>
+                <li><a href="#">Library Collection</a></li> -->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/directory.html">Contact</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/jeps/friends/index.html">Donate</a></li>
+    </ul>
+</nav>
+</td>
+</tr>
+</table>
+ 
+<!-- End of horizontal menu -->
+
+ <table border="0">
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+     </tr>
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a></span>
+<span class="pageAuthorLine">
+<br>
+<a href="/IJM_fam_key.html">Key to families</a>
+|
+<a href="http://ucjeps.berkeley.edu/IJM_toc.html">Table of families and genera</a>
+</span>
+   	  
+<P class="bodyText">
+<!--Specimen numbers are hyperlinked to records in the Consortium of California Herbaria data view where possible. Taxa are hyperlinked to entries in the Jepson Interchange via the "[Online Interchange]" link. --> 
+
+</td>
+</tr>
+</table>
+
+<h2>Key to Elymus</h2>	<FORM>
+	<SELECT WIDTH=20 onChange="window.location=this.value">
+	<OPTION VALUE="None">List of species in Elymus
+	<OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24095">Elymus californicus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24187">Elymus caput-medusae
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24163">Elymus cinereus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24165">Elymus condensatus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24104">Elymus elymoides
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=58213">Elymus elymoides var. brevifolius
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=91963">Elymus elymoides var. californicus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=72180">Elymus elymoides var. elymoides
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24107">Elymus glaucus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50264">Elymus glaucus subsp. glaucus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50266">Elymus glaucus subsp. virescens
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24153">Elymus hispidus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50271">Elymus lanceolatus subsp. lanceolatus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=70142">Elymus mollis subsp. mollis
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24122">Elymus multisetus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24174">Elymus pacificus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=91896">Elymus ponticus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24158">Elymus repens
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=91897">Elymus salina
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24130">Elymus scribneri
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24133">Elymus sierrae
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24183">Elymus smithii
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24186">Elymus spicatus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24134">Elymus stebbinsii
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=50280">Elymus trachycaulus subsp. trachycaulus
+ <OPTION VALUE="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=24181">Elymus triticoides
+
+	</SELECT>
+	</FORM>
+<a href='http://herbaria4.herb.berkeley.edu/eflora_display.php?tid=11052'><h3>View taxon page for Elymus</h3></a><blockquote><h3></h3>
+<P class="keyText" style="padding-left : 0 ;"><a href="#AMS1'">1.</a><a name="AMS1."> </a> Annual <a href="/cgi-bin/get_IJM.pl?tid=24187">.....&nbsp;E. caput-medusae</a>
+
+<P class="keyText" style="padding-left : 0 ;"><a href="#AMS1.">1'</a><a name="AMS1'"> </a> Perennial herb
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AMS2'">2.</a><a name="AMS2."> </a> Inflorescence branched, at least at base
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AMS3'">3.</a><a name="AMS3."> </a> Stem 11&ndash;35 dm, 6&ndash;10 mm wide at base; blade 15&ndash;35 mm wide; spikelet 10&ndash;40 per node (inc branches) <a href="/cgi-bin/get_IJM.pl?tid=24165">.....&nbsp;E. condensatus</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AMS3.">3'</a><a name="AMS3'"> </a> Stem 6.5&ndash;21 dm, 3.5&ndash;5 mm wide at base; blade 6&ndash;15 mm wide; spikelet 2&ndash;6 per node <a href="/cgi-bin/get_IJM.pl?tid=93810">.....&nbsp;E. &times;gouldii</a> (2)
+
+<P class="keyText" style="padding-left : 7 ;"><a href="#AMS2.">2'</a><a name="AMS2'"> </a> Inflorescence spike-like (raceme-like), spikelets sessile or some slightly stalked (&lt; 1 mm)
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AMS4'">4.</a><a name="AMS4."> </a> Plants of coastal beaches, dunes, and bluffs
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AMS5'">5.</a><a name="AMS5."> </a> Glumes awl-like <a href="/cgi-bin/get_IJM.pl?tid=24174">.....&nbsp;E. pacificus</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AMS5.">5'</a><a name="AMS5'"> </a> Glumes flat, lanceolate
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AMS6'">6.</a><a name="AMS6."> </a> Glumes 1&ndash;2 mm wide at mid-length, keeled <a href="/cgi-bin/get_IJM.pl?tid=93809">.....&nbsp;E. &times;vancouverensis</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AMS6.">6'</a><a name="AMS6'"> </a> Glumes 3&ndash;5 mm wide at mid-length, rounded <a href="/cgi-bin/get_IJM.pl?tid=70142">.....&nbsp;E. mollis subsp. mollis</a>
+
+<P class="keyText" style="padding-left : 14 ;"><a href="#AMS4.">4'</a><a name="AMS4'"> </a> Plants of other habitats
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AMS7'">7.</a><a name="AMS7."> </a> Glumes 0 or &lt;&lt; lowest lemma <a href="/cgi-bin/get_IJM.pl?tid=24095">.....&nbsp;E. californicus</a>
+
+<P class="keyText" style="padding-left : 21 ;"><a href="#AMS7.">7'</a><a name="AMS7'"> </a> Glumes 2 (on at least upper spikelets in <I>Elymus salina</I>), equal or unequal, but > 1/2 lowest lemma
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AMS8'">8.</a><a name="AMS8."> </a> Inflorescence axis breaking apart with age
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AMS9'">9.</a><a name="AMS9."> </a> Spikelets generally 1 per node; glumes narrowly lanceolate <a href="/cgi-bin/get_IJM.pl?tid=24130">.....&nbsp;E. scribneri</a>
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AMS9.">9'</a><a name="AMS9'"> </a> Spikelets 2(3) per node; glumes awn-like
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMS10'">10.</a><a name="AMS10."> </a> Glumes cleft into 3&ndash;9 awn-like divisions; auricles generally present <a href="/cgi-bin/get_IJM.pl?tid=24122">.....&nbsp;E. multisetus</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMS10.">10'</a><a name="AMS10'"> </a> Glumes entire or 2(3)-cleft; auricles often lacking <a href="/cgi-bin/get_IJM.pl?tid=24104">.....&nbsp;E. elymoides</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS11'">11.</a><a name="AMS11."> </a> Glumes 2 on all spikelets; palea veins generally not extended as short bristles <a href="/cgi-bin/get_IJM.pl?tid=58213">.....&nbsp;var. brevifolius</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS11.">11'</a><a name="AMS11'"> </a> Glumes on spikelets at lower nodes appearing to be 3, 1 a glume-like sterile floret; palea veins generally extended as short bristles
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS12'">12.</a><a name="AMS12."> </a> Glumes entire; lemma awns generally > glume awns <a href="/cgi-bin/get_IJM.pl?tid=91963">.....&nbsp;var. californicus</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS12.">12'</a><a name="AMS12'"> </a> Some glumes with 2&ndash;3 awn-like divisions; lemma awns generally &lt; glume awns <a href="/cgi-bin/get_IJM.pl?tid=72180">.....&nbsp;var. elymoides</a>
+
+<P class="keyText" style="padding-left : 28 ;"><a href="#AMS8.">8'</a><a name="AMS8'"> </a> Inflorescence axis remaining intact with age
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AMS13'">13.</a><a name="AMS13."> </a> Lemma awn generally 10&ndash;40 mm
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMS14'">14.</a><a name="AMS14."> </a> Lemma awn curving outward with age
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS15'">15.</a><a name="AMS15."> </a> Stem erect at base, 30&ndash;100 cm; sagebrush steppe, woodland, &lt; 1650 m <a href="/cgi-bin/get_IJM.pl?tid=24186">.....&nbsp;E. spicatus</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS15.">15'</a><a name="AMS15'"> </a> Stem decumbent at base, generally 20&ndash;50 cm; alpine, subalpine conifer forest, > 1800 m <a href="/cgi-bin/get_IJM.pl?tid=24133">.....&nbsp;E. sierrae</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMS14.">14'</a><a name="AMS14'"> </a> Lemma awn straight or wavy, but not curving outward (sometimes slightly curved in <I>Elymus glaucus</I>)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS16'">16.</a><a name="AMS16."> </a> Spikelets generally 2 per node <a href="/cgi-bin/get_IJM.pl?tid=50264">.....&nbsp;E. glaucus subsp. glaucus</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS16.">16'</a><a name="AMS16'"> </a> Spikelets generally 1 per node
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS17'">17.</a><a name="AMS17."> </a> Anthers 4&ndash;7 mm; inflorescence internodes generally 9&ndash;27 mm <a href="/cgi-bin/get_IJM.pl?tid=24134">.....&nbsp;E. stebbinsii</a> (2)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS17.">17'</a><a name="AMS17'"> </a> Anthers 1.2&ndash;2.5 mm; inflorescence internodes generally 7&ndash;9 mm <a href="/cgi-bin/get_IJM.pl?tid=50280">.....&nbsp;E. trachycaulus subsp. trachycaulus</a> (2)
+
+<P class="keyText" style="padding-left : 35 ;"><a href="#AMS13.">13'</a><a name="AMS13'"> </a> Lemma awn 0&ndash;10(15) mm
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMS18'">18.</a><a name="AMS18."> </a> Glumes generally awl-like, or if lanceolate, then often inconspicuously 0&ndash;3(5)-veined, hard or tough textured, and awn-tipped or acute
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS19'">19.</a><a name="AMS19."> </a> Spikelets 2&ndash;7 per node
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS20'">20.</a><a name="AMS20."> </a> Stem node region generally densely pubescent; plants generally cespitose <a href="/cgi-bin/get_IJM.pl?tid=24163">.....&nbsp;E. cinereus</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS20.">20'</a><a name="AMS20'"> </a> Stem node region glabrous; plants rhizomatous
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMS21'">21.</a><a name="AMS21."> </a> Leaf blades generally 3&ndash;6 mm wide; spikelets 2(3) per node, 3&ndash;7 florets <a href="/cgi-bin/get_IJM.pl?tid=24181">.....&nbsp;E. triticoides</a> (2)
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMS21.">21'</a><a name="AMS21'"> </a> Leaf blades generally 6&ndash;15 mm wide; spikelets 2&ndash;6 per node, with 6&ndash;9 florets <a href="/cgi-bin/get_IJM.pl?tid=93810">.....&nbsp;E. &times;gouldii</a> (2)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS19.">19'</a><a name="AMS19'"> </a> Spikelets generally 1 per node (sometimes 2&ndash;3 in <I>Elymus salina</I>)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS22'">22.</a><a name="AMS22."> </a> Florets generally twisted so that back of lowermost lemma centered between glumes <a href="/cgi-bin/get_IJM.pl?tid=24181">.....&nbsp;E. triticoides</a> (2)
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS22.">22'</a><a name="AMS22'"> </a> Florets not twisted, back of lowermost lemma not centered between glumes
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMS23'">23.</a><a name="AMS23."> </a> Plants generally cespitose (sometimes weakly rhizomed); stem 30&ndash;90 cm; cauline leaves present; glumes not curved distally <a href="/cgi-bin/get_IJM.pl?tid=91897">.....&nbsp;E. salina</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMS23.">23'</a><a name="AMS23'"> </a> Plants rhizomatous; stem 20&ndash;100 cm; leaves mostly basal; glumes &plusmn; curved distally <a href="/cgi-bin/get_IJM.pl?tid=24183">.....&nbsp;E. smithii</a>
+
+<P class="keyText" style="padding-left : 42 ;"><a href="#AMS18.">18'</a><a name="AMS18'"> </a> Glumes flat, narrowly to broadly lanceolate, strongly 3&ndash;9-veined, thin (if thickened, tip obtuse)
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS24'">24.</a><a name="AMS24."> </a> Glume tips rounded, obtuse to truncate
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS25'">25.</a><a name="AMS25."> </a> Plants rhizomatous; midvein of glume more prominent than lateral veins <a href="/cgi-bin/get_IJM.pl?tid=24153">.....&nbsp;E. hispidus</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS25.">25'</a><a name="AMS25'"> </a> Plants cespitose; midvein of glume and lateral veins &plusmn; equally prominent <a href="/cgi-bin/get_IJM.pl?tid=91896">.....&nbsp;E. ponticus</a>
+
+<P class="keyText" style="padding-left : 49 ;"><a href="#AMS24.">24'</a><a name="AMS24'"> </a> Glume tips acute to acuminate and/or awned
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS26'">26.</a><a name="AMS26."> </a> Rhizomes present
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMS27'">27.</a><a name="AMS27."> </a> Leaf blade 1&ndash;6 mm wide; lemma hairy <a href="/cgi-bin/get_IJM.pl?tid=50271">.....&nbsp;E. lanceolatus subsp. lanceolatus</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMS27.">27'</a><a name="AMS27'"> </a> Leaf blade 6&ndash;14 mm wide; lemma glabrous <a href="/cgi-bin/get_IJM.pl?tid=24158">.....&nbsp;E. repens</a>
+
+<P class="keyText" style="padding-left : 56 ;"><a href="#AMS26.">26'</a><a name="AMS26'"> </a> Rhizomes generally 0
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMS28'">28.</a><a name="AMS28."> </a> Spikelets generally 2 per node <a href="/cgi-bin/get_IJM.pl?tid=50266">.....&nbsp;E. glaucus subsp. virescens</a>
+
+<P class="keyText" style="padding-left : 63 ;"><a href="#AMS28.">28'</a><a name="AMS28'"> </a> Spikelets generally 1 per node
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#AMS29'">29.</a><a name="AMS29."> </a> Anthers 4&ndash;7 mm; inflorescence internodes generally 9&ndash;27 mm <a href="/cgi-bin/get_IJM.pl?tid=24134">.....&nbsp;E. stebbinsii</a> (2)
+
+<P class="keyText" style="padding-left : 70 ;"><a href="#AMS29.">29'</a><a name="AMS29'"> </a> Anthers 1.2&ndash;2.5 mm; inflorescence internodes generally 7&ndash;9 mm <a href="/cgi-bin/get_IJM.pl?tid=50280">.....&nbsp;E. trachycaulus subsp. trachycaulus</a> (2)</blockquote><P>
+<a href="&#109;&#97;&#105;&#108;to:rosatti&#064;berkeley.edu?subject=eFlora comment"><font size=3 color="red">Contact/Feedback</font></a>
+<P class=bodyText>
+Citation for the whole project: Jepson Flora Project (eds.) [year] <em>Jepson eFlora</em>,  http://ucjeps.berkeley.edu/IJM.html [accessed on month, day, year]
+<br>
+Citation for an individual treatment:  [Author of taxon treatment] [year]. [Taxon name] in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, [URL for treatment]. Accessed on [month, day, year].
+<br>
+We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The Jepson Herbarium.
+
+        
+<hr>
+
