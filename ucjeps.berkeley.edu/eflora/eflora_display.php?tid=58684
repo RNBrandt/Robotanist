@@ -1,0 +1,380 @@
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora: Eriogonum ovalifolium var. purpureum</title> 
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<link href="common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
+
+<!--jquery script files-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<!-- google maps files and scripts -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript"> 
+function initialize() {
+  var myOptions = {
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+
+  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+	var TaxID = 58684;
+
+  var kmlLayer = new google.maps.KmlLayer("http://ucjeps.berkeley.edu/jepcodes-v7.kmz", { suppressInfoWindows: true });
+  kmlLayer.setMap(map);
+  var pmlLayer = new google.maps.KmlLayer("http://herbaria4.herb.berkeley.edu/interchange/coords/"+TaxID+".kml", { });
+  pmlLayer.setMap(map);
+
+}
+
+function JumpToIt(list) {
+    var newPage = list.options[list.selectedIndex].value
+    if (newPage != "None") {
+        location=newPage
+    }
+}
+</script>
+
+<style type="text/css" media="screen">
+    #map_canvas {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      float: left;
+      width: 467px;
+      height: 445px;
+      padding: 10px;
+    }
+</style>
+
+<!-- Google analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27128382-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- jquery functions -->
+<script>
+//jquery ui functions that make the hidden higher taxonomy descriptions appear
+$(document).ready(function(){
+    $("#familylink").click(function(){
+        $("#familydesc").slideToggle(500);
+    });
+    $("#genuslink").click(function(){
+        $("#genusdesc").slideToggle(500);
+    });
+    $("#specieslink").click(function(){
+        $("#speciesdesc").slideToggle(500);
+    });
+});
+
+$(document).ready(function(){
+//jquery functions that grab the column widths from the hidden table
+//so they can be applied as a standard to the higher taxonomy table, which is made up of three separate tables
+	var width1 = $("#check1").width() + 1; // width() function turns out to be one pixel too small, so add 1
+	var width2 = $("#check2").width() + 1;
+	var width3 = $("#check3").width() + 1;
+	$(".column1").attr("width", width1);
+	$(".column2").attr("width", width2);
+	$(".column3").attr("width", width3);
+});
+</script>
+</head>
+
+<body onload="initialize()">
+<!-- Begin banner -->
+<table class="banner" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="5" align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+    <td rowspan="3" width="120" align="center" valign="middle">&nbsp;</td>
+    <td align="center">&nbsp;</td>
+    <td rowspan="3" width="120" align="center" valign="middle">
+      <a href="http://ucjeps.berkeley.edu/jeps/"><img src="http://ucjeps.berkeley.edu/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS)" width="100" height="100" border="0" /></a></td>
+    <td rowspan="5" width="12" align="center" valign="middle"></td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="middle"><span class="bannerTitle">The Jepson Herbarium</span><br /></td>
+  </tr>
+
+  <tr>
+     <td align="center" valign="top"><a href="http://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">&nbsp;</td>
+    <td height="14" align="center"></td>
+    <td align="center"><a href="http://ucjeps.berkeley.edu/jeps/" class="logoText">Jepson&nbsp;Herbarium</a></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" align="center"></td>
+  </tr>
+  
+  <tr>
+    <td height="8" colspan="5" align="center">&nbsp;</td>
+  </tr>
+
+  <tr class="bannerBottomBorder">
+  	<td colspan="6" height="3"></td>
+  </tr>
+
+  <tr>
+    <td colspan="6"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+</table>
+<!-- End banner -->
+
+<!-- Beginning of horizontal menu -->
+<table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<nav>
+	<ul>
+    	<li><a href="http://ucjeps.berkeley.edu/">Home</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/main/collections.html">About &#x25BE;</a>
+        	<ul>
+            	<!--<li><a href="#">University Herbarium</a></li>
+                <li><a href="#">Jepson Herbarium</a></li></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/main/collections.html#UC">About the Collections</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/directory.html">People</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/volunteer.html">Volunteering</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/policies.html">Policies</a></li>
+               <!-- <li><a href="http://ucjeps.berkeley.edu/main/questions.html">Herbaria FAQs</a></li>-->
+                <li><a href="http://ucjeps.berkeley.edu/history/">History</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jepsonflora/index.html">Jepson Flora Project</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+                <!--<li><a href="http://ucjeps.berkeley.edu/bryolab/Bryolab.html">Mishler Lab</a></li>-->
+                <!--<li><a href="http://ucjeps.berkeley.edu/Baldwin-Lab.html">Baldwin Lab</a></li>-->
+                <!--<li><a href="#">American-Iranian<br /> Botanical Program</a></li>-->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/specimens/">UC/JEPS Specimen Portal</a></li>
+            	<li><a href="http://ucjeps.berkeley.edu/images/">UC/JEPS Image Collection</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/consortium/">Consortium of California Herbaria</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/bryolab/UC_bryophytes.html">Bryophyte Specimen Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/interchange/">Jepson Online Interchange</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/icpn/">Index of California Plant Names</a></li>
+		
+                <li><a href="http://ucjeps.berkeley.edu/INA.html">Index Nominum Algarum</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/db/JPNI.html">Jepson Place Name Index</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/efloras.html">eFloras &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/IJM.html">Jepson eFlora</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li><a href="http://ucjeps.berkeley.edu/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
+              <li><a href="http://ucjeps.berkeley.edu/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/workshops/">Public Workshops</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/opportunities.html">Academic Opportunities</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/jeps/globe/"><i>The Jepson Globe</i></a></li>
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/archives/index.html">Archives &#x25BE;</a>
+        	<ul>
+            	<li><a href="http://ucjeps.berkeley.edu/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/archon/">Archives Database</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/main/archives/images.html">Images</a></li>
+                <li><a href="http://ucjeps.berkeley.edu/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+<!--                <li><a href="#">Inventory Report</a></li>
+                <li><a href="#">Archives Policies</a></li>
+                <li><a href="#">Library Collection</a></li> -->
+            </ul>
+        </li>
+        <li><a href="http://ucjeps.berkeley.edu/main/directory.html">Contact</a></li>
+        <li><a href="http://ucjeps.berkeley.edu/jeps/friends/index.html">Donate</a></li>
+    </ul>
+</nav>
+</td>
+</tr>
+</table>
+ 
+<!-- End of horizontal menu -->
+
+<table border="0">
+	<tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+     </tr>
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td><span class="pageName"><a href="http://ucjeps.berkeley.edu/IJM.html">Jepson eFlora:</a> Taxon page</span>
+		<br>
+			<span class="pageAuthorLine">
+				<a href="http://ucjeps.berkeley.edu/IJM_fam_key.html">Key to families</a>
+				|
+				<a href="http://ucjeps.berkeley.edu/IJM_toc.html">Table of families and genera</a>
+			</span>	  
+		</td>
+
+	</tr>
+</table>
+
+<table align="center" width="100%"><tr><td>
+<a href="eflora_display.php?tid=58681"><IMG SRC="http://ucjeps.berkeley.edu/icons/left.gif" BORDER=2 ALT="Previous taxon"></a></td>
+<td width=90%">
+<!--eFlora index-->
+<span class="pageAuthorLine">Index to accepted names and synonyms:</span><br>
+| 	<a href="eflora_index.php?index=A">A</a> | 
+	<a href="eflora_index.php?index=B">B</a> | 
+	<a href="eflora_index.php?index=C">C</a> | 
+	<a href="eflora_index.php?index=D">D</a> | 
+	<a href="eflora_index.php?index=E">E</a> | 
+	<a href="eflora_index.php?index=F">F</a> | 
+	<a href="eflora_index.php?index=G">G</a> | 
+	<a href="eflora_index.php?index=H">H</a> | 
+	<a href="eflora_index.php?index=I">I</a> | 
+	<a href="eflora_index.php?index=J">J</a> | 
+	<a href="eflora_index.php?index=K">K</a> | 
+	<a href="eflora_index.php?index=L">L</a> | 
+	<a href="eflora_index.php?index=M">M</a> | 
+	<a href="eflora_index.php?index=N">N</a> | 
+	<a href="eflora_index.php?index=O">O</a> | 
+	<a href="eflora_index.php?index=P">P</a> | 
+	<a href="eflora_index.php?index=Q">Q</a> | 
+	<a href="eflora_index.php?index=R">R</a> | 
+	<a href="eflora_index.php?index=S">S</a> | 
+	<a href="eflora_index.php?index=T">T</a> | 
+	<a href="eflora_index.php?index=U">U</a> | 
+	<a href="eflora_index.php?index=V">V</a> | 
+	<a href="eflora_index.php?index=W">W</a> | 
+	<a href="eflora_index.php?index=X">X</a> | 
+	<a href="eflora_index.php?index=Y">Y</a> | 
+	<a href="eflora_index.php?index=Z">Z</a> |
+<!--end eFlora index-->
+<hr width="10%">
+</td>
+<td align="right">
+<a href="eflora_display.php?tid=58688"><IMG SRC="http://ucjeps.berkeley.edu/icons/right.gif" BORDER=2 ALT="Next taxon"></a></td></tr>
+</table>
+
+<center><span align ='center' class='pageLargeHeading'>Eriogonum ovalifolium var. purpureum</span></center>
+<center><span align ='center' class='pageMajorHeading'>PURPLE CUSHION WILD BUCKWHEAT</span></center>
+<br>
+
+
+<!-- this hidden table provides the column width values (check1 through check3) which are used to assign consistent widths to the actual higher taxonomy tables-->
+<div class="hidden">
+	<table class='taxonomy_table'>
+	<tr><td id='check1'><b>Family: Polygonaceae</b></td><td id='check2'><a href="#">View Description</a></b></td><td id='check3'><a href='#'>Dichotomous Key</a></td></tr>
+	<tr><td><b>Genus: Eriogonum</b></td><td><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
+	<tr><td><b>Species: Eriogonum ovalifolium</b></td><td><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
+	</table>
+</div>
+
+
+	
+<table width=100%><tr><td width=100%><div class='pageMajorHeading'><b>Higher Taxonomy</b><br></div><table class='taxonomy_table'><tr><td class='column1'><b>Family: Polygonaceae</b></td><td class='column2'><a id='familylink'>View Description</a></b></td><td class='column3'><a href='http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=77487'>Dichotomous Key</a></td></tr></table><div id="familydesc" class="initiallyHidden"><blockquote class='bodyText'><br><b>Common Name:</b> BUCKWHEAT FAMILY<br><b>Habit:</b> Annual to shrub [tree]. <b>Stem:</b> nodes swollen or not. <b>Leaf:</b> simple, basal or cauline, generally alternate; ocreae present or 0, generally scarious, persistent or not. <b>Inflorescence:</b> flower clusters in axillary to terminal cyme-, panicle-, raceme-, spike-, umbel- or head-like arrangements, entire inflorescence or main inflorescence branches generally subtended by bracts ("inflorescence bracts"); peduncles present or 0; flower clusters in Eriogoneae-Eriogonoideae subtended by involucre of >= 1 free or +- fused, sometimes awn-tipped bracts ("involucre bracts") or, in Polygonoideae and rarely in Eriogonoideae, not (if bracts completely fused, involucre "tubular"); pedicels in Eriogoneae each often subtended by 2 free, transparent, linear bractlets or in Polygonoideae all subtended by 2+ fused, membranous, wide bractlets. <b>Flower:</b> generally bisexual, small, 1--200 per node; perianth parts 2--6, generally in 2 whorls, free or basally fused, generally petal-like, often +- concave adaxially, often darker at midvein, often turning +- red or +- brown in age; stamens [1]3 or 6--9 in 2 whorls; ovary superior, 1-chambered, ovule 1, styles 1--3. <b>Fruit:</b> achenes, included in or exserted from perianth, generally 3-angled, ovoid or elliptic, generally glabrous. <br><b>Genera In Family:</b> 48 genera, +- 1200 species: worldwide, especially northern temperate; some cultivated for food (<i>Coccoloba</i>, sea-grape; <i>Fagopyrum</i>, <i>Rheum</i>, <i>Rumex</i>) or ornamental (<i>Antigonon</i>, lovechain; <i>Coccoloba</i>; <i>Muehlenbeckia</i>; <i>Persicaria</i>; <i>Polygonum</i>), a few timbered (<i>Coccoloba</i>; <i>Triplaris</i>). Several (<i>Emex</i>; <i>Fallopia</i>; <i>Persicaria</i>; <i>Polygonum</i>; <i>Rumex</i>) are weeds. <b>Note:</b> Treatment of genera in Eriogonoideae based on monographic work of James L. Reveal. Involucre number throughout is number (1--many) per ultimate grouping, at tips of ultimate branches; flower number is per flower cluster or involucre, unless otherwise stated. <i>Fagopyrum esculentum</i> Moench not naturalized, considered an historical waif (or garden weed +- presently), therefore not treated. <br><b>eFlora Treatment Author:</b> Mihai Costea, except as noted<br></blockquote></div><table class='taxonomy_table'><tr><td class='column1'><b>Genus: Eriogonum</b></td><td class='column2'><a id='genuslink'>View Description</a></b></td><td class='column3'><a href='http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=11209'>Dichotomous Key</a></td></tr></table><div id="genusdesc" class="initiallyHidden"><blockquote class='bodyText'><br><b>Common Name:</b> WILD BUCKWHEAT<br><b>Habit:</b> Annual to shrub, matted or not. <b>Stem:</b> prostrate to erect, occasionally 0, glabrous or hairy, occasionally glandular. <b>Leaf:</b> basal, sheathing (on stem above basal, beneath other, +- non-sheathing cauline), or cauline, alternate, opposite, or whorled; blades linear to +- round, generally longer than wide, margins flat, wavy, or rolled under; ocreae 0. <b>Inflorescence:</b> variable, glabrous or hairy, occasionally glandular; peduncles 0 or erect to reflexed (pointed down); involucres 1 or in clusters, tubular, glabrous or hairy, teeth generally 4--10, awns 0. <b>Flower:</b> (2)6--100(200), with a stalk-like base ("flower stipe" or "stipe") or not; perianth generally white to red or yellow, glabrous or hairy, occasionally glandular, lobes 6, generally entire; stamens 9. <b>Fruit:</b> generally brown or black, generally obconic, glabrous or hairy; embryo curved or straight. <br><b>Species In Genus:</b> +- 250 species: temperate North America. <b>Etymology:</b> (Greek: woolly knees, for hairy nodes of 1st sp. named) <b>Note:</b> One of largest genera in California; stem in descriptions refers to the main stem(s), not branches of inflorescence. A perennial herb allied to <i>Eriogonum austrinum</i> (S. Stokes) Reveal and <i>Eriogonum moranii</i> Reveal of east-central Baja California, with spreading (rather than reflexed or erect) involucres on peduncles < 2 mm, occurring in DMtns (Bristol, Granite mountains), has been known for nearly 25 years yet remains undescribed. <i>Eriogonum puberulum</i> moved to <i>Johanneshowellia</i>. <br><b>eFlora Treatment Author:</b> James L. Reveal & Thomas J. Rosatti<br></div><table class='taxonomy_table'><tr><td class='column1'><b>Species: Eriogonum ovalifolium</b></td><td class='column2'><a id='specieslink'>View Description</a></b></td><td class='column3'>&nbsp;</td></tr></table><div id="speciesdesc" class="initiallyHidden"><blockquote class='bodyText'><br><b>Habit:</b> Perennial mat, scapose (in California), 0.5--4 dm diam. <b>Stem:</b> 0.03--2 dm, sparsely to densely tomentose or +- glabrous. <b>Leaf:</b> basal; blades 0.2--6 cm, (0.1)0.2--1.5 cm wide, narrow to +- round, generally tomentose. <b>Inflorescence:</b> head-like (in California); peduncles 0; involucres 1--15, (2)3.5--5(8) mm, 2--4 mm wide, tomentose to hairy. <b>Flower:</b> (2.5)3--6(7) mm, glabrous; perianth yellow or white to cream, rose, red or purple, outer lobes 2--4 mm, 2--4 mm wide, generally oval to round, inner 3--7 mm, 0.8--1.5 mm wide, oblanceolate to elliptic. <b>Fruit:</b> 2--3 mm, glabrous. <br><b>Note:</b> Additional varieties elsewhere. <br></div><br></table></tr></td><table width="100%"><tr><td width="100%" valign="top"><div class='pageMajorHeading'><b><i>Eriogonum ovalifolium</i> var. <i>purpureum</i> (Nutt.) Durand</b><br></div><div class='bodyText'><b>NATIVE</b><br><b>Habit:</b> Plant 2.5--4 dm diam. <b>Stem:</b> erect, (4)5--20 cm, tomentose. <b>Leaf:</b> blades 0.5--2 cm, tomentose to hairy, margins not +- brown. <b>Inflorescence:</b> 1.5--3.5 cm wide; involucres 3--15, 4--5 mm. <b>Flower:</b> 4--5 mm; perianth white to rose or purple. <b>Chromosomes:</b> n=20.<br><b>Ecology:</b> Common. Sand or gravel; <b>Elevation:</b> 700--3100 m. <b>Bioregional Distribution:</b> KR, CaRH, SNH (e slope), GB; <b>Distribution Outside California:</b> to southwestern Canada, western Colorado, northwestern New Mexico. <b>Flowering Time:</b> Apr--Aug <br><b>Synonyms:</b> Eriogonum davisianum S. Stokes; Eriogonum dichroanthum Gand.; Eriogonum oblongifolium Benth. var. minus Benth.; Eriogonum orthocaulon Small; Eriogonum ovalifolium var. celsum A. Nelson; Eriogonum ovalifolium var. orthocaulon (Small) C.L. Hitchc., illeg.; Eriogonum ovalifolium var. cyclophyllum Gand.; Eriogonum ovalifolium subsp. purpureum (Nutt.) A. Nelson ex S. Stokes; Eriogonum ovalifolium var. utahense Gand.; Eriogonum purpureum (Nutt.) Benth.; Eriogonum roseiflorum Gand.; Eriogonum tenellum Nutt., illeg., non Torr.; Eucycla purpurea Nutt.<br><b>eFlora Treatment Author:</b> James L. Reveal & Thomas J. Rosatti<br><a href="http://ucjeps.berkeley.edu/cgi-bin/get_cpn.pl?58684"><b>Jepson Online Interchange</b></a><br><P><FORM><SELECT WIDTH=20 onChange="JumpToIt(this)"><OPTION VALUE="None">List of species <OPTION VALUE="eflora_display.php?tid=24685">Eriogonum alpinum <OPTION VALUE="eflora_display.php?tid=24687">Eriogonum ampullaceum <OPTION VALUE="eflora_display.php?tid=24690">Eriogonum angulosum <OPTION VALUE="eflora_display.php?tid=24693">Eriogonum apiculatum <OPTION VALUE="eflora_display.php?tid=24694">Eriogonum apricum <OPTION VALUE="eflora_display.php?tid=58466">Eriogonum apricum var. apricum <OPTION VALUE="eflora_display.php?tid=58467">Eriogonum apricum var. prostratum <OPTION VALUE="eflora_display.php?tid=24695">Eriogonum arborescens <OPTION VALUE="eflora_display.php?tid=24697">Eriogonum argillosum <OPTION VALUE="eflora_display.php?tid=24701">Eriogonum baileyi <OPTION VALUE="eflora_display.php?tid=58469">Eriogonum baileyi var. baileyi <OPTION VALUE="eflora_display.php?tid=58470">Eriogonum baileyi var. praebens <OPTION VALUE="eflora_display.php?tid=24707">Eriogonum bifurcatum <OPTION VALUE="eflora_display.php?tid=24709">Eriogonum brachyanthum <OPTION VALUE="eflora_display.php?tid=24710">Eriogonum brachypodum <OPTION VALUE="eflora_display.php?tid=24713">Eriogonum breedlovei <OPTION VALUE="eflora_display.php?tid=58476">Eriogonum breedlovei var. breedlovei <OPTION VALUE="eflora_display.php?tid=58477">Eriogonum breedlovei var. shevockii <OPTION VALUE="eflora_display.php?tid=24720">Eriogonum butterworthianum <OPTION VALUE="eflora_display.php?tid=24721">Eriogonum caespitosum <OPTION VALUE="eflora_display.php?tid=88977">Eriogonum callistum <OPTION VALUE="eflora_display.php?tid=91086">Eriogonum cedrorum <OPTION VALUE="eflora_display.php?tid=24724">Eriogonum cernuum <OPTION VALUE="eflora_display.php?tid=24726">Eriogonum cinereum <OPTION VALUE="eflora_display.php?tid=24727">Eriogonum cithariforme <OPTION VALUE="eflora_display.php?tid=58498">Eriogonum cithariforme var. agninum <OPTION VALUE="eflora_display.php?tid=58499">Eriogonum cithariforme var. cithariforme <OPTION VALUE="eflora_display.php?tid=81392">Eriogonum clavatum <OPTION VALUE="eflora_display.php?tid=24729">Eriogonum collinum <OPTION VALUE="eflora_display.php?tid=58500">Eriogonum compositum var. compositum <OPTION VALUE="eflora_display.php?tid=24733">Eriogonum congdonii <OPTION VALUE="eflora_display.php?tid=24734">Eriogonum contiguum <OPTION VALUE="eflora_display.php?tid=24742">Eriogonum covilleanum <OPTION VALUE="eflora_display.php?tid=24743">Eriogonum crocatum <OPTION VALUE="eflora_display.php?tid=24748">Eriogonum dasyanthemum <OPTION VALUE="eflora_display.php?tid=24749">Eriogonum davidsonii <OPTION VALUE="eflora_display.php?tid=24750">Eriogonum deflexum <OPTION VALUE="eflora_display.php?tid=58519">Eriogonum deflexum var. baratum <OPTION VALUE="eflora_display.php?tid=58520">Eriogonum deflexum var. deflexum <OPTION VALUE="eflora_display.php?tid=58522">Eriogonum deflexum var. nevadense <OPTION VALUE="eflora_display.php?tid=24754">Eriogonum deserticola <OPTION VALUE="eflora_display.php?tid=24756">Eriogonum diclinum <OPTION VALUE="eflora_display.php?tid=81386">Eriogonum douglasii var. meridionale <OPTION VALUE="eflora_display.php?tid=24761">Eriogonum eastwoodianum <OPTION VALUE="eflora_display.php?tid=24763">Eriogonum elatum <OPTION VALUE="eflora_display.php?tid=58536">Eriogonum elatum var. elatum <OPTION VALUE="eflora_display.php?tid=58537">Eriogonum elatum var. villosum <OPTION VALUE="eflora_display.php?tid=24764">Eriogonum elegans <OPTION VALUE="eflora_display.php?tid=76426">Eriogonum elongatum var. elongatum <OPTION VALUE="eflora_display.php?tid=24767">Eriogonum eremicola <OPTION VALUE="eflora_display.php?tid=58541">Eriogonum esmeraldense var. esmeraldense <OPTION VALUE="eflora_display.php?tid=81391">Eriogonum evanidum <OPTION VALUE="eflora_display.php?tid=24814">Eriogonum exaltatum <OPTION VALUE="eflora_display.php?tid=24773">Eriogonum fasciculatum <OPTION VALUE="eflora_display.php?tid=58543">Eriogonum fasciculatum var. fasciculatum <OPTION VALUE="eflora_display.php?tid=58544">Eriogonum fasciculatum var. flavoviride <OPTION VALUE="eflora_display.php?tid=58545">Eriogonum fasciculatum var. foliolosum <OPTION VALUE="eflora_display.php?tid=58546">Eriogonum fasciculatum var. polifolium <OPTION VALUE="eflora_display.php?tid=24779">Eriogonum giganteum <OPTION VALUE="eflora_display.php?tid=58557">Eriogonum giganteum var. compactum <OPTION VALUE="eflora_display.php?tid=76427">Eriogonum giganteum var. formosum <OPTION VALUE="eflora_display.php?tid=58559">Eriogonum giganteum var. giganteum <OPTION VALUE="eflora_display.php?tid=24780">Eriogonum gilmanii <OPTION VALUE="eflora_display.php?tid=24781">Eriogonum glandulosum <OPTION VALUE="eflora_display.php?tid=24784">Eriogonum gossypinum <OPTION VALUE="eflora_display.php?tid=24785">Eriogonum gracile <OPTION VALUE="eflora_display.php?tid=58563">Eriogonum gracile var. gracile <OPTION VALUE="eflora_display.php?tid=58564">Eriogonum gracile var. incultum <OPTION VALUE="eflora_display.php?tid=24786">Eriogonum gracilipes <OPTION VALUE="eflora_display.php?tid=24787">Eriogonum gracillimum <OPTION VALUE="eflora_display.php?tid=24788">Eriogonum grande <OPTION VALUE="eflora_display.php?tid=58565">Eriogonum grande var. grande <OPTION VALUE="eflora_display.php?tid=58566">Eriogonum grande var. rubescens <OPTION VALUE="eflora_display.php?tid=58568">Eriogonum grande var. timorum <OPTION VALUE="eflora_display.php?tid=24794">Eriogonum heermannii <OPTION VALUE="eflora_display.php?tid=58569">Eriogonum heermannii var. argense <OPTION VALUE="eflora_display.php?tid=58571">Eriogonum heermannii var. floccosum <OPTION VALUE="eflora_display.php?tid=58572">Eriogonum heermannii var. heermannii <OPTION VALUE="eflora_display.php?tid=58573">Eriogonum heermannii var. humilius <OPTION VALUE="eflora_display.php?tid=58574">Eriogonum heermannii var. occidentale <OPTION VALUE="eflora_display.php?tid=58576">Eriogonum heermannii var. sulcatum <OPTION VALUE="eflora_display.php?tid=58578">Eriogonum heracleoides var. heracleoides <OPTION VALUE="eflora_display.php?tid=24802">Eriogonum hirtellum <OPTION VALUE="eflora_display.php?tid=24803">Eriogonum hirtiflorum <OPTION VALUE="eflora_display.php?tid=24804">Eriogonum hoffmannii <OPTION VALUE="eflora_display.php?tid=58582">Eriogonum hoffmannii var. hoffmannii <OPTION VALUE="eflora_display.php?tid=58583">Eriogonum hoffmannii var. robustius <OPTION VALUE="eflora_display.php?tid=24806">Eriogonum hookeri <OPTION VALUE="eflora_display.php?tid=24809">Eriogonum incanum <OPTION VALUE="eflora_display.php?tid=24810">Eriogonum inerme <OPTION VALUE="eflora_display.php?tid=58585">Eriogonum inerme var. hispidulum <OPTION VALUE="eflora_display.php?tid=58586">Eriogonum inerme var. inerme <OPTION VALUE="eflora_display.php?tid=24811">Eriogonum inflatum <OPTION VALUE="eflora_display.php?tid=24815">Eriogonum intrafractum <OPTION VALUE="eflora_display.php?tid=24822">Eriogonum kelloggii <OPTION VALUE="eflora_display.php?tid=24823">Eriogonum kennedyi <OPTION VALUE="eflora_display.php?tid=58599">Eriogonum kennedyi var. alpigenum <OPTION VALUE="eflora_display.php?tid=58600">Eriogonum kennedyi var. austromontanum <OPTION VALUE="eflora_display.php?tid=58601">Eriogonum kennedyi var. kennedyi <OPTION VALUE="eflora_display.php?tid=58602">Eriogonum kennedyi var. pinicola <OPTION VALUE="eflora_display.php?tid=58603">Eriogonum kennedyi var. purpusii <OPTION VALUE="eflora_display.php?tid=24830">Eriogonum latens <OPTION VALUE="eflora_display.php?tid=24832">Eriogonum latifolium <OPTION VALUE="eflora_display.php?tid=24838">Eriogonum libertini <OPTION VALUE="eflora_display.php?tid=24839">Eriogonum lobbii <OPTION VALUE="eflora_display.php?tid=24857">Eriogonum luteolum <OPTION VALUE="eflora_display.php?tid=58623">Eriogonum luteolum var. caninum <OPTION VALUE="eflora_display.php?tid=58624">Eriogonum luteolum var. luteolum <OPTION VALUE="eflora_display.php?tid=58625">Eriogonum luteolum var. pedunculatum <OPTION VALUE="eflora_display.php?tid=58626">Eriogonum luteolum var. saltuarium <OPTION VALUE="eflora_display.php?tid=24860">Eriogonum maculatum <OPTION VALUE="eflora_display.php?tid=24862">Eriogonum marifolium <OPTION VALUE="eflora_display.php?tid=88978">Eriogonum marifolium var. cupulatum <OPTION VALUE="eflora_display.php?tid=72246">Eriogonum marifolium var. marifolium <OPTION VALUE="eflora_display.php?tid=24897">Eriogonum mensicola <OPTION VALUE="eflora_display.php?tid=24864">Eriogonum microthecum <OPTION VALUE="eflora_display.php?tid=58631">Eriogonum microthecum var. alpinum <OPTION VALUE="eflora_display.php?tid=58632">Eriogonum microthecum var. ambiguum <OPTION VALUE="eflora_display.php?tid=58634">Eriogonum microthecum var. corymbosoides <OPTION VALUE="eflora_display.php?tid=58635">Eriogonum microthecum var. johnstonii <OPTION VALUE="eflora_display.php?tid=82311">Eriogonum microthecum var. lacus-ursi <OPTION VALUE="eflora_display.php?tid=58636">Eriogonum microthecum var. lapidicola <OPTION VALUE="eflora_display.php?tid=58637">Eriogonum microthecum var. laxiflorum <OPTION VALUE="eflora_display.php?tid=58641">Eriogonum microthecum var. panamintense <OPTION VALUE="eflora_display.php?tid=85315">Eriogonum microthecum var. schoolcraftii <OPTION VALUE="eflora_display.php?tid=58642">Eriogonum microthecum var. simpsonii <OPTION VALUE="eflora_display.php?tid=24867">Eriogonum mohavense <OPTION VALUE="eflora_display.php?tid=24868">Eriogonum molestum <OPTION VALUE="eflora_display.php?tid=24873">Eriogonum nervulosum <OPTION VALUE="eflora_display.php?tid=24874">Eriogonum nidularium <OPTION VALUE="eflora_display.php?tid=24876">Eriogonum nortonii <OPTION VALUE="eflora_display.php?tid=24878">Eriogonum nudum <OPTION VALUE="eflora_display.php?tid=58650">Eriogonum nudum var. auriculatum <OPTION VALUE="eflora_display.php?tid=58651">Eriogonum nudum var. decurrens <OPTION VALUE="eflora_display.php?tid=58652">Eriogonum nudum var. deductum <OPTION VALUE="eflora_display.php?tid=58653">Eriogonum nudum var. indictum <OPTION VALUE="eflora_display.php?tid=58654">Eriogonum nudum var. murinum <OPTION VALUE="eflora_display.php?tid=58655">Eriogonum nudum var. nudum <OPTION VALUE="eflora_display.php?tid=58656">Eriogonum nudum var. oblongifolium <OPTION VALUE="eflora_display.php?tid=58657">Eriogonum nudum var. paralinum <OPTION VALUE="eflora_display.php?tid=58658">Eriogonum nudum var. pauciflorum <OPTION VALUE="eflora_display.php?tid=80051">Eriogonum nudum var. psychicola <OPTION VALUE="eflora_display.php?tid=58659">Eriogonum nudum var. pubiflorum <OPTION VALUE="eflora_display.php?tid=58660">Eriogonum nudum var. regirivum <OPTION VALUE="eflora_display.php?tid=58661">Eriogonum nudum var. scapigerum <OPTION VALUE="eflora_display.php?tid=58662">Eriogonum nudum var. westonii <OPTION VALUE="eflora_display.php?tid=24882">Eriogonum nummulare <OPTION VALUE="eflora_display.php?tid=24885">Eriogonum nutans <OPTION VALUE="eflora_display.php?tid=58666">Eriogonum nutans var. glabratum <OPTION VALUE="eflora_display.php?tid=58667">Eriogonum nutans var. nutans <OPTION VALUE="eflora_display.php?tid=58673">Eriogonum ochrocephalum var. ochrocephalum <OPTION VALUE="eflora_display.php?tid=24887">Eriogonum ordii <OPTION VALUE="eflora_display.php?tid=24890">Eriogonum ovalifolium <OPTION VALUE="eflora_display.php?tid=58675">Eriogonum ovalifolium var. caelestinum <OPTION VALUE="eflora_display.php?tid=58676">Eriogonum ovalifolium var. depressum <OPTION VALUE="eflora_display.php?tid=58677">Eriogonum ovalifolium var. eximium <OPTION VALUE="eflora_display.php?tid=80119">Eriogonum ovalifolium var. monarchense <OPTION VALUE="eflora_display.php?tid=58678">Eriogonum ovalifolium var. nivale <OPTION VALUE="eflora_display.php?tid=58681">Eriogonum ovalifolium var. ovalifolium <OPTION VALUE="eflora_display.php?tid=58684">Eriogonum ovalifolium var. purpureum <OPTION VALUE="eflora_display.php?tid=58688">Eriogonum ovalifolium var. vineum <OPTION VALUE="eflora_display.php?tid=24895">Eriogonum palmerianum <OPTION VALUE="eflora_display.php?tid=24896">Eriogonum panamintense <OPTION VALUE="eflora_display.php?tid=24899">Eriogonum parishii <OPTION VALUE="eflora_display.php?tid=24900">Eriogonum parvifolium <OPTION VALUE="eflora_display.php?tid=24906">Eriogonum pendulum <OPTION VALUE="eflora_display.php?tid=24908">Eriogonum plumatella <OPTION VALUE="eflora_display.php?tid=24909">Eriogonum polycladon <OPTION VALUE="eflora_display.php?tid=24911">Eriogonum polypodum <OPTION VALUE="eflora_display.php?tid=24912">Eriogonum prattenianum <OPTION VALUE="eflora_display.php?tid=58703">Eriogonum prattenianum var. avium <OPTION VALUE="eflora_display.php?tid=58704">Eriogonum prattenianum var. prattenianum <OPTION VALUE="eflora_display.php?tid=24913">Eriogonum prociduum <OPTION VALUE="eflora_display.php?tid=24915">Eriogonum pusillum <OPTION VALUE="eflora_display.php?tid=24916">Eriogonum pyrolifolium <OPTION VALUE="eflora_display.php?tid=58706">Eriogonum pyrolifolium var. coryphaeum <OPTION VALUE="eflora_display.php?tid=58708">Eriogonum pyrolifolium var. pyrolifolium <OPTION VALUE="eflora_display.php?tid=24918">Eriogonum reniforme <OPTION VALUE="eflora_display.php?tid=24920">Eriogonum rixfordii <OPTION VALUE="eflora_display.php?tid=81750">Eriogonum rosense var. rosense <OPTION VALUE="eflora_display.php?tid=24922">Eriogonum roseum <OPTION VALUE="eflora_display.php?tid=24926">Eriogonum rupinum <OPTION VALUE="eflora_display.php?tid=24928">Eriogonum saxatile <OPTION VALUE="eflora_display.php?tid=58715">Eriogonum shockleyi var. shockleyi <OPTION VALUE="eflora_display.php?tid=24932">Eriogonum siskiyouense <OPTION VALUE="eflora_display.php?tid=80952">Eriogonum spectabile <OPTION VALUE="eflora_display.php?tid=24936">Eriogonum spergulinum <OPTION VALUE="eflora_display.php?tid=58719">Eriogonum spergulinum var. pratense <OPTION VALUE="eflora_display.php?tid=58720">Eriogonum spergulinum var. reddingianum <OPTION VALUE="eflora_display.php?tid=58721">Eriogonum spergulinum var. spergulinum <OPTION VALUE="eflora_display.php?tid=24937">Eriogonum sphaerocephalum <OPTION VALUE="eflora_display.php?tid=58724">Eriogonum sphaerocephalum var. halimioides <OPTION VALUE="eflora_display.php?tid=58725">Eriogonum sphaerocephalum var. sphaerocephalum <OPTION VALUE="eflora_display.php?tid=24939">Eriogonum strictum <OPTION VALUE="eflora_display.php?tid=76429">Eriogonum strictum var. anserinum <OPTION VALUE="eflora_display.php?tid=76430">Eriogonum strictum var. greenei <OPTION VALUE="eflora_display.php?tid=76431">Eriogonum strictum var. proliferum <OPTION VALUE="eflora_display.php?tid=24946">Eriogonum temblorense <OPTION VALUE="eflora_display.php?tid=24948">Eriogonum ternatum <OPTION VALUE="eflora_display.php?tid=24949">Eriogonum thomasii <OPTION VALUE="eflora_display.php?tid=81197">Eriogonum thornei <OPTION VALUE="eflora_display.php?tid=24951">Eriogonum thurberi <OPTION VALUE="eflora_display.php?tid=24955">Eriogonum trichopes <OPTION VALUE="eflora_display.php?tid=24956">Eriogonum tripodum <OPTION VALUE="eflora_display.php?tid=24957">Eriogonum truncatum <OPTION VALUE="eflora_display.php?tid=24959">Eriogonum twisselmannii <OPTION VALUE="eflora_display.php?tid=24960">Eriogonum umbellatum <OPTION VALUE="eflora_display.php?tid=79201">Eriogonum umbellatum var. ahartii <OPTION VALUE="eflora_display.php?tid=58752">Eriogonum umbellatum var. argus <OPTION VALUE="eflora_display.php?tid=58755">Eriogonum umbellatum var. bahiiforme <OPTION VALUE="eflora_display.php?tid=82312">Eriogonum umbellatum var. canifolium <OPTION VALUE="eflora_display.php?tid=58756">Eriogonum umbellatum var. chlorothamnus <OPTION VALUE="eflora_display.php?tid=58759">Eriogonum umbellatum var. covillei <OPTION VALUE="eflora_display.php?tid=58762">Eriogonum umbellatum var. dichrocephalum <OPTION VALUE="eflora_display.php?tid=77048">Eriogonum umbellatum var. dumosum <OPTION VALUE="eflora_display.php?tid=58764">Eriogonum umbellatum var. furcosum <OPTION VALUE="eflora_display.php?tid=58765">Eriogonum umbellatum var. glaberrimum <OPTION VALUE="eflora_display.php?tid=58766">Eriogonum umbellatum var. goodmanii <OPTION VALUE="eflora_display.php?tid=58768">Eriogonum umbellatum var. humistratum <OPTION VALUE="eflora_display.php?tid=58770">Eriogonum umbellatum var. juniporinum <OPTION VALUE="eflora_display.php?tid=79200">Eriogonum umbellatum var. lautum <OPTION VALUE="eflora_display.php?tid=58773">Eriogonum umbellatum var. minus <OPTION VALUE="eflora_display.php?tid=58777">Eriogonum umbellatum var. modocense <OPTION VALUE="eflora_display.php?tid=58774">Eriogonum umbellatum var. munzii <OPTION VALUE="eflora_display.php?tid=79202">Eriogonum umbellatum var. nelsoniorum <OPTION VALUE="eflora_display.php?tid=58775">Eriogonum umbellatum var. nevadense <OPTION VALUE="eflora_display.php?tid=58776">Eriogonum umbellatum var. polyanthum <OPTION VALUE="eflora_display.php?tid=79203">Eriogonum umbellatum var. smallianum <OPTION VALUE="eflora_display.php?tid=58779">Eriogonum umbellatum var. speciosum <OPTION VALUE="eflora_display.php?tid=58783">Eriogonum umbellatum var. subaridum <OPTION VALUE="eflora_display.php?tid=58784">Eriogonum umbellatum var. torreyanum <OPTION VALUE="eflora_display.php?tid=58787">Eriogonum umbellatum var. versicolor <OPTION VALUE="eflora_display.php?tid=24966">Eriogonum ursinum <OPTION VALUE="eflora_display.php?tid=85316">Eriogonum ursinum var. erubescens <OPTION VALUE="eflora_display.php?tid=72253">Eriogonum ursinum var. ursinum <OPTION VALUE="eflora_display.php?tid=24968">Eriogonum vestitum <OPTION VALUE="eflora_display.php?tid=24970">Eriogonum vimineum <OPTION VALUE="eflora_display.php?tid=24971">Eriogonum viridescens <OPTION VALUE="eflora_display.php?tid=24979">Eriogonum wrightii <OPTION VALUE="eflora_display.php?tid=58796">Eriogonum wrightii var. membranaceum <OPTION VALUE="eflora_display.php?tid=58797">Eriogonum wrightii var. nodosum <OPTION VALUE="eflora_display.php?tid=58798">Eriogonum wrightii var. olanchense <OPTION VALUE="eflora_display.php?tid=58800">Eriogonum wrightii var. subscaposum <OPTION VALUE="eflora_display.php?tid=58801">Eriogonum wrightii var. trachygonum <OPTION VALUE="eflora_display.php?tid=58802">Eriogonum wrightii var. wrightii</SELECT></FORM><a href="eflora_display.php?tid=58681">Previous taxon: Eriogonum ovalifolium var. ovalifolium</a><br><a href="eflora_display.php?tid=58688">Next taxon: Eriogonum ovalifolium var. vineum</a><br>
+<br>
+<form action="search_eflora.php" method="POST">
+<b>Name Search </b>		<input type="text" id="query_text" name="query"></input>
+		<input type="submit" value="Submit Name" />
+</form>
+
+</td></tr>
+</table>
+
+
+
+
+<table width="100%">
+<tr>
+<td width="100%" valign="top">
+
+
+
+<P>
+<a href="&#109;&#97;&#105;&#108;to:interchange&#064;lists.berkeley.edu?subject=new eFlora comment"><font size=3 color="red">Contact/Feedback</font></a>
+
+
+
+<P class=bodyText>
+Citation for this treatment: James L. Reveal & Thomas J. Rosatti 2016. <i>Eriogonum ovalifolium var. purpureum</i>, in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=58684, accessed on March 12, 2016.
+</P>
+<P class=bodyText>Citation for the whole project: Jepson Flora Project (eds.) 2016. <em>Jepson eFlora</em>,  http://ucjeps.berkeley.edu/IJM.html, accessed on March 12, 2016.</P>
+
+
+
+
+<hr width=80%> 
+
+<table><tr><td width='200px'><i>Eriogonum ovalifolium var. purpureum</i><br><a href="http://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&enlarge=0000+0000+1209+2465"><img border="0" src=http://calphotos.berkeley.edu/imgs/128x192/0000_0000/1209/2465.jpeg alt="click for enlargement"></img></a><br>&copy; 2009 Gary A. Monroe<br></td><td width='200px'><i>Eriogonum ovalifolium var. purpureum</i><br><a href="http://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&enlarge=0000+0000+0410+0366"><img border="0" src=http://calphotos.berkeley.edu/imgs/128x192/0000_0000/0410/0366.jpeg alt="click for enlargement"></img></a><br>&copy; 2010 Gary A. Monroe<br></td><td width='200px'><i>Eriogonum ovalifolium var. purpureum</i><br><a href="http://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&enlarge=0000+0000+0209+2166"><img border="0" src=http://calphotos.berkeley.edu/imgs/128x192/0000_0000/0209/2166.jpeg alt="click for enlargement"></img></a><br>&copy; 2009 Keir Morse<br></td><td width='200px'><i>Eriogonum ovalifolium var. purpureum</i><br><a href="http://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&enlarge=0000+0000+0209+2117"><img border="0" src=http://calphotos.berkeley.edu/imgs/128x192/0000_0000/0209/2117.jpeg alt="click for enlargement"></img></a><br>&copy; 2009 Keir Morse<br></td><td width='200px'><i>Eriogonum ovalifolium var. purpureum</i><br><a href="http://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&enlarge=0000+0000+0714+1002"><img border="0" src=http://calphotos.berkeley.edu/imgs/128x192/0000_0000/0714/1002.jpeg alt="click for enlargement"></img></a><br>&copy; 2014 James Morefield<br></td><td width='200px'><i>Eriogonum ovalifolium var. purpureum</i><br><a href="http://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&enlarge=0000+0000+1109+2366"><img border="0" src=http://calphotos.berkeley.edu/imgs/128x192/0000_0000/1109/2366.jpeg alt="click for enlargement"></img></a><br>&copy; 2009 Gary A. Monroe<br></td></tr></table><p><a href="http://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&where-genre=Plant&where-taxon=Eriogonum ovalifolium var. purpureum&title_tag=Eriogonum ovalifolium var. purpureum">More photos of <i>Eriogonum ovalifolium var. purpureum</i> in CalPhotos</a></p><hr width=80%>
+
+
+<!--distribution panes-->
+<table border=0>
+<tr><td valign='bottom'>Geographic subdivisions for Eriogonum ovalifolium var. purpureum:
+<br>KR, CaRH, SNH (e slope), GB;</td>
+<td>Markers link to CCH specimen records. If the markers are obscured, reload the page [or change window size and reload]. Yellow markers indicate records that may provide evidence for eFlora range revision or may have georeferencing or identification issues.
+<br><b><a href="http://ucjeps.berkeley.edu/consortium/about_yellow.html">READ ABOUT YELLOW FLAGS</a></b>
+</td></tr>
+<tr>
+<td valign="top">
+<img src="http://ucjeps.berkeley.edu/cgi-bin/new_jmap.pl?0403c40106" border="0" alt="map of distribution 1"></td>
+<td>
+	<div id="map_canvas"></div>
+</td>
+</tr>
+
+<tr><td valign="top">
+(Note: any qualifiers in the taxon distribution description, such as 'northern', 'southern', 'adjacent' etc., are not reflected in the map above, and in some cases indication of a taxon in a subdivision is based on a single collection or author-verified occurence).
+<br><br>
+<a href="http://ucjeps.berkeley.edu/cgi-bin/map_cch_elev.pl?taxon_name=Eriogonum ovalifolium var. purpureum&t=&g=">View elevation by latitude chart</a></td>
+<td valign="top">Data provided by the participants of the Consortium of California Herbaria.
+<br>
+<a href="http://ucjeps.berkeley.edu/cgi-bin/get_consort.pl?taxon_name=Eriogonum ovalifolium var. purpureum">View all CCH records</a><br><br>
+CCH collections by month<br> 
+<img border=1 src="http://ucjeps.berkeley.edu/cgi-bin/hb2.pl?name=Eriogonum ovalifolium purpureum&FT=3,4,5,6,7"><br>Duplicates counted once; synonyms included.
+<br>Species do not include records of infraspecific taxa.
+<br>Blue line denotes eFlora flowering time.
+</td></tr>
+</table>
+
+<!--Begin footer-->
+<table width="100%" id="footer">
+  <tr>
+    <td height="18" class="banner"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+  <tr>
+    <td height="20"><span class="copyrightText"><a href="http://ucjeps.berkeley.edu/main/copyright.html"> Copyright</a> &copy; 2016  Regents of the University of California
+<br>We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The Jepson Herbarium.</span></td>
+  </tr>
+</table>
+<!--End footer-->
