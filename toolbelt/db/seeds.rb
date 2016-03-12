@@ -70,10 +70,11 @@ def add_tool_tip_span(text)
   text_array.each do |word|
     if Glossary.where(word: word)[0]
       entry = Glossary.find_by(word: word)
-      word = "<span data-tooltip aria-haspopup='true' class='has-tip [tip-top tip-bottom tip-left tip-right] [radius round]' title=#{entry.definition}>#{word}</span>"
+      text.gsub!(/#{Regexp.quote(word)}/, "<span data-tooltip aria-haspopup='true' class='has-tip [tip-top tip-bottom tip-left tip-right] [radius round]' title=#{entry.definition}>#{word}</span>")
     end
   end
-  return text_array.join(" ")
+  p text
+  return text
 end
 
 #3. Sporangia, sporangium cases, seeds, cones, or cone-like structures 0 or not readily apparent [plants in strictly vegetative condition]
