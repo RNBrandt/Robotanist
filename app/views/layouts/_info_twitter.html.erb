@@ -1,0 +1,16 @@
+<% @tweets.each do |twit| %>
+  <div class="row">
+    <%= twit.text %>
+    <br>
+    <%= twit.retweet_count %>
+    <br>
+    <%= twit.user.created_at %>
+    <%= twit.user.location %>
+    <%= twit.media.each do |media| %>
+      <img src="<%= media.media_url %>">
+    <% end %>
+    <br>
+    <img src="<%= twit.user.profile_image_url %>">
+    <hr>
+  </div>
+<% end %>

@@ -18,6 +18,65 @@
 //= require_tree .
 
 $(function(){ 
+$(document).foundation();
+$('#div-search').show();
+$('#div-tabs').hide();
+
+  // Capture tooltip click
+  $('.has-tip').on('click', function(e){
+      e.preventDefault();
+      $('#div-search').hide();
+      $('#div-tabs').show();
+      var $wikipediaKeyword = $(this).attr('data-keyword');
+
+      // API Request to Wikipedia
+      $.ajax({
+        type: "GET",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + $wikipediaKeyword + "&callback=?&redirects",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
+
+        success: function (data, textStatus, jqXHR) {
+          var markup = data.parse.text["*"];
+          var blurb = $('<div></div>').html(markup);
+
+          // remove links as they will not work
+          blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+
+          // remove any references
+          blurb.find('sup').remove();
+
+          // remove cite error
+          blurb.find('.mw-ext-cite-error').remove();
+
+          // Handlebars Template Starts Here
+          var wikipediaInfo = document.getElementById("wikipedia-template").innerHTML;
+          var template = Handlebars.compile(wikipediaInfo)
+          var wikipediaData = template({
+            info: $(blurb)
+          });
+          document.getElementById("wikipediaDiv").innerHTML += wikipediaData;
+          // Handlebars Template Ends Here
+
+        },
+
+        error: function (errorMessage) {
+        }
+      });
+      // API Request to Wikipedia
+
+
+  });
+  // Capture tooltip click
+
+
+
+
+
+
+
+
 
 
 //data.photos.photo[2].id
@@ -56,30 +115,7 @@ $(function(){
 
 
 
-   $.ajax({
-        type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=hadrian's_wall&callback=?&redirects",
-        contentType: "application/json; charset=utf-8",
-        async: false,
-        dataType: "json",
-        success: function (data, textStatus, jqXHR) {
-            var markup = data.parse.text["*"];
-            var blurb = $('<div></div>').html(markup);
  
-            // remove links as they will not work
-            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
- 
-            // remove any references
-            blurb.find('sup').remove();
- 
-            // remove cite error
-            blurb.find('.mw-ext-cite-error').remove();
-            $('#tabDetail').html($(blurb).find('p'));
- 
-        },
-        error: function (errorMessage) {
-        }
-    });
 
 
 
@@ -94,8 +130,7 @@ $(function(){
 
 
 
-
-  $(document).foundation();
+  
 
   $('#dataCarousel').on('click', '#arrowLeft', function(e){
     e.preventDefault();
