@@ -18,7 +18,9 @@ gem 'foundation-rails'
 gem 'foundation-icons-sass-rails', '~> 3.0.0'
 gem 'hirb'
 gem 'jquery-turbolinks'
+gem 'watir-webdriver'
 gem 'dotenv'
+
 
 
 group :development, :test do
