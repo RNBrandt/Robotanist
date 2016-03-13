@@ -20,12 +20,10 @@ gem 'hirb'
 gem 'jquery-turbolinks'
 
 gem 'dotenv-rails'
-
+gem 'rubocop', require: false
 gem 'rspec-rails'
 gem 'capybara'
 gem 'selenium-webdriver'
-
-gem 'watir-webdriver'
 
 
 group :development, :test do
