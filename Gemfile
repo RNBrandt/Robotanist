@@ -9,16 +9,18 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'mongoid'
+gem 'mongoid', '~> 5.1', '>= 5.1.1'
 gem 'mongoid-tree'
 gem 'nokogiri'
+gem 'rails_12factor'
 
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails', '~> 3.0.0'
 gem 'hirb'
 gem 'jquery-turbolinks'
-gem 'mechanize'
 gem 'watir-webdriver'
+gem 'dotenv'
+
 
 
 group :development, :test do

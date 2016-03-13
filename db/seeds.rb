@@ -4,8 +4,6 @@ require_relative "../app/helpers/link_helpers"
 Option.destroy_all
 Glossary.destroy_all
 
-
-
 BASE_URL = '/Users/apprentice/Desktop/pete/Jepson-2/ucjeps.berkeley.edu'
 
 @current_href = "/IJM_fam_key.html"
