@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mongoid'
 gem 'mongoid-tree'
 gem 'nokogiri'
-
+gem 'twitter'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails', '~> 3.0.0'
 gem 'hirb'
