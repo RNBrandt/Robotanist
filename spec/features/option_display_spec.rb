@@ -12,10 +12,13 @@ describe Option, :js => true do
   let!(:dog) { option_prime.children.create(text: "Maybe it's a dogplant?") }
   let!(:dog_prime) { option_prime.children.create(text: "It's almost certainly a dogplant.") }
 
-  before(:each) { visit root_path }
+  before(:each) {
+    Capybara.current_window.resize_to(1400,900)
+    visit root_path
+  }
 
-  context 'a user' do
-    it 'can see the page title' do
+  context 'index page' do
+    it 'displays page title' do
       p "SPEC " + ("$" * 80)
       p option
       p option.children
@@ -32,10 +35,18 @@ describe Option, :js => true do
         click_on('Continue Here ▶')
         expect(page.find("#dataCarousel")).to have_content("dogplant")
       end
-      # it "renders links to navigate further" do
-      #   # render :template => "layouts/carousel.html"
-      #   rendered.should include("◀ Continue Here")
-      # end
+    end
+
+    describe 'info tab' do
+      it "loads info from Wikipedia API" do
+        expect(page.find('#tabDetail')).to have_content("Latin")
+      end
+    end
+
+    describe 'photo gallery' do
+      it "displays images from Flickr API" do
+        expect(page.find('#flickr_photos')).to have_selector('img')
+      end
     end
   end
 
