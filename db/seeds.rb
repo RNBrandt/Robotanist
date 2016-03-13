@@ -12,10 +12,10 @@ BASE_URL = "http://ucjeps.berkeley.edu"
 
 
 
-def scrape_and_find_links(current_href, parent_href=nil, parent_key=nil)
+def scrape_and_find_links(current_href, parent_page=nil, parent_key=nil)
   url = BASE_URL + current_href
   dichotomies = scrape(url)
-  make_first_nodes(dichotomies, parent_href, parent_key, current_href)
+  make_first_nodes(dichotomies, parent_page, parent_key, current_href)
   fill_tree(dichotomies, current_href)
   return find_links(url)
 end
@@ -40,7 +40,7 @@ def recursive_scrape(href, parent_page=nil,parent_key=nil)
   #if page has no links with .....
   #return
 
-  scrape_and_find_links(href)
+  scrape_and_find_links(href, parent_page, parent_key)
   p links = create_link_objs(url)
 
   links.each do |link|

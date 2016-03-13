@@ -7,7 +7,7 @@ def scrape(url)
   return dichotomies
 end
 
-def make_first_nodes(dichotomies, parent_href = nil, parent_key = nil, current_href)
+def make_first_nodes(dichotomies, parent_page = nil, parent_key = nil, current_href)
   dichotomies.each do |dichotomy|
     if parent_key == nil
       if dichotomy[0] == "1" && dichotomy[1] == '.'
@@ -16,11 +16,12 @@ def make_first_nodes(dichotomies, parent_href = nil, parent_key = nil, current_h
         Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: current_href, head: current_href, key: "1'")
       end
    else
-     parent_option = Option.find_by(page: parent_href, key: parent_key)
+     p "****************************************"
+     parent_option = Option.find_by(page: parent_page, key: parent_key)
      if dichotomy[0] == "1" && dichotomy[1] == '.'
-        parent_key.children << Option.create(text:dichotomy,page: current_href, head: current_href, key: "1.")
+        parent_option.children << Option.create(text:dichotomy,page: current_href, head: current_href, key: "1.")
       elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: current_href, head: current_href, key: "1'")
+        parent_option.children << Option.create(text:add_tool_tip_span(dichotomy),page: current_href, head: current_href, key: "1'")
     end
    end
   end
