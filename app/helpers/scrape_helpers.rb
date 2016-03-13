@@ -6,8 +6,6 @@ def scrape(url)
   return dichotomies
 end
 
-
-
 def make_first_nodes(dichotomies)
   dichotomies.each do |dichotomy|
     if dichotomy[0] == "1" && dichotomy[1] == '.'
@@ -19,7 +17,7 @@ def make_first_nodes(dichotomies)
 end
 
 def fill_tree(dichotomies)
-  i = 2
+
   while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}'/)} != nil
     prime_match = (/^#{Regexp.quote(i.to_s)}'/)
     non_prime_match = (/^#{Regexp.quote(i.to_s)}\./)
@@ -82,10 +80,41 @@ def find_links(url)
   links = doc.css('blockquote').css('a')
   hrefs = links.map {|link| (link.attribute("href").to_s)}
   useful_hrefs = hrefs.select {|href| href.match(/.*.html/)}
-  link_text = links.map {|link| (link.inner_text)}
-  useful_link_text = link_text.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/)}
-  useful_link_text.map! {|word| word.delete "....."}
-  # Hash[@words.zip @definitions]
-  link_hash = Hash[useful_link_text.zip useful_hrefs]
+  return useful_hrefs
+end
+
+
+def find_link_parent_keys(url)
+  p_tags = scrape(url)
+  tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/)}
+  parent_keys = tags_with_links.map {|txt| txt.gsub(/\s.+/, '')}
+  return parent_keys
+end
+
+def make_link_hash(url)
+  links = find_links(url)
+  keys = find_link_parent_keys(url)
+  link_hash = Hash[keys.zip links]
+  p link_hash
   return link_hash
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
