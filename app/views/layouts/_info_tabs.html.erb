@@ -41,12 +41,13 @@
  -->
 
 <script id="flickr-template" type="text/x-handlebars-template">
- <ul class="clearing-thumbs" data-clearing>
-  
   {{#each photos}}
-    <li><a class="th" href="../img/demos/demo2.png"><img src="https://farm{{this.farm}}.staticflickr.com/{{this.server}}/{{this.id}}_{{this.secret}}_m.jpg"></a></li>
+    <div class="medium-3 large-3 columns text-center" style="margin-bottom: 20px;">
+      <a class="th" href="../img/demos/demo2.png"><img src="https://farm{{this.farm}}.staticflickr.com/{{this.server}}/{{this.id}}_{{this.secret}}_m.jpg" style="height: 160px;"></a>
+      <br>
+      <h5><small>{{this.title}}</small></h5>
+    </div>
   {{/each}}
-  </ul>
 </script>
 
 
