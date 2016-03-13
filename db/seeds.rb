@@ -30,6 +30,8 @@ def create_link_objs (url)
 end
 
 def recursive_scrape(href, parent_page=nil,parent_key=nil)
+  p BASE_URL
+  p href
   url = BASE_URL + href
   p_tags = scrape(url)
   if tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/)} == []
@@ -39,7 +41,7 @@ def recursive_scrape(href, parent_page=nil,parent_key=nil)
   #return
 
   scrape_and_find_links(href)
-  links = create_link_objs(url)
+  p links = create_link_objs(url)
 
   links.each do |link|
     recursive_scrape(link.href, link.parent_href, link.parent_key)

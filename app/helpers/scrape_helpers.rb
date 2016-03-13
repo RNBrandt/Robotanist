@@ -1,5 +1,6 @@
 def scrape(url)
-  doc = File.open(url) { |f| Nokogiri::XML(f)}
+  uri = URI(url)
+  doc = Nokogiri.parse(Net::HTTP.get(uri))
   blockquote = doc.css('blockquote').inner_text
   dichotomies =  blockquote.split("\n")
   dichotomies.delete("")
@@ -85,10 +86,11 @@ def add_tool_tip_span(text)
 end
 
 def find_links(url)
-  doc = File.open(url) { |f| Nokogiri::XML(f)}
+  uri = URI(url)
+  doc = Nokogiri.parse(Net::HTTP.get(uri))
   links = doc.css('blockquote').css('a')
   hrefs = links.map {|link| (link.attribute("href").to_s)}
-  useful_hrefs = hrefs.select {|href| href.match(/.*.html/)}
+  useful_hrefs = hrefs.select {|href| href.match(/^\/.*/)}
   return useful_hrefs
 end
 
@@ -101,6 +103,7 @@ def find_link_parent_keys(url)
 end
 
 def make_link_hash(url)
+  url#Finds the right link.
   links = find_links(url)
   keys = find_link_parent_keys(url)
   link_hash = Hash[keys.zip links]
