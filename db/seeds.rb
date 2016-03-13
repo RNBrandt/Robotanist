@@ -29,7 +29,7 @@ def create_link_objs (url)
   return link_objs
 end
 
-def recursive_scrape(href, parent_page=nil,parent_key=nil)
+def recursive_scrape( href, parent_page=nil,parent_key=nil )
   p BASE_URL
   p href
   url = BASE_URL + href
