@@ -37,8 +37,6 @@ def recursive_scrape(href, parent_page=nil,parent_key=nil)
   if tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/)} == []
     return "done"
   end
-  #if page has no links with .....
-  #return
 
   scrape_and_find_links(href, parent_page, parent_key)
   p links = create_link_objs(url)
@@ -46,10 +44,6 @@ def recursive_scrape(href, parent_page=nil,parent_key=nil)
   links.each do |link|
     recursive_scrape(link.href, link.parent_href, link.parent_key)
   end
-
 end
 
-
-
-recursive_scrape(@current_href)
-
+recursive_scrape("/IJM_fam_key.html")
