@@ -3,10 +3,11 @@ require 'spec_helper'
 
 describe OptionsController, :type => :controller do
 
-  before(:all) { Option.destroy_all }
+  before(:each) { Option.destroy_all }
 
-  let(:option) { Option.create(text: "Is it a plant?", head: "root", page: "1", key: "1") }
-  let(:child) { option.children.create(text: "Is it a dog?") }
+  let!(:option) { Option.create(text: "Is it a plant?", head: "root") }
+  let!(:child) { option.children.create(text: "Bulblets") }
+  let!(:child_prime) { option.children.create(text: "That's right, Bulblets") }
 
   describe 'get #index' do
     it 'renders question display' do
@@ -28,7 +29,7 @@ describe OptionsController, :type => :controller do
 
     it "assigns the children of option as @children" do
       get :show, {:id => option.to_param}
-      expect(assigns(:children)).to eq([child])
+      expect(assigns(:children)).to eq([child, child_prime])
     end
   end
 end

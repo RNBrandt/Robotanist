@@ -6,6 +6,9 @@ class OptionsController < ApplicationController
   def show
     @option = Option.find(params[:id])
     @children = @option.children
+    p "CONTROLLER " + ("@" * 120)
+    p @option
+    p @children
     if request.xhr?
       render partial: "layouts/carousel", locals: {options: @children}, layout: false
     end
