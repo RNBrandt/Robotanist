@@ -15,7 +15,7 @@ BASE_URL = "http://ucjeps.berkeley.edu"
 def scrape_and_find_links(current_href, parent_page=nil, parent_key=nil)
   url = BASE_URL + current_href
   dichotomies = scrape(url)
-  make_first_nodes(dichotomies, parent_page, parent_key, current_href)
+  make_first_nodes(dichotomies, parent_page, parent_key, current_href )
   fill_tree(dichotomies, current_href)
   return find_links(url)
 end

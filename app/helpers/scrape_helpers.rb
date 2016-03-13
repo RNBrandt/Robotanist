@@ -2,7 +2,7 @@ def scrape(url)
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   blockquote = doc.css('blockquote').inner_text
-  dichotomies = blockquote.split('\n')
+  dichotomies = blockquote.split("\n")
   dichotomies.delete('')
   dichotomies
 end
@@ -11,9 +11,9 @@ def create_option(dichotomy, current_href, head, key)
   Option.create(text: add_tool_tip_span(dichotomy), page: current_href, head: head, key: key)
 end
 
-def make_first_nodes(dichotomies, current_href, parent_page = nil, parent_key = nil)
+def make_first_nodes(dichotomies, parent_page = nil, parent_key = nil, current_href)
   dichotomies.each do |dichotomy|
-    if parent_key.nil?
+    if parent_key == nil
       first_options_pair_assignment(dichotomy, current_href)
     else
       top_of_new_pair_assignment(dichotomy, current_href, parent_page, parent_key)
@@ -22,9 +22,9 @@ def make_first_nodes(dichotomies, current_href, parent_page = nil, parent_key = 
 end
 
 def first_options_pair_assignment(dichotomy, current_href)
-  if dichotomy[0] == '1' && dichotomy[1] == '.'
-    p @first = create_option(dichotomy, current_href, 'root', '1.')
-  elsif dichotomy[0] == '1' && dichotomy[1] == "'"
+  if dichotomy[0] == "1" && dichotomy[1] == '.'
+    @first = create_option(dichotomy, current_href, 'root', "1.")
+  elsif dichotomy[0] == "1" && dichotomy[1] == "'"
     p Option.first.siblings << create_option(dichotomy, current_href, 'root', "1'")
   end
 end
@@ -40,15 +40,14 @@ end
 
 def fill_tree(dichotomies, current_href)
   i = 2
-  while dichotomies.find !{ |dic| dic.match(/^#{Regexp.quote(i.to_s)}'/) }.nil
-    #per rubocop, i changed the above line from {xxx} = !nil
-    prime_match = /^#{Regexp.quote(i.to_s)}'/
-    non_prime_match = /^#{Regexp.quote(i.to_s)}\./
-    parent_index = dichotomies.find_index { |dic| dic.match(non_prime_match) } - 1
-    text = dichotomies.find { |dic| dic.match(non_prime_match) }
+  while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}'/)} != nil
+    prime_match = (/^#{Regexp.quote(i.to_s)}'/)
+    non_prime_match = (/^#{Regexp.quote(i.to_s)}\./)
+    parent_index = dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
+    @text = dichotomies.find {|dic| dic.match(non_prime_match)}
     parent = Option.find_by(page: current_href, key: dichotomies[parent_index][/^([^\s]+)/])
-    parent.children << Option.create(text: add_tool_tip_span(text), page: current_href, key: "#{i}.")
-    text_prime = dichotomies.find { |dic| dic.match(prime_match) }
+    parent.children << Option.create(text: add_tool_tip_span(@text),page: current_href, key: "#{i}.")
+    text_prime = dichotomies.find {|dic| dic.match(prime_match)}
     parent.children << Option.create(text: text_prime, page: current_href, key: "#{i}'")
     i += 1
   end
