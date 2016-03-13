@@ -1,5 +1,3 @@
-require 'nokogiri'
-
 class Glossary
   include Mongoid::Document
   field :word, type: String
