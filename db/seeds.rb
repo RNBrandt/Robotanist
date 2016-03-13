@@ -48,4 +48,3 @@ end
 
  url = BASE_URL + @current_href
 p create_link_objs(url)
-

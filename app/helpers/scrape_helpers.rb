@@ -18,7 +18,7 @@ def make_first_nodes(dichotomies, parent_key = nil, parent_page = nil)
      if dichotomy[0] == "1" && dichotomy[1] == '.'
         Option.create(text:dichotomy,page: @href, head: @href, key: "1.")
       elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: @href, head: @href, key: "1'")
+        Option.first.children << Option.create(text:add_tool_tip_span(dichotomy),page: @href, head: @href, key: "1'")
     end
    end
 end
