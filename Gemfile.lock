@@ -59,17 +59,15 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
-    dotenv (2.1.0)
-    erubis (2.7.0)
-    execjs (2.6.0)
-    ffi (1.9.10)
     domain_name (0.5.20160309)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.1.0)
     equalizer (0.0.10)
     erubis (2.7.0)
     execjs (2.6.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    ffi (1.9.10)
     foundation-icons-sass-rails (3.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
@@ -171,15 +169,12 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-<<<<<<< HEAD
     selenium-webdriver (2.52.0)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
-=======
     simple_oauth (0.3.1)
->>>>>>> 03-foundation-fix
     spring (1.6.4)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -213,14 +208,11 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-<<<<<<< HEAD
-    watir-webdriver (0.9.1)
-      selenium-webdriver (>= 2.46.2)
-=======
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
->>>>>>> 03-foundation-fix
+    watir-webdriver (0.9.1)
+      selenium-webdriver (>= 2.46.2)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
