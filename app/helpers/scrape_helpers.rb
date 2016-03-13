@@ -6,35 +6,36 @@ def scrape(url)
   return dichotomies
 end
 
-def make_first_nodes(dichotomies, parent_key = nil, parent_page = nil)
+def make_first_nodes(dichotomies, parent_href = nil, parent_key = nil, current_href)
   dichotomies.each do |dichotomy|
     if parent_key == nil
       if dichotomy[0] == "1" && dichotomy[1] == '.'
-        first = Option.create(text:dichotomy,page: @href, head: @href, key: "1.")
+        first = Option.create(text:dichotomy,page: current_href, head: current_href, key: "1.")
       elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: @href, head: @href, key: "1'")
+        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: current_href, head: current_href, key: "1'")
       end
    else
+     parent_option = Option.find_by(page: parent_href, key: parent_key)
      if dichotomy[0] == "1" && dichotomy[1] == '.'
-        Option.create(text:dichotomy,page: @href, head: @href, key: "1.")
+        parent_key.children << Option.create(text:dichotomy,page: current_href, head: current_href, key: "1.")
       elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: @href, head: @href, key: "1'")
+        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: current_href, head: current_href, key: "1'")
     end
    end
-end
+  end
 end
 
-def fill_tree(dichotomies)
-
+def fill_tree(dichotomies, current_href)
+  i = 2
   while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}'/)} != nil
     prime_match = (/^#{Regexp.quote(i.to_s)}'/)
     non_prime_match = (/^#{Regexp.quote(i.to_s)}\./)
     parent_index = dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
     @text = dichotomies.find {|dic| dic.match(non_prime_match)}
-    parent = Option.find_by(page: @href, key: dichotomies[parent_index][/^([^\s]+)/])
-    parent.children << Option.create(text: add_tool_tip_span(@text),page: @href, key: "#{i}.")
+    parent = Option.find_by(page: current_href, key: dichotomies[parent_index][/^([^\s]+)/])
+    parent.children << Option.create(text: add_tool_tip_span(@text),page: current_href, key: "#{i}.")
     text_prime = dichotomies.find {|dic| dic.match(prime_match)}
-    parent.children << Option.create(text: text_prime, page: @href, key: "#{i}'")
+    parent.children << Option.create(text: text_prime, page: current_href, key: "#{i}'")
     i += 1
   end
 end
@@ -103,26 +104,5 @@ def make_link_hash(url)
   links = find_links(url)
   keys = find_link_parent_keys(url)
   link_hash = Hash[keys.zip links]
-  p link_hash
   return link_hash
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
