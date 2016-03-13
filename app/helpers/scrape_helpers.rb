@@ -6,14 +6,22 @@ def scrape(url)
   return dichotomies
 end
 
-def make_first_nodes(dichotomies)
+def make_first_nodes(dichotomies, parent_key = nil, parent_page = nil)
   dichotomies.each do |dichotomy|
-    if dichotomy[0] == "1" && dichotomy[1] == '.'
-      first = Option.create(text:dichotomy,page: @href, head: @href, key: "1.")
-    elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-      Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: @href, head: @href, key: "1'")
+    if parent_key == nil
+      if dichotomy[0] == "1" && dichotomy[1] == '.'
+        first = Option.create(text:dichotomy,page: @href, head: @href, key: "1.")
+      elsif dichotomy[0] == "1" && dichotomy[1] == "'"
+        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: @href, head: @href, key: "1'")
+      end
+   else
+     if dichotomy[0] == "1" && dichotomy[1] == '.'
+        Option.create(text:dichotomy,page: @href, head: @href, key: "1.")
+      elsif dichotomy[0] == "1" && dichotomy[1] == "'"
+        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: @href, head: @href, key: "1'")
     end
- end
+   end
+end
 end
 
 def fill_tree(dichotomies)
