@@ -117,7 +117,11 @@ end
 def make_link_hash(url)
   url#Finds the right link.
   links = find_links(url)
+  p "Links Count @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+  p links.length
   keys = find_link_parent_keys(url)
+  p "Keys Count @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+  p keys.length
   link_hash = Hash[keys.zip links]
   return link_hash
 end
