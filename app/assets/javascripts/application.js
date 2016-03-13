@@ -20,6 +20,81 @@
 $(function(){ 
 
 
+//data.photos.photo[2].id
+//data.photos.photo[2].server
+//data.photos.photo[2].farm
+//data.photos.photo[2].secret
+//data.photos.photo[2].owner
+
+
+   $.ajax({
+        type: "GET",
+        url: "https://api.flickr.com/services/rest/?&method=flickr.photos.search&tags=angiosperm&safe_search=1&per_page=20&api_key=79ea624274bb06e96bf9e06fd2a00c74&format=json&jsoncallback=?",
+        async: false,
+        dataType: "json",
+        success: function (data, textStatus, jqXHR) {
+            console.log(data);
+        var flickrInfo = document.getElementById("flickr-template").innerHTML;
+        var template = Handlebars.compile(flickrInfo)
+        var flickrData = template({
+          photos: data.photos.photo
+        });
+        document.getElementById("flickr_photos").innerHTML += flickrData;
+
+
+
+
+
+
+
+ 
+        },
+        error: function (errorMessage) {
+          console.log(errorMessage);
+        }
+    });
+
+
+
+   $.ajax({
+        type: "GET",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=hadrian's_wall&callback=?&redirects",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
+        success: function (data, textStatus, jqXHR) {
+            var markup = data.parse.text["*"];
+            var blurb = $('<div></div>').html(markup);
+ 
+            // remove links as they will not work
+            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+ 
+            // remove any references
+            blurb.find('sup').remove();
+ 
+            // remove cite error
+            blurb.find('.mw-ext-cite-error').remove();
+            $('#tabDetail').html($(blurb).find('p'));
+ 
+        },
+        error: function (errorMessage) {
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   $(document).foundation();
 
   $('#dataCarousel').on('click', '#arrowLeft', function(e){

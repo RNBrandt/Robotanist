@@ -257,6 +257,9 @@ $buttongroup-margin: 1rem;
 $buttongroup-spacing: 1px;
 $buttongroup-child-selector: '.button';
 $buttongroup-expand-max: 6;
+$button-bar-margin-opposite: rem-calc(10);
+$button-group-border-width: 1px;
+
 
 // 13. Callout
 // -----------
@@ -565,3 +568,29 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
+
+
+$clearing-bg: 'red';
+$clearing-caption-bg: $clearing-bg;
+$clearing-carousel-bg: rgba(51,51,51,0.8);
+$clearing-img-bg: $clearing-bg;
+
+// We use these to style the close button
+$clearing-close-color: 'red';
+$clearing-close-size: 30px;
+
+// We use these to style the arrows
+$clearing-arrow-size: 12px;
+$clearing-arrow-color: $clearing-close-color;
+
+// We use these to style captions
+$clearing-caption-font-color: 'red';
+$clearing-caption-font-size: 0.875em;
+$clearing-caption-padding: 10px 30px 20px;
+
+// We use these to make the image and carousel height and style
+$clearing-active-img-height: 85%;
+$clearing-carousel-height: 120px;
+$clearing-carousel-thumb-width: 120px;
+$clearing-carousel-thumb-active-border: 1px solid rgb(255,255,255);
