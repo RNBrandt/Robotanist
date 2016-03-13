@@ -25,8 +25,8 @@ end
 
 
 
-p assign_obj_type('http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=33989')
+# p assign_obj_type('http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=33989')
 
-p assign_obj_type("http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=34")
+# p assign_obj_type("http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=34")
 
-p assign_obj_type("http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=10193")
+# p assign_obj_type("http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=10193")

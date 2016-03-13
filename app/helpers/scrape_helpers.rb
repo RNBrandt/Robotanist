@@ -103,6 +103,7 @@ def find_links(url)
   links = doc.css('blockquote').css('a')
   hrefs = links.map { |link| (link.attribute('href').to_s) }
   useful_hrefs = hrefs.select { |href| href.match(/^\/.*/) }
+  p "USEFUL REFSSSSSS #{useful_hrefs}"
   useful_hrefs
 end
 
@@ -111,16 +112,34 @@ def find_link_parent_keys(url)
   p_tags = scrape(url)
   tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/) }
   parent_keys = tags_with_links.map { |txt| txt.gsub(/\s.+/, '') }
-  parent_keys
+  p parent_keys
 end
 
 def make_link_hash(url)
   links = find_links(url)
-  p "Links Count @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
   p links.length
   keys = find_link_parent_keys(url)
-  p "Keys Count @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
   p keys.length
-  link_hash = Hash[keys.zip links]
+  link_hash = Hash[keys.zip links] #This is the line to repair
   link_hash
 end
+
+def associate_links(url)
+  uri = URI(url)
+  doc = Nokogiri.parse(Net::HTTP.get(uri))
+  links = doc.css('blockquote').css('p')
+  useful_links = links.select{ |link| link.inner_text.match(/(?<=\.\.\.\.\.).*/) }
+  useful_links.each do |link|
+    p link.css('a').inner_text
+  end
+end
+
+# def find_double_links
+#   tags_with_links.each { |txt| txt.match(/(?<=\.\.\.\.\.).*/) }
+#   #find the line it's in the text after the ..... then find the href of the link with that text
+
+# end
+
+# def find_unlinked_families
+
+# end

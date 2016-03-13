@@ -43,6 +43,6 @@ def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
     recursive_scrape(link.href, link.parent_href, link.parent_key)
   end
 end
-
-recursive_scrape("/IJM_fam_key.html")
+url = "http://ucjeps.berkeley.edu/IJM_keys/IJM_key_Group2.html"
+associate_links(url)
 
