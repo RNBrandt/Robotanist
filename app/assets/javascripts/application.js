@@ -21,14 +21,25 @@ $(function(){
 $(document).foundation();
 $('#div-search').show();
 $('#div-tabs').hide();
+$('#wikipediaDiv').hide();
+$('#flickrDiv').hide();
 
   // Capture tooltip click
-  $('.has-tip').on('click', function(e){
-      e.preventDefault();
+  $('.has-tip, #tab-wikipedia').on('click', function(e){
       $('#div-search').hide();
       $('#div-tabs').show();
-      var $wikipediaKeyword = $(this).attr('data-keyword');
+      $('#wikipediaDiv').show();
+      $('#flickrDiv').hide();
+      $('#tab-flickr').removeClass('alert');
+      $('#tab-wikipedia').addClass('alert');
 
+
+      var $wikipediaKeyword = $(this).attr('data-keyword');
+      $('#tab-wikipedia').attr("data-keyword", $wikipediaKeyword)
+      $('#tab-flickr').attr("data-keyword", $wikipediaKeyword)
+
+
+      $wikipediaKeyword = $wikipediaKeyword.toLocaleLowerCase().replace(/ /g,"_");
       // API Request to Wikipedia
       $.ajax({
         type: "GET",
@@ -38,27 +49,35 @@ $('#div-tabs').hide();
         dataType: "json",
 
         success: function (data, textStatus, jqXHR) {
-          var markup = data.parse.text["*"];
-          var blurb = $('<div></div>').html(markup);
+          try { 
+            var markup = data.parse.text["*"];
+            var blurb = $('<div></div>').html(markup);
+            
+            // remove links as they will not work
+            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
 
-          // remove links as they will not work
-          blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+            // remove any references
+            blurb.find('sup').remove();
 
-          // remove any references
-          blurb.find('sup').remove();
+            // remove cite error
+            blurb.find('.mw-ext-cite-error').remove();
+            blurb = ($(blurb).find('p'));
 
-          // remove cite error
-          blurb.find('.mw-ext-cite-error').remove();
-
-          // Handlebars Template Starts Here
-          var wikipediaInfo = document.getElementById("wikipedia-template").innerHTML;
-          var template = Handlebars.compile(wikipediaInfo)
-          var wikipediaData = template({
-            info: $(blurb)
-          });
-          document.getElementById("wikipediaDiv").innerHTML += wikipediaData;
-          // Handlebars Template Ends Here
-
+            // Handlebars Template Starts Here
+            var wikipediaInfo = document.getElementById("wikipedia-template").innerHTML;
+            var template = Handlebars.compile(wikipediaInfo)
+            var wikipediaData = template({
+              title: $wikipediaKeyword,
+              info: blurb
+            });
+            document.getElementById("wikipediaDiv").innerHTML = wikipediaData;
+            // Handlebars Template Ends Here
+          }
+          
+          catch(err) {
+            console.log("Wikipedia Fetch Error");
+            document.getElementById("wikipediaDiv").innerHTML = '<h4>Sorry, Wikipedia does not have an entry for this keyword...</h4>';
+          }
         },
 
         error: function (errorMessage) {
@@ -76,6 +95,15 @@ $('#div-tabs').hide();
 
 
 
+  // Capture flickr click
+  $('#tab-flickr').on('click', function(e){
+    console.log("Flickr Tab Clicked")
+    $('#wikipediaDiv').hide();
+    $('#flickrDiv').show();
+    $('#tab-flickr').addClass('alert');
+    $('#tab-wikipedia').removeClass('alert');
+
+  });
 
 
 
@@ -99,13 +127,6 @@ $('#div-tabs').hide();
           photos: data.photos.photo
         });
         document.getElementById("flickr_photos").innerHTML += flickrData;
-
-
-
-
-
-
-
  
         },
         error: function (errorMessage) {
