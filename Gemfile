@@ -13,14 +13,19 @@ gem 'mongoid', '~> 5.1', '>= 5.1.1'
 gem 'mongoid-tree'
 gem 'nokogiri'
 gem 'rails_12factor'
-
+gem 'twitter'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails', '~> 3.0.0'
 gem 'hirb'
 gem 'jquery-turbolinks'
-gem 'watir-webdriver'
-gem 'dotenv'
 
+gem 'dotenv-rails'
+
+gem 'rspec-rails'
+gem 'capybara'
+gem 'selenium-webdriver'
+
+gem 'watir-webdriver'
 
 
 group :development, :test do

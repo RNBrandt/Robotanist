@@ -7,23 +7,34 @@ def scrape(url)
   return dichotomies
 end
 
+def create_option(dichotomy, current_href, head, key)
+  Option.create(text: add_tool_tip_span(dichotomy), page: current_href, head: head, key: key)
+end
+
 def make_first_nodes(dichotomies, parent_page = nil, parent_key = nil, current_href)
   dichotomies.each do |dichotomy|
     if parent_key == nil
-      if dichotomy[0] == "1" && dichotomy[1] == '.'
-        first = Option.create(text:dichotomy,page: current_href, head: current_href, key: "1.")
-      elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-        Option.first.siblings << Option.create(text:add_tool_tip_span(dichotomy),page: current_href, head: current_href, key: "1'")
-      end
-   else
-     p "****************************************"
-     parent_option = Option.find_by(page: parent_page, key: parent_key)
-     if dichotomy[0] == "1" && dichotomy[1] == '.'
-        parent_option.children << Option.create(text:dichotomy,page: current_href, head: current_href, key: "1.")
-      elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-        parent_option.children << Option.create(text:add_tool_tip_span(dichotomy),page: current_href, head: current_href, key: "1'")
+      first_options_pair_assignment(dichotomy, current_href)
+    else
+      top_of_new_pair_assignment(dichotomy, current_href, parent_page, parent_key)
     end
-   end
+  end
+end
+
+def first_options_pair_assignment(dichotomy, current_href)
+  if dichotomy[0] == "1" && dichotomy[1] == '.'
+    p @first = create_option(dichotomy, current_href, 'root', "1.")
+  elsif dichotomy[0] == "1" && dichotomy[1] == "'"
+    p Option.first.siblings << create_option(dichotomy, current_href, 'root', "1'")
+  end
+end
+
+def top_of_new_pair_assignment(dichotomy, current_href, parent_page, parent_key)
+  @parent_option = Option.find_by(page: parent_page, key: parent_key)
+    if dichotomy[0] == "1" && dichotomy[1] == '.'
+      @parent_option.children << create_option(dichotomy, current_href, current_href, "1.") #can be refactored
+    elsif dichotomy[0] == "1" && dichotomy[1] == "'"
+      @parent_option.children << create_option(dichotomy, current_href, current_href, "1'")
   end
 end
 
