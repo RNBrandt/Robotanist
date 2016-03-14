@@ -12,12 +12,11 @@ BASE_URL = "http://ucjeps.berkeley.edu"
 
 
 
-def scrape_and_find_links(current_href, parent_page=nil, parent_key=nil)
+def scrape_and_make_options(current_href, parent_page=nil, parent_key=nil)
   url = BASE_URL + current_href
   dichotomies = scrape(url)
   make_first_nodes(dichotomies, parent_page, parent_key, current_href )
   fill_tree(dichotomies, current_href)
-  return find_links(url)
 end
 
 def create_link_objs (url, current_href)
@@ -30,19 +29,21 @@ def create_link_objs (url, current_href)
 end
 
 def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
+  p current_href
   url = BASE_URL + current_href
   p_tags = scrape(url)
   if tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/)} == []
-    return "done"
+    p obj = assign_obj_type(url)
+    return obj
   end
-
-  scrape_and_find_links(current_href, parent_page, parent_key)
-  p links = create_link_objs(url, current_href)
+  scrape_and_make_options(current_href, parent_page, parent_key)
+  links = associate_links(url, current_href)
 
   links.each do |link|
     recursive_scrape(link.href, link.parent_href, link.parent_key)
   end
 end
-url = "http://ucjeps.berkeley.edu/IJM_keys/IJM_key_Group2.html"
-associate_links(url)
 
+# url = BASE_URL + @root_href
+ recursive_scrape("/IJM_fam_key.html")
+p associate_links('http://ucjeps.berkeley.edu/IJM_fam_key.html', "/IJM_fam_key.html")

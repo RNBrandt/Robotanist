@@ -19,6 +19,8 @@ def create_obj(url, klass)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   scientific_name = doc.css("span.pageLargeHeading").inner_text
   common_name = doc.css("span.pageMajorHeading").inner_text
+  p doc.css(".bodyText").inner_text
+  p doc.css(".bodyText").inner_text.match(/.+?(?=eFlora)/)
   description = doc.css("div.bodyText").inner_text.match(/.+?(?=eFlora)/)[0]
   return klass.create(scientific_name: scientific_name, common_name: common_name, description: description)
 end

@@ -97,48 +97,49 @@ def add_tool_tip_span(text)
   return text
 end
 
-def find_links(url)
-  uri = URI(url)
-  doc = Nokogiri.parse(Net::HTTP.get(uri))
-  links = doc.css('blockquote').css('a')
-  hrefs = links.map { |link| (link.attribute('href').to_s) }
-  useful_hrefs = hrefs.select { |href| href.match(/^\/.*/) }
-  p "USEFUL REFSSSSSS #{useful_hrefs}"
-  useful_hrefs
-end
+# def find_links(url)
+#   uri = URI(url)
+#   doc = Nokogiri.parse(Net::HTTP.get(uri))
+#   links = doc.css('blockquote').css('a')
+#   hrefs = links.map { |link| (link.attribute('href').to_s) }
+#   useful_hrefs = hrefs.select { |href| href.match(/^\/.*/) }
+#   p "USEFUL REFSSSSSS #{useful_hrefs}"
+#   useful_hrefs
+# end
 
 
-def find_link_parent_keys(url)
-  p_tags = scrape(url)
-  tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/) }
-  parent_keys = tags_with_links.map { |txt| txt.gsub(/\s.+/, '') }
-  p parent_keys
-end
+# def find_link_parent_keys(url)
+#   p_tags = scrape(url)
+#   tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/) }
+#   parent_keys = tags_with_links.map { |txt| txt.gsub(/\s.+/, '') }
+#   p parent_keys
+# end
 
-def make_link_hash(url)
-  links = find_links(url)
-  p links.length
-  keys = find_link_parent_keys(url)
-  p keys.length
-  link_hash = Hash[keys.zip links] #This is the line to repair
-  link_hash
-end
+# def make_link_hash(url)
+#   links = find_links(url)
+#   p links.length
+#   keys = find_link_parent_keys(url)
+#   p keys.length
+#   link_hash = Hash[keys.zip links] #This is the line to repair
+#   link_hash
+# end
 
-def associate_links(url)
+def associate_links(url, current_href)
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   links = doc.css('blockquote').css('p')
-  useful_links = links.select{ |link| link.inner_text.match(/(?<=\.\.\.\.\.).*/) }
-  useful_links.each do |link|
-    p link.css('a').inner_text
+  lines_with_links = links.select{ |link| link.inner_text.match(/(?<=\.\.\.\.\.).*/) }
+  link_objs = []
+  lines_with_links.each do |line|
+    d_key = line.css('a')[0].inner_text
+    hrefs = line.css('a').map { |link| (link.attribute('href').to_s) }
+    actual_links = hrefs.select { |href| href.match(/^\/.*/) }
+    actual_links.each do |link|
+      link_objs << Link.new(link, current_href, d_key)
+    end
   end
+  return link_objs
 end
-
-# def find_double_links
-#   tags_with_links.each { |txt| txt.match(/(?<=\.\.\.\.\.).*/) }
-#   #find the line it's in the text after the ..... then find the href of the link with that text
-
-# end
 
 # def find_unlinked_families
 
