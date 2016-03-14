@@ -42,8 +42,8 @@ class BlockQuoteParser
   end
 
 #creates an option object
-  def create_option(dichotomy, head, key)
-    Option.create(text: add_tool_tip_span(dichotomy), page: @href, head: head, key: key)
+  def create_option(dichotomy, head = nil, key)
+    Option.create(text: add_tool_tip_span(dichotomy), page: @href, head: head, key: key, child_obj:{})
   end
 
 #this method is used as part of the make first node method
@@ -63,12 +63,14 @@ class BlockQuoteParser
       prime_match = (/^#{ Regexp.quote(i.to_s) }'/)
       non_prime_match = (/^#{ Regexp.quote(i.to_s) }\./)
       parent_index = @dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
-      @text = @dichotomies.find {|dic| dic.match(non_prime_match)}
+      text = @dichotomies.find {|dic| dic.match(non_prime_match)}
       parent = Option.find_by(page: @href, key: @dichotomies[parent_index][/^([^\s]+)/])
-      parent.children << Option.create(text: add_tool_tip_span(@text),page: @href, key: "#{i}.")
+      child = create_option(text, "#{i}.")
+      parent.children << child
       text_prime = @dichotomies.find {|dic| dic.match(prime_match)}
-      parent.children << Option.create(text: text_prime, page: @href, key: "#{i}'")
+      child_prime = create_option(text_prime, "#{i}'")
       i += 1
+      parent.children << child_prime
     end
   end
 
@@ -86,6 +88,24 @@ class BlockQuoteParser
       end
     end
     return @link_objs
+  end
+
+end
+
+class FamilyParser < BlockQuoteParser
+  def initialize(family_name)
+    super
+    @family_name = family_name
+  end
+
+  def top_pair_node(dichotomy)
+    @family_id = Family.find_by(scientific_name: @family_name).id
+    @parent_option = Option.find_by( child_obj['Family'] = "@family_id" )
+    if dichotomy[0] == '1' && dichotomy[1] =='.'
+      @parent_option.children << create_option(dichotomy, @href, '1.')
+    elsif dichotomy[0] == '1' && dichotomy[1] == "'"
+      @parent_option.children << create_option(dichotomy, @href, "1'")
+    end
   end
 
 end
