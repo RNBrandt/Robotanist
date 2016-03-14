@@ -24,6 +24,8 @@ gem 'rubocop', require: false
 gem 'rspec-rails'
 gem 'capybara'
 gem 'selenium-webdriver'
+gem 'httpclient'
+
 
 
 group :development, :test do

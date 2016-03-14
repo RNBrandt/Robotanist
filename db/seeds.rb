@@ -33,7 +33,9 @@ def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
   url = BASE_URL + current_href
   p_tags = scrape(url)
   if tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/)} == []
-    return "obj"
+    p new_url = get_redirect(url)
+    p obj = assign_obj_type(new_url[0])
+    return obj
   end
   scrape_and_make_options(current_href, parent_page, parent_key)
   links = associate_links(url, current_href)
@@ -43,6 +45,6 @@ def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
   end
 end
 
-# url = BASE_URL + @root_href
- recursive_scrape("/IJM_fam_key.html")
-# p associate_links('http://ucjeps.berkeley.edu/IJM_fam_key.html', "/IJM_fam_key.html")
+recursive_scrape("/IJM_fam_key.html")
+
+
