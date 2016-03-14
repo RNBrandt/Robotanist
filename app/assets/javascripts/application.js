@@ -14,10 +14,10 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require foundation
-//= require turbolinks
 //= require_tree .
 
 $(function(){ 
+
 $(document).foundation();
 $('#div-search').show();
 $('#div-tabs').hide();
@@ -37,6 +37,7 @@ $('#flickrDiv').hide();
       var $wikipediaKeyword = $(this).attr('data-keyword');
       $('#tab-wikipedia').attr("data-keyword", $wikipediaKeyword)
       $('#tab-flickr').attr("data-keyword", $wikipediaKeyword)
+      $('#tab-twitter').attr("data-keyword", $wikipediaKeyword)
 
 
       $wikipediaKeyword = $wikipediaKeyword.toLocaleLowerCase().replace(/ /g,"_");
@@ -75,6 +76,7 @@ $('#flickrDiv').hide();
           }
           
           catch(err) {
+            console.log("======333333=====")
             console.log("Wikipedia Fetch Error");
             document.getElementById("wikipediaDiv").innerHTML = '<h4>Sorry, Wikipedia does not have an entry for this keyword...</h4>';
           }
@@ -89,12 +91,6 @@ $('#flickrDiv').hide();
   });
   // Capture tooltip click
 
-
-
-
-
-
-
   // Capture flickr click
   $('#tab-flickr').on('click', function(e){
     console.log("Flickr Tab Clicked")
@@ -102,57 +98,77 @@ $('#flickrDiv').hide();
     $('#flickrDiv').show();
     $('#tab-flickr').addClass('alert');
     $('#tab-wikipedia').removeClass('alert');
-
-  });
-
-
-
-//data.photos.photo[2].id
-//data.photos.photo[2].server
-//data.photos.photo[2].farm
-//data.photos.photo[2].secret
-//data.photos.photo[2].owner
+    $('#tab-twitter').removeClass('alert');
+    var $flickrKeyword = $(this).attr('data-keyword');
+    //data.photos.photo[2].id
+    //data.photos.photo[2].server
+    //data.photos.photo[2].farm
+    //data.photos.photo[2].secret
+    //data.photos.photo[2].owner
 
 
    $.ajax({
         type: "GET",
-        url: "https://api.flickr.com/services/rest/?&method=flickr.photos.search&tags=angiosperm&safe_search=1&per_page=20&api_key=79ea624274bb06e96bf9e06fd2a00c74&format=json&jsoncallback=?",
+        url: "https://api.flickr.com/services/rest/?&method=flickr.photos.search&tags=" + $flickrKeyword + "&safe_search=1&per_page=20&api_key=79ea624274bb06e96bf9e06fd2a00c74&format=json&jsoncallback=?",
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-            console.log(data);
-        var flickrInfo = document.getElementById("flickr-template").innerHTML;
-        var template = Handlebars.compile(flickrInfo)
-        var flickrData = template({
-          photos: data.photos.photo
-        });
-        document.getElementById("flickr_photos").innerHTML += flickrData;
- 
+          console.log("======444444=====")
+          console.log(data);
+          console.log("===========")
+          console.log($flickrKeyword)
+          console.log("===========")
+          var flickrInfo = document.getElementById("flickr-template").innerHTML;
+          var template = Handlebars.compile(flickrInfo)
+          var flickrData = template({
+            title: $flickrKeyword,
+            photos: data.photos.photo
+          });
+
+          document.getElementById("flickr_photos").innerHTML = flickrData;
         },
         error: function (errorMessage) {
+          console.log("======555555=====")
           console.log(errorMessage);
         }
     });
+  });
 
+  // Capture twitter click
+  $('#tab-twitter').on('click', function(e){
+    console.log("Twitter Tab Clicked")
+    $('#wikipediaDiv').hide();
+    $('#flickrDiv').hide();
+    $('#twitterDiv').show();
+    $('#tab-flickr').removeClass('alert');
+    $('#tab-wikipedia').removeClass('alert');
+    $('#tab-twitter').addClass('alert');
+    var $twitterKeyword = $(this).attr('data-keyword');
+    // ajax request starts
+    $.ajax({
+      method: "get",
+      url: "/options/twitter/"
+    })
+    .done(function(data) {
+      console.log(data);
+      document.getElementById("twitterDiv").innerHTML = data;
+    })
+    .fail(function() {
+      console.log("fail")
+    })
+  // ajax request ends
+  });
 
-
+  // Capture close click
+  $('#tab-close').on('click', function(e){
+    $('#div-tabs').hide();
+    $('#wikipediaDiv').hide();
+    $('#flickrDiv').hide();
+    $('#div-search').show();
+    $('#tab-flickr').removeClass('alert');
+    $('#tab-wikipedia').removeClass('alert');
+  });
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
   $('#dataCarousel').on('click', '#arrowLeft', function(e){
     e.preventDefault();
     var optionID = $(this).attr('data-id')
@@ -200,7 +216,4 @@ $('#flickrDiv').hide();
     });
     //Fade outAnimation Complete
   });
-  
-
-
 });
