@@ -15,12 +15,25 @@ end
 
 
 def create_obj(url, klass)
+  p '******************url**********************'
+  p url
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   scientific_name = doc.css("span.pageLargeHeading").inner_text
   common_name = doc.css("span.pageMajorHeading").inner_text
-  description = doc.css("div.bodyText").inner_text.match(/.+?(?=eFlora)/)[0]
-  return klass.create(scientific_name: scientific_name, common_name: common_name, description: description)
+  if doc.css("div.bodyText").inner_text == ''
+    p "BROKEN!!!!!!!!!!!!"
+    return Family.create(description: "Sorry this link is broken")
+  else
+    description = doc.css("div.bodyText").inner_text.match(/.+?(?=eFlora)/)[0]
+  end
+
+  if klass.where(scientific_name: scientific_name) == []
+
+    return klass.create(scientific_name: scientific_name, common_name: common_name, description: add_tool_tip_span(description))
+  else
+    return klass.find_by(scientific_name: scientific_name)
+  end
 end
 
 

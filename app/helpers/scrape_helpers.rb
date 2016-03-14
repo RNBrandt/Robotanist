@@ -21,11 +21,21 @@ def make_first_nodes(dichotomies, parent_page = nil, parent_key = nil, current_h
   end
 end
 
+def make_family_head_nodes(dichotomy, family_name, current_href)
+  papa = Family.find_by(scientific_name: family_name)
+  if dichotomy[0] == "1" && dichotomy[1] == '.'
+    first_node = Option.create(dichotomy, current_href, scientific_name, "1.")
+    papa.children << first_node
+  elsif dichotomy[0] == "1" && dichotomy[1] == "'"
+    first_node.siblings << create_option(dichotomy, current_href, scientific_name, "1'")
+  end
+end
+
 def first_options_pair_assignment(dichotomy, current_href)
   if dichotomy[0] == "1" && dichotomy[1] == '.'
     @first = create_option(dichotomy, current_href, 'root', "1.")
   elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-    p Option.first.siblings << create_option(dichotomy, current_href, 'root', "1'")
+    Option.first.siblings << create_option(dichotomy, current_href, 'root', "1'")
   end
 end
 
@@ -97,33 +107,6 @@ def add_tool_tip_span(text)
   return text
 end
 
-# def find_links(url)
-#   uri = URI(url)
-#   doc = Nokogiri.parse(Net::HTTP.get(uri))
-#   links = doc.css('blockquote').css('a')
-#   hrefs = links.map { |link| (link.attribute('href').to_s) }
-#   useful_hrefs = hrefs.select { |href| href.match(/^\/.*/) }
-#   p "USEFUL REFSSSSSS #{useful_hrefs}"
-#   useful_hrefs
-# end
-
-
-# def find_link_parent_keys(url)
-#   p_tags = scrape(url)
-#   tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/) }
-#   parent_keys = tags_with_links.map { |txt| txt.gsub(/\s.+/, '') }
-#   p parent_keys
-# end
-
-# def make_link_hash(url)
-#   links = find_links(url)
-#   p links.length
-#   keys = find_link_parent_keys(url)
-#   p keys.length
-#   link_hash = Hash[keys.zip links] #This is the line to repair
-#   link_hash
-# end
-
 def associate_links(url, current_href)
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
@@ -141,6 +124,16 @@ def associate_links(url, current_href)
   return link_objs
 end
 
-# def find_unlinked_families
+def big_family_scraper(url, family_name, current_href)
+  uri = URI(url)
+  doc = Nokogiri.parse(Net::HTTP.get(uri))
+  blockquotes = doc.css('blockquote')
+  nice_blocks = blockquotes.select { |block| block.inner_text.match(/^1.*/) }
+  dichotomies = nice_blocks[0].inner_text.split("/n")
+  make_family_head_nodes(dichotomies, family_name, current_href)
+  fill_tree(dichotomies, href)
+  linked_options = dichotomies.select { |dichotomy| dichotomy.match(/(?<=\.\.\.\.\.).*/) }
+  p linked_options
+end
 
-# end
+

@@ -3,6 +3,9 @@ require_relative "../app/helpers/link_helpers"
 require_relative "../app/helpers/object_helpers"
 Option.destroy_all
 Glossary.destroy_all
+Species.destroy_all
+Family.destroy_all
+Genus.destroy_all
 
 BASE_URL = "http://ucjeps.berkeley.edu"
 
@@ -29,14 +32,16 @@ def create_link_objs (url, current_href)
 end
 
 def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
-  p current_href
   url = BASE_URL + current_href
   p_tags = scrape(url)
   if tags_with_links = p_tags.select { |txt| txt.match(/(?<=\.\.\.\.\.).*/)} == []
-    p new_url = get_redirect(url)
-    p obj = assign_obj_type(new_url[0])
-    return obj
+    new_url = get_redirect(url)
+    newOption = Option.find_by(page:parent_page, key:parent_key)
+    newOption.children << assign_obj_type(new_url[0])
+    newOption.save
+    return
   end
+
   scrape_and_make_options(current_href, parent_page, parent_key)
   links = associate_links(url, current_href)
 
@@ -45,6 +50,7 @@ def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
   end
 end
 
-recursive_scrape("/IJM_fam_key.html")
+# recursive_scrape("/cgi-bin/get_IJM.pl?key=58")
+big_family_scraper('http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=58', 'Asteraceae', 'fuck knows')
 
 
