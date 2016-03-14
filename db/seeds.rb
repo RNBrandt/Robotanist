@@ -47,8 +47,8 @@ def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
   end
 end
 
-# recursive_scrape("/cgi-bin/get_IJM.pl?key=58")
-big_family_scraper('http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=58', 'Asteraceae', 'fuck knows')
+recursive_scrape("/IJM_fam_key.html")
+# big_family_scraper('http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=58', 'Asteraceae', 'fuck knows')
 
 
 # create_glossary

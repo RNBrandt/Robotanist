@@ -21,8 +21,12 @@ RSpec.configure do |config|
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
 
-  # config.before(:each, js: true) do
-  #   Capybara.page.driver.browser.resize(900,200)
+  # config.before(:suite) do
+  #   # Option.destroy_all
+  #   # Species.destroy_all
+  #   # Family.destroy_all
+  #   # Genus.destroy_all
+  #   Rails.application.load_seed
   # end
 
   config.expect_with :rspec do |expectations|
