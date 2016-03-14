@@ -1,6 +1,7 @@
 require_relative "../app/helpers/scrape_helpers"
 require_relative "../app/helpers/link_helpers"
 require_relative "../app/helpers/object_helpers"
+require_relative "../app/helpers/glossary_helpers"
 Option.destroy_all
 Glossary.destroy_all
 Species.destroy_all
@@ -10,10 +11,6 @@ Genus.destroy_all
 BASE_URL = "http://ucjeps.berkeley.edu"
 
 @root_href = "/IJM_fam_key.html"
-
-#@parent_url = nil
-
-
 
 def scrape_and_make_options(current_href, parent_page=nil, parent_key=nil)
   url = BASE_URL + current_href
@@ -51,6 +48,8 @@ def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
 end
 
 # recursive_scrape("/cgi-bin/get_IJM.pl?key=58")
-big_family_scraper('http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=58', 'Asteraceae', 'fuck knows')
+# big_family_scraper('http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=58', 'Asteraceae', 'fuck knows')
 
+
+create_glossary
 
