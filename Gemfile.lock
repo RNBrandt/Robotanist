@@ -123,6 +123,7 @@ GEM
     minitest (5.8.4)
     mongo (2.2.4)
       bson (~> 4.0)
+    mongo_sync (0.1.2)
     mongoid (5.1.1)
       activemodel (~> 4.0)
       mongo (~> 2.1)
@@ -277,6 +278,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
+  mongo_sync
   mongoid (~> 5.1, >= 5.1.1)
   mongoid-tree
   nokogiri
