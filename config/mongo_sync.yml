@@ -6,7 +6,7 @@ local:
 remote:
   db: 'heroku_ttq3fpb1'
   host:
-    url: 'mongodb://heroku_ttq3fpb1:d7imm8pnoab5qarh91oeli5hq@ds011389.mlab.com:11389/heroku_ttq3fpb1'
+    url: 'ds011389.mlab.com'
     port: 11389
   access:
     username: 'heroku_ttq3fpb1'
