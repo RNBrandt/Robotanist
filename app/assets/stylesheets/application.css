@@ -14,10 +14,10 @@
  *= require_self
 
  */
- 
+
  /* Panels */
  body {
-  background-color: $body-color;
+  /*background-color: $body-color;*/
  }
 .panel {
   border-style: solid;
