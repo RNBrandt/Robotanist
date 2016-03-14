@@ -1,3 +1,4 @@
+# Controller for all Options objects
 class OptionsController < ApplicationController
   
   def index
@@ -22,8 +23,7 @@ class OptionsController < ApplicationController
     @option = Option.find(params[:id])
     @children = @option.children
     if request.xhr?
-      render partial: "layouts/carousel", locals: {options: @children}, layout: false
+      render partial: 'layouts/carousel', locals: { options: @children }, layout: false
     end
-
   end
 end
