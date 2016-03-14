@@ -107,4 +107,5 @@ def group_scrape
 
     i += 1
   end
+end
 #how do we find groups
