@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
     get 'options/twitter' => 'options#twitter'
     resources :options
+    resources :family
+    resources :species
+    resources :genus
     resources :api
 
 

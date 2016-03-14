@@ -99,6 +99,7 @@ GEM
       domain_name (~> 0.5)
     http-form_data (1.0.1)
     http_parser.rb (0.6.0)
+    httpclient (2.7.1)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -272,6 +273,7 @@ DEPENDENCIES
   foundation-icons-sass-rails (~> 3.0.0)
   foundation-rails
   hirb
+  httpclient
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
