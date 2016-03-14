@@ -129,11 +129,17 @@ def big_family_scraper(url, family_name, current_href)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   blockquotes = doc.css('blockquote')
   nice_blocks = blockquotes.select { |block| block.inner_text.match(/^1.*/) }
-  dichotomies = nice_blocks[0].inner_text.split("/n")
-  make_family_head_nodes(dichotomies, family_name, current_href)
-  fill_tree(dichotomies, href)
+  dichotomies = nice_blocks[0].inner_text.split("\n")
+  # make_family_head_nodes(dichotomies, family_name, current_href)
+  # fill_tree(dichotomies, href)
   linked_options = dichotomies.select { |dichotomy| dichotomy.match(/(?<=\.\.\.\.\.).*/) }
-  p linked_options
+  dichotomous_key_group = {}
+  linked_options.each do | dic |
+    key = dic.match(/^([^\s]+)/)[0]
+    group_name = dic.match(/((\.\.\.\.\.)+.*)/)[0]
+    dichotomous_key_group[key] = group_name
+  end
+  p dichotomous_key_group
 end
 
 
