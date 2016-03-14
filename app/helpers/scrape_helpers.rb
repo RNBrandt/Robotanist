@@ -83,9 +83,9 @@ end
 def big_family_scraper(url, family_name, current_href)
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
-  blockquotes = doc.css('blockquote')
-  nice_blocks = blockquotes.select { |block| block.inner_text.match(/^1.*/) }
-  dichotomies = nice_blocks[0].inner_text.split("\n")
+  @blockquotes = doc.css('blockquote')
+  @nice_blocks = @blockquotes.select { |block| block.inner_text.match(/^1.*/) }
+  dichotomies = @nice_blocks[0].inner_text.split("\n")
   # make_family_head_nodes(dichotomies, family_name, current_href)
   # fill_tree(dichotomies, href)
   linked_options = dichotomies.select { |dichotomy| dichotomy.match(/(?<=\.\.\.\.\.).*/) }
@@ -96,6 +96,15 @@ def big_family_scraper(url, family_name, current_href)
     dichotomous_key_group[key] = group_name
   end
   p dichotomous_key_group
+
 end
 
+def group_scrape
+  i = 1
+  while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}'/)} != nil
+    dichotomies = nice_blocks[i].inner_text.split("\n").reject { |text| text==""}
+
+
+    i += 1
+  end
 #how do we find groups
