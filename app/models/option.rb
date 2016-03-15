@@ -8,5 +8,8 @@ class Option
   field :head, type: String
   field :page, type: String
   field :key, type: String
+  has_many :species
+  has_many :genera, class_name: "Genus"
+  has_many :families
 end
 
