@@ -30,8 +30,8 @@ def create_link_objs (url, current_href)
 end
 
 
-  first_blockquote = get_blockquote("/IJM_fam_key.html")
-  parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
+  # first_blockquote = get_blockquote("/IJM_fam_key.html")
+  # parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
 
 # recursive_scrape(parser)
 # scrape_from_families
@@ -42,18 +42,26 @@ def big_family_scraper(href)
   p "Doing stuff"
   blockquotes = get_blockquote(href)
   blockquotes = blockquotes.select { |block| block.inner_text.match(/^1/)}
-  parser = FamilyParser.new(blockquotes[0], href, {"family_name"=> "Poaceae"})
-  parser.scrape_text
-  p parser.group_key_hash
-  # blockquotes.each do |blockquote|
-  #   parser = FamilyParser.new
-  # end
+  first_parser = FamilyParser.new(blockquotes.shift, href, {"family_name"=> "Poaceae"})
+  first_parser.scrape_text
+  p first_parser.dichotomies
+  key_to_groups = first_parser.group_key_hash
+  recursive_scrape(first_parser)
+  embedded_links = first_parser.embedded_group_links
+  embedded_link_hash = Hash[embedded_links.zip(blockquotes)]
+  embedded_link_hash.each do |link, blockquote|
+    new_parser = BlockQuoteParser.new(blockquote, link.href, { parent_page: link.parent_href, parent_key: link.parent_key })
+    recursive_scrape(new_parser)
+  end
+
 end
 
-big_family_scraper("/cgi-bin/get_IJM.pl?key=223")
+# big_family_scraper("/cgi-bin/get_IJM.pl?key=223")
 
+blockquotes = get_blockquote("/cgi-bin/get_IJM.pl?key=223")
+first_parser = FamilyParser.new(blockquotes.shift, "/cgi-bin/get_IJM.pl?key=223", {"family_name"=> "Poaceae"})
 
-
+first_parser.scrape_text
 
 
 

@@ -10,12 +10,10 @@ class BlockQuoteParser
   end
 
   def scrape_text
-    blockquote = @blockquote.inner_text
-    @dichotomies = blockquote.split("\n")
-    @dichotomies.delete('')
-    # eliminate lines that have an a before first space
-    @dichotomies.delete_if {|dic| dic.match(/^.{1,3}a([^\s]+)/)}
-    @dichotomies
+    dic_line = @blockquote.css('p')
+    nice_lines =  dic_line.select { |dic| !dic.inner_text.match(/^.{1,3}a([^\s]+)/) }
+    @dichotomies = nice_lines.map { |line| line.inner_text}
+    @dichotomies.map! { |dic| dic.gsub(/[\u0080-\u00ff]/, "") }
   end
 
 #This is a replacement of line 34 of the seeds file, I haven't included the ==[] case required of that if statement
@@ -96,6 +94,7 @@ class BlockQuoteParser
 end
 
 class FamilyParser < BlockQuoteParser
+  attr_reader :key_to_groups
   def initialize(blockquote, href, options={})
     super
     @family_name = options['family_name']
@@ -115,13 +114,14 @@ class FamilyParser < BlockQuoteParser
 
   def group_key_hash
     lines_with_groups = @dichotomies.select { |dichotomy| dichotomy.match(/.*\.\.\.\.\.Group/) }
-    group_link_hash = {}
+    @key_to_groups = {}
     lines_with_groups.each do |line|
       d_key = line.match(/^([^\s]+)/)[0]
       group_number = line.match(/.$/)[0]
-      group_link_hash[d_key] = group_number
+      key_to_groups[d_key] = group_number
     end
-    return group_link_hash
+
+    return @key_to_groups
   end
 
   def create_links
@@ -137,6 +137,14 @@ class FamilyParser < BlockQuoteParser
       end
     end
     return @link_objs
+  end
+
+  def embedded_group_links
+    embedded_links = []
+    @key_to_groups.each do |key, group_number|
+      embedded_links << Link.new("#{href}_#{group_number}", href, key )
+    end
+    return embedded_links
   end
 
 
