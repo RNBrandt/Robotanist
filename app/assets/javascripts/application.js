@@ -25,7 +25,7 @@ $('#flickrDiv').hide();
 $('#twitterDiv').hide();
 
   // Capture tooltip click
-  $('.has-tip, #tab-wikipedia').on('click', function(e){
+  $('[data-toggle=tooltip], #tab-wikipedia').on('click', function(e){
       $('#div-search').hide();
       $('#div-tabs').show();
       $('#wikipediaDiv').show();
@@ -72,7 +72,7 @@ $('#twitterDiv').hide();
               title: $wikipediaKeyword,
               info: blurb
             });
-            document.getElementById("wikipediaDiv").innerHTML = wikipediaData;
+            document.getElementById("div#wikipediaDiv").innerHTML = wikipediaData;
             // Handlebars Template Ends Here
           }
           
@@ -172,7 +172,7 @@ $('#twitterDiv').hide();
 
     
     //Fade out once complete run ajax
-    $('#panel-left').css('border', '4px dotted #ec5840');
+    $('#panel-left').css('border', '4px dotted #1ABC9C');
     $("#dataCarousel").animate({opacity: '0'}, function(){
       // ajax request starts
       $.ajax({
@@ -202,7 +202,7 @@ $('#twitterDiv').hide();
     }
 
     //Fade out once complete run ajax
-    $('#panel-right').css('border', '4px dotted #ec5840');
+    $('#panel-right').css('border', '4px dotted #1ABC9C');
     $("#dataCarousel").animate({opacity: '0'}, function(){
       // ajax request starts
       $.ajax({
