@@ -48,17 +48,8 @@ def big_family_scraper(href)
 
 end
 
-# big_family_scraper("/cgi-bin/get_IJM.pl?key=223")
 
-
-
-
-
-
-
-
-
-
+recursive_scrape("/IJM_fam_key.html")
 
 
 

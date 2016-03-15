@@ -154,10 +154,6 @@ def scrape_from_families
      parser = FamilyParser.new(blockquote, href, options={"family_name" => family_name})
      recursive_scrape(parser)
   end
-
 end
-
-
-
 
 
