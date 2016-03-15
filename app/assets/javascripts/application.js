@@ -23,6 +23,7 @@ $('#div-search').show();
 $('#div-tabs').hide();
 $('#wikipediaDiv').hide();
 $('#flickrDiv').hide();
+$('#twitterDiv').hide();
 
   // Capture tooltip click
   $('.has-tip, #tab-wikipedia').on('click', function(e){
@@ -31,6 +32,7 @@ $('#flickrDiv').hide();
       $('#wikipediaDiv').show();
       $('#flickrDiv').hide();
       $('#tab-flickr').removeClass('alert');
+      $('#tab-twitter').removeClass('alert');
       $('#tab-wikipedia').addClass('alert');
 
 
@@ -76,8 +78,6 @@ $('#flickrDiv').hide();
           }
           
           catch(err) {
-            console.log("======333333=====")
-            console.log("Wikipedia Fetch Error");
             document.getElementById("wikipediaDiv").innerHTML = '<h4>Sorry, Wikipedia does not have an entry for this keyword...</h4>';
           }
         },
@@ -93,8 +93,8 @@ $('#flickrDiv').hide();
 
   // Capture flickr click
   $('#tab-flickr').on('click', function(e){
-    console.log("Flickr Tab Clicked")
     $('#wikipediaDiv').hide();
+    $('#twitterDiv').hide();
     $('#flickrDiv').show();
     $('#tab-flickr').addClass('alert');
     $('#tab-wikipedia').removeClass('alert');
@@ -113,11 +113,6 @@ $('#flickrDiv').hide();
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-          console.log("======444444=====")
-          console.log(data);
-          console.log("===========")
-          console.log($flickrKeyword)
-          console.log("===========")
           var flickrInfo = document.getElementById("flickr-template").innerHTML;
           var template = Handlebars.compile(flickrInfo)
           var flickrData = template({
@@ -128,15 +123,12 @@ $('#flickrDiv').hide();
           document.getElementById("flickr_photos").innerHTML = flickrData;
         },
         error: function (errorMessage) {
-          console.log("======555555=====")
-          console.log(errorMessage);
         }
     });
   });
 
   // Capture twitter click
   $('#tab-twitter').on('click', function(e){
-    console.log("Twitter Tab Clicked")
     $('#wikipediaDiv').hide();
     $('#flickrDiv').hide();
     $('#twitterDiv').show();
@@ -147,10 +139,9 @@ $('#flickrDiv').hide();
     // ajax request starts
     $.ajax({
       method: "get",
-      url: "/options/twitter/"
+      url: "/options/twitter/" + $twitterKeyword
     })
     .done(function(data) {
-      console.log(data);
       document.getElementById("twitterDiv").innerHTML = data;
     })
     .fail(function() {
@@ -182,7 +173,6 @@ $('#flickrDiv').hide();
         url: "/options/" + optionID
       })
       .done(function(data) {
-        console.log(data);
         $("#dataCarousel").html(data).animate({opacity: '1'});
       })
       .fail(function() {
@@ -193,20 +183,26 @@ $('#flickrDiv').hide();
     //Fade outAnimation Complete
   });
 
-  $('#dataCarousel').on('click', '#arrowRight', function(e){
+  $('#dataCarousel').on('click', '#arrowParent, #arrowRight, #arrowStepRight' , function(e){
     e.preventDefault();
     var optionID = $(this).attr('data-id')
-    
+    var url = '';
+
+    if ($(this).attr('id') == 'arrowParent') {
+      url = "/options/"
+    } else {
+      url = "/options/" + optionID
+    }
+
     //Fade out once complete run ajax
     $('#panel-right').css('border', '4px dotted #ec5840');
     $("#dataCarousel").animate({opacity: '0'}, function(){
       // ajax request starts
       $.ajax({
         method: "get",
-        url: "/options/" + optionID
+        url: url
       })
       .done(function(data) {
-        console.log(data);
         $("#dataCarousel").html(data).animate({opacity: '1'});
       })
       .fail(function() {
