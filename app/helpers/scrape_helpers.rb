@@ -40,7 +40,7 @@ end
 
 def fill_tree(dichotomies, current_href)
   i = 2
-  while dichotomies.find !{ |dic| dic.match(/^#{Regexp.quote(i.to_s)}'/) }.nil
+  while dichotomies.find { |dic| dic.match(/^#{Regexp.quote(i.to_s)}'/) } == !nil
     #per rubocop, i changed the above line from {xxx} = !nil
     prime_match = /^#{Regexp.quote(i.to_s)}'/
     non_prime_match = /^#{Regexp.quote(i.to_s)}\./
