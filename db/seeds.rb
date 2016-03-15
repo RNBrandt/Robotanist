@@ -3,11 +3,11 @@ require_relative "../app/helpers/link_helpers"
 require_relative "../app/helpers/object_helpers"
 require_relative "../app/helpers/glossary_helpers"
 require_relative "../app/helpers/blockquote_class"
-Option.destroy_all
-Glossary.destroy_all
-Species.destroy_all
-Family.destroy_all
-Genus.destroy_all
+# Option.destroy_all
+# Glossary.destroy_all
+# Species.destroy_all
+# Family.destroy_all
+# Genus.destroy_all
 
 BASE_URL = "http://ucjeps.berkeley.edu"
 
@@ -33,23 +33,26 @@ end
   first_blockquote = get_blockquote("/IJM_fam_key.html")
   parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
 
-recursive_scrape(parser)
-scrape_from_families
+# recursive_scrape(parser)
+# scrape_from_families
 # recursive_scrape(parser)
 
 
 def big_family_scraper(href)
+  p "Doing stuff"
   blockquotes = get_blockquote(href)
   blockquotes = blockquotes.select { |block| block.inner_text.match(/^1/)}
-  blockquotes.each do |blockquote|
-    parser = BlockQuoteParser.new
-  end
-
-
+  parser = FamilyParser.new(blockquotes[0], href, {"family_name"=> "Poaceae"})
+  parser.scrape_text
+  p parser.group_key_hash
+  # blockquotes.each do |blockquote|
+  #   parser = FamilyParser.new
+  # end
 end
 
+big_family_scraper("/cgi-bin/get_IJM.pl?key=223")
 
-recursive_scrape("/IJM_fam_key.html")
+
 
 
 

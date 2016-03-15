@@ -102,6 +102,7 @@ class FamilyParser < BlockQuoteParser
   end
 
   def top_pair_node(dichotomy)
+
     @family_id = Family.find_by(scientific_name: @family_name).id
     @parent_option = Option.find_by( child_obj['Family'] = "@family_id" )
     if dichotomy[0] == '1' && dichotomy[1] =='.'
@@ -109,7 +110,36 @@ class FamilyParser < BlockQuoteParser
     elsif dichotomy[0] == '1' && dichotomy[1] == "'"
       @parent_option.children << create_option(dichotomy, @href, "1'")
     end
+
   end
+
+  def group_key_hash
+    lines_with_groups = @dichotomies.select { |dichotomy| dichotomy.match(/.*\.\.\.\.\.Group/) }
+    group_link_hash = {}
+    lines_with_groups.each do |line|
+      d_key = line.match(/^([^\s]+)/)[0]
+      group_number = line.match(/.$/)[0]
+      group_link_hash[d_key] = group_number
+    end
+    return group_link_hash
+  end
+
+  def create_links
+    links = @blockquote.css('p')
+    lines_with_links = links.select{ |link| link.inner_text.match@all_text_after_dots }
+    @link_objs = []
+    lines_with_links.each do |line|
+      d_key = line.css('a')[0].inner_text
+      hrefs = line.css('a').map { |link| (link.attribute('href').to_s) }
+      actual_links = hrefs.select { |href| href.match(/^#.*/) }
+      actual_links.each do |link|
+        @link_objs << Link.new(link, @href, d_key)
+      end
+    end
+    return @link_objs
+  end
+
+
 end
 
 
