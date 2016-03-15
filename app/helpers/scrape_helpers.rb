@@ -109,42 +109,55 @@ def big_family_scraper(url, family_name, current_href)
 end
 
 def get_family_links
-  url = "http://ucjeps.berkeley.edu/eflora/key_list.html"
-  doc = get_doc(url)
+  href = "/eflora/key_list.html"
+  doc = get_doc(href)
   #blockquote = doc.css("blockquote")
-  table_data = doc.css("td")
-  p table_data.inner_text
-
-
+  table_data = doc.css("ol")
+  family_names = table_data.inner_text.split("\n").map! {|name| name.strip}
+  family_names.shift
+  links = doc.css("ol").css("a").map { |link| (link.attribute('href').to_s) }
+  family_link_hash = Hash[family_names.zip(links)]
+  to_delete = ["Asteraceae", "Fabaceae", "Poaceae", "Brassicaceae"]
+  family_link_hash.delete_if { |key, value| to_delete.include?(key)}
+  p family_link_hash
 end
 
-def recursive_scrape(href, parent_page=nil,parent_key=nil)
-  blockquote = get_blockquote(href)
-  options_hash = {parent_page: parent_page, parent_key: parent_key}
-  parser = BlockQuoteParser.new(blockquote, href, options_hash)
+
+
+
+def recursive_scrape(parser)
   parser.scrape_text
   if parser.find_dichotomies_with_links == []
-    new_url = get_redirect(BASE_URL + href)
-    parent_option = Option.find_by(page:parent_page, key: parent_key)
+    new_url = get_redirect(BASE_URL + parser.href)
+    parent_option = Option.find_by(page:parser.parent_page, key: parser.parent_key)
     child = assign_obj_type(new_url[0])
     parent_option.child_obj[child.class.to_s] = child.id
   end
-
   parser.make_first_node
   parser.fill_tree
   links = parser.create_link_obj
   links.each do |link|
-    recursive_scrape(link.href, link.parent_href, link.parent_key)
+    blockquote = get_blockquote(link.href)
+    new_parser = BlockQuoteParser.new(blockquote, link.href, {parent_page: link.parent_href, parent_key: link.parent_key})
+    recursive_scrape(new_parser)
   end
 end
 
+def scrape_from_families
+  p "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+  p "FAIMILIES"
+  link_hash = get_family_links
 
-# def group_scrape
-#   i = 1
-#   while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}'/)} != nil
-#     dichotomies = nice_blocks[i].inner_text.split("\n").reject { |text| text==""}
+  link_hash.each do |family_name, href|
+     p family_name
+     blockquote = get_blockquote(href)
+     parser = FamilyParser.new(blockquote, href, options={"family_name" => family_name})
+     recursive_scrape(parser)
+  end
+
+end
 
 
-#     i += 1
-#   end
-#how do we find groups
+
+
+

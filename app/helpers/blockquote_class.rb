@@ -1,6 +1,6 @@
 # This class will house all the methods required to parse a a key into matched and linked dichotomies
 class BlockQuoteParser
-  attr_reader :dichotomies, :dichotomies_with_links, :link_objs
+  attr_reader :dichotomies, :dichotomies_with_links, :link_objs, :href, :parent_page, :parent_key
   def initialize (nokogiri_object, href, options={})
     @blockquote = nokogiri_object
     @parent_page = options[:parent_page]
@@ -13,6 +13,8 @@ class BlockQuoteParser
     blockquote = @blockquote.inner_text
     @dichotomies = blockquote.split("\n")
     @dichotomies.delete('')
+    # eliminate lines that have an a before first space
+    @dichotomies.delete_if {|dic| dic.match(/^.{1,3}a([^\s]+)/)}
     @dichotomies
   end
 
@@ -69,8 +71,9 @@ class BlockQuoteParser
       parent.children << child
       text_prime = @dichotomies.find {|dic| dic.match(prime_match)}
       child_prime = create_option(text_prime, "#{i}'")
-      i += 1
       parent.children << child_prime
+
+      i += 1
     end
   end
 
@@ -93,9 +96,9 @@ class BlockQuoteParser
 end
 
 class FamilyParser < BlockQuoteParser
-  def initialize(family_name)
+  def initialize(blockquote, href, options={})
     super
-    @family_name = family_name
+    @family_name = options['family_name']
   end
 
   def top_pair_node(dichotomy)
@@ -107,5 +110,6 @@ class FamilyParser < BlockQuoteParser
       @parent_option.children << create_option(dichotomy, @href, "1'")
     end
   end
-
 end
+
+
