@@ -9,11 +9,19 @@ class BlockQuoteParser
     @href = href
   end
 
+  def sanitize_blockquote
+    @blockquote.search('font').remove
+  end
+
   def scrape_text
+    sanitize_blockquote
     dic_line = @blockquote.css('p')
     nice_lines =  dic_line.select { |dic| !dic.inner_text.match(/^.{1,3}a([^\s]+)/) }
     @dichotomies = nice_lines.map { |line| line.inner_text}
     @dichotomies.map! { |dic| dic.gsub(/[\u0080-\u00ff]/, "") }
+    @dichotomies.map! { |dic| dic.gsub(/\n/, "")}
+    @dichotomies.delete("")
+    @dichotomies
   end
 
 #This is a replacement of line 34 of the seeds file, I haven't included the ==[] case required of that if statement
@@ -63,7 +71,12 @@ class BlockQuoteParser
       prime_match = (/^#{ Regexp.quote(i.to_s) }'/)
       non_prime_match = (/^#{ Regexp.quote(i.to_s) }\./)
       parent_index = @dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
+      p parent_index
       text = @dichotomies.find {|dic| dic.match(non_prime_match)}
+      p "---------------------------------------"
+      p i
+      p @dichotomies[parent_index]
+      p "---------------------------------------"
       parent = Option.find_by(page: @href, key: @dichotomies[parent_index][/^([^\s]+)/])
       child = create_option(text, "#{i}.")
       parent.children << child
@@ -72,11 +85,13 @@ class BlockQuoteParser
       parent.children << child_prime
 
       i += 1
+
     end
   end
 
 
   def create_link_obj
+
     links = @blockquote.css('p')
     lines_with_links = links.select{ |link| link.inner_text.match@all_text_after_dots }
     @link_objs = []
@@ -129,6 +144,7 @@ class FamilyParser < BlockQuoteParser
     lines_with_links = links.select{ |link| link.inner_text.match@all_text_after_dots }
     @link_objs = []
     lines_with_links.each do |line|
+      # p line if line.css('a').length < 2
       d_key = line.css('a')[0].inner_text
       hrefs = line.css('a').map { |link| (link.attribute('href').to_s) }
       actual_links = hrefs.select { |href| href.match(/^#.*/) }

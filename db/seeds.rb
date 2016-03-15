@@ -39,29 +39,26 @@ end
 
 
 def big_family_scraper(href)
-  p "Doing stuff"
+  p "Doing shhhhtuff"
   blockquotes = get_blockquote(href)
   blockquotes = blockquotes.select { |block| block.inner_text.match(/^1/)}
+  p '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'
   first_parser = FamilyParser.new(blockquotes.shift, href, {"family_name"=> "Poaceae"})
+  first_parser
   first_parser.scrape_text
-  p first_parser.dichotomies
+  first_parser.dichotomies
   key_to_groups = first_parser.group_key_hash
   recursive_scrape(first_parser)
-  embedded_links = first_parser.embedded_group_links
+  p embedded_links = first_parser.embedded_group_links
   embedded_link_hash = Hash[embedded_links.zip(blockquotes)]
   embedded_link_hash.each do |link, blockquote|
     new_parser = BlockQuoteParser.new(blockquote, link.href, { parent_page: link.parent_href, parent_key: link.parent_key })
     recursive_scrape(new_parser)
   end
-
 end
 
-# big_family_scraper("/cgi-bin/get_IJM.pl?key=223")
+big_family_scraper("/cgi-bin/get_IJM.pl?key=58")
 
-blockquotes = get_blockquote("/cgi-bin/get_IJM.pl?key=223")
-first_parser = FamilyParser.new(blockquotes.shift, "/cgi-bin/get_IJM.pl?key=223", {"family_name"=> "Poaceae"})
-
-first_parser.scrape_text
 
 
 
