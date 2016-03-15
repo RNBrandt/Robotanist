@@ -11,6 +11,11 @@ class FamiliesController < ApplicationController
 
   def search
     search_id = Family.find_by(scientific_name: params[:search_key]).id
-    redirect_to family_path(id: search_id)
+    if request.xhr?
+      @family = Family.find(search_id)
+      render :json => @family
+    else
+      redirect_to family_path(id: search_id)
+    end
   end
 end
