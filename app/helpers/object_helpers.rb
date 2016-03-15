@@ -29,7 +29,6 @@ def create_obj(url, klass)
   end
 
   if klass.where(scientific_name: scientific_name) == []
-
     return klass.create(scientific_name: scientific_name, common_name: common_name, description: add_tool_tip_span(description))
   else
     return klass.find_by(scientific_name: scientific_name)
