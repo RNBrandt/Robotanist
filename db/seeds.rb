@@ -30,11 +30,11 @@ def create_link_objs (url, current_href)
 end
 
 
-  # first_blockquote = get_blockquote("/IJM_fam_key.html")
-  # parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
+  first_blockquote = get_blockquote("/IJM_fam_key.html")
+  parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
 
-# recursive_scrape(parser)
-# scrape_from_families
+recursive_scrape(parser)
+scrape_from_families
 # recursive_scrape(parser)
 
 
@@ -57,7 +57,7 @@ def big_family_scraper(href)
   end
 end
 
-big_family_scraper("/cgi-bin/get_IJM.pl?key=58")
+# big_family_scraper("/cgi-bin/get_IJM.pl?key=58")
 
 
 
