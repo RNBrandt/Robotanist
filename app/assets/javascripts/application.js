@@ -18,7 +18,6 @@
 
 $(function(){ 
 
-$(document).foundation();
 $('#div-search').show();
 $('#div-tabs').hide();
 $('#wikipediaDiv').hide();
@@ -160,9 +159,17 @@ $('#twitterDiv').hide();
     $('#tab-wikipedia').removeClass('alert');
   });
  
-  $('#dataCarousel').on('click', '#arrowLeft', function(e){
+  $('#dataCarousel').on('click', '#arrowParent, #arrowLeft, #arrowStepLeft', function(e){
     e.preventDefault();
     var optionID = $(this).attr('data-id')
+    var url = '';
+
+    if ($(this).attr('id') == 'arrowParent') {
+      url = "/options/"
+    } else {
+      url = "/options/" + optionID
+    }
+
     
     //Fade out once complete run ajax
     $('#panel-left').css('border', '4px dotted #ec5840');
