@@ -1,6 +1,6 @@
 # Controller for all Options objects
 class OptionsController < ApplicationController
-  
+
   def index
     @options = Option.where(head:'root')
     if request.xhr?
@@ -11,6 +11,7 @@ class OptionsController < ApplicationController
 
   def twitter
     client = Twitter::REST::Client.new do |config|
+
       config.consumer_key        = Rails.application.secrets[:'config.consumer_key']
       config.consumer_secret     = Rails.application.secrets[:'config.consumer_secret']
       config.bearer_token        = Rails.application.secrets[:'config.bearer_token']
@@ -20,6 +21,7 @@ class OptionsController < ApplicationController
     puts "=" * 40
 
     @tweets = client.search(params[:keyword], result_type: "recent").take(20)
+
     if request.xhr?
       render partial: 'layouts/info_twitter', locals: {tweets: @tweets}, layout: false
     end

@@ -23,6 +23,8 @@ gem 'rubocop', require: false
 gem 'rspec-rails'
 gem 'capybara'
 gem 'selenium-webdriver'
+gem 'httpclient'
+
 
 group :development, :test do
   gem 'byebug'
@@ -32,5 +34,6 @@ group :development do
 
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'mongo_sync'
 end
 

@@ -39,8 +39,8 @@ $(function () {
 
     // ajax request starts
       $.ajax({
-        method: "get",
-        url: "/family/",
+        method: "POST",
+        url: "/families/search",
         data: $data
       })
       .done(function(data) {
