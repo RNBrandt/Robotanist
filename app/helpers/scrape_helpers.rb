@@ -58,7 +58,7 @@ def recursive_scrape(parser)
     new_url = get_redirect(BASE_URL + parser.href)
     parent_option = Option.find_by(page:parser.parent_page, key: parser.parent_key)
     child = assign_obj_type(new_url[0])
-    parent_option.child_obgitj[child.class.to_s] = child.id
+    parent_option.child_obj[child.class.to_s] = child.id
   end
   parser.make_first_node
   parser.fill_tree

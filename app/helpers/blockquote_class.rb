@@ -71,12 +71,12 @@ class BlockQuoteParser
       prime_match = (/^#{ Regexp.quote(i.to_s) }'/)
       non_prime_match = (/^#{ Regexp.quote(i.to_s) }\./)
       parent_index = @dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
-      p parent_index
+      # p parent_index
       text = @dichotomies.find {|dic| dic.match(non_prime_match)}
-      p "---------------------------------------"
-      p i
-      p @dichotomies[parent_index]
-      p "---------------------------------------"
+      # p "---------------------------------------"
+      # p i
+      # p @dichotomies[parent_index]
+      # p "---------------------------------------"
       parent = Option.find_by(page: @href, key: @dichotomies[parent_index][/^([^\s]+)/])
       child = create_option(text, "#{i}.")
       parent.children << child
