@@ -10,6 +10,7 @@ class BlockQuoteParser
   end
 
   def sanitize_blockquote
+    p @blockquote
     @blockquote.search('font').remove
   end
 
@@ -67,25 +68,23 @@ class BlockQuoteParser
 
   def fill_tree
     i = 2
-    while @dichotomies.find {|dic| dic.match(/^#{ Regexp.quote(i.to_s) }'/)} != nil
+    while i <= (@dichotomies.length/2) +1
       prime_match = (/^#{ Regexp.quote(i.to_s) }'/)
       non_prime_match = (/^#{ Regexp.quote(i.to_s) }\./)
-      parent_index = @dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
-      p parent_index
-      text = @dichotomies.find {|dic| dic.match(non_prime_match)}
-      p "---------------------------------------"
-      p i
-      p @dichotomies[parent_index]
-      p "---------------------------------------"
-      parent = Option.find_by(page: @href, key: @dichotomies[parent_index][/^([^\s]+)/])
-      child = create_option(text, "#{i}.")
-      parent.children << child
-      text_prime = @dichotomies.find {|dic| dic.match(prime_match)}
-      child_prime = create_option(text_prime, "#{i}'")
-      parent.children << child_prime
-
-      i += 1
-
+      if @dichotomies.find_index {|dic| dic.match(non_prime_match)} == nil
+        i += 1
+      else
+        parent_index = @dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
+        p parent_index
+        text = @dichotomies.find {|dic| dic.match(non_prime_match)}
+        parent = Option.find_by(page: @href, key: @dichotomies[parent_index][/^([^\s]+)/])
+        child = create_option(text, "#{i}.")
+        parent.children << child
+        text_prime = @dichotomies.find {|dic| dic.match(prime_match)}
+        child_prime = create_option(text_prime, "#{i}'")
+        parent.children << child_prime
+        i += 1
+      end
     end
   end
 
@@ -108,17 +107,18 @@ class BlockQuoteParser
 
 end
 
-class FamilyParser < BlockQuoteParser
+class KlassParser < BlockQuoteParser
   attr_reader :key_to_groups
   def initialize(blockquote, href, options={})
     super
-    @family_name = options['family_name']
+    @klass_name = options["klass_name"]
+    @klass = options["klass"]
   end
 
   def top_pair_node(dichotomy)
 
-    @family_id = Family.find_by(scientific_name: @family_name).id
-    @parent_option = Option.find_by( child_obj['Family'] = "@family_id" )
+    @klass_id = @klass.find_by(scientific_name: @klass_name).id
+    @parent_option = Option.find_by( child_obj['@klass'] = "@family_id" )
     if dichotomy[0] == '1' && dichotomy[1] =='.'
       @parent_option.children << create_option(dichotomy, @href, '1.')
     elsif dichotomy[0] == '1' && dichotomy[1] == "'"
@@ -132,10 +132,9 @@ class FamilyParser < BlockQuoteParser
     @key_to_groups = {}
     lines_with_groups.each do |line|
       d_key = line.match(/^([^\s]+)/)[0]
-      group_number = line.match(/.$/)[0]
-      key_to_groups[d_key] = group_number
+      group_number = line.match(/(?<=Group\s)\d*/)[0]
+      @key_to_groups[d_key] = group_number
     end
-
     return @key_to_groups
   end
 
@@ -162,8 +161,6 @@ class FamilyParser < BlockQuoteParser
     end
     return embedded_links
   end
-
-
 end
 
 
