@@ -2,11 +2,11 @@ require_relative "../app/helpers/scrape_helpers"
 require_relative "../app/helpers/link_helpers"
 require_relative "../app/helpers/object_helpers"
 require_relative "../app/helpers/glossary_helpers"
-Option.destroy_all
-Glossary.destroy_all
-Species.destroy_all
-Family.destroy_all
-Genus.destroy_all
+# Option.destroy_all
+# Glossary.destroy_all
+# Species.destroy_all
+# Family.destroy_all
+# Genus.destroy_all
 
 BASE_URL = "http://ucjeps.berkeley.edu"
 
@@ -47,9 +47,9 @@ def recursive_scrape(current_href, parent_page=nil,parent_key=nil)
   end
 end
 
-recursive_scrape("/IJM_fam_key.html")
+# recursive_scrape("/IJM_fam_key.html")
 # big_family_scraper('http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=58', 'Asteraceae', 'fuck knows')
 
 
-# create_glossary
+create_glossary
 

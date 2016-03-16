@@ -16,9 +16,6 @@ class OptionsController < ApplicationController
       config.consumer_secret     = Rails.application.secrets[:'config.consumer_secret']
       config.bearer_token        = Rails.application.secrets[:'config.bearer_token']
     end
-    puts "=" * 40
-    puts params[:keyword]
-    puts "=" * 40
 
     @tweets = client.search(params[:keyword], result_type: "recent").take(20)
 
