@@ -10070,17 +10070,12 @@ blockquote.pull-right {
 
 .owl-carousel.owl-loaded { display:block }
 
-/*.owl-carousel.owl-loading {
+.owl-carousel.owl-loading {
 	display:block;
 	min-height: 100px;
-<<<<<<< HEAD
-	background: url('/assets/preloader.gif') no-repeat center center
-}
-=======
 	background: url('images/preloader.gif') no-repeat center center
-}*/
-/*Took this out - Dave*/
->>>>>>> 5e47674b8a4c41a79ab92fb866c288d0fa5c3cdb
+}
+/*Took this out because it was erroring index page, then put it back in after merge with Timur seemed to fix - Dave*/
 
 .owl-carousel .owl-refresh .owl-item { display:none }
 
