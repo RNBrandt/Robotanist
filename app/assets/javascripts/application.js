@@ -13,10 +13,68 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require foundation
 //= require_tree .
 
 $(function(){ 
+    
+  $('body').on('click', function(e){
+    $('#popover').popover("hide");
+  });
+
+  var glossary = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    // url points to a json file that contains an array of country names, see
+    prefetch: {
+      url: '/assets/glossary.json'
+    }
+  });
+
+  // passing in `null` for the `options` arguments will result in the default
+  // options being used
+  $('#prefetch #typeahead').typeahead(null, {
+    name: 'glossary',
+    source: glossary
+  });
+
+  //Capture Typeahead Form Submit
+  // Intercept Write Post Form Submit
+  $('#typeahead-form').on('submit', function(e){
+    var $data = $(this).serializeArray();
+    var q = $data[0]['value']
+
+    // ajax request starts
+    $.ajax({
+      method: "get",
+      url: "/glossary/" + $data[0]['value']
+    })
+    .done(function(data) {
+      $("#popover").attr('data-content', data);
+      $("#popover").attr('data-original-title', q);
+      $('#popover').popover("toggle");
+    })
+    .fail(function() {
+      console.log("fail")
+    })
+  // ajax request ends
+
+
+
+
+
+
+
+
+
+
+  });
+
+
+
+
+    // typeahead ends here
+
+
 
 $('#div-search').show();
 $('#div-tabs').hide();
@@ -149,15 +207,6 @@ $('#twitterDiv').hide();
   // ajax request ends
   });
 
-  // Capture close click
-  $('#tab-close').on('click', function(e){
-    $('#div-tabs').hide();
-    $('#wikipediaDiv').hide();
-    $('#flickrDiv').hide();
-    $('#div-search').show();
-    $('#tab-flickr').removeClass('alert');
-    $('#tab-wikipedia').removeClass('alert');
-  });
  
   $('#dataCarousel').on('click', '#arrowParent, #arrowLeft, #arrowStepLeft', function(e){
     e.preventDefault();

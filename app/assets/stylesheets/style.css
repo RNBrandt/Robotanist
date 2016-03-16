@@ -10073,9 +10073,14 @@ blockquote.pull-right {
 /*.owl-carousel.owl-loading {
 	display:block;
 	min-height: 100px;
+<<<<<<< HEAD
+	background: url('/assets/preloader.gif') no-repeat center center
+}
+=======
 	background: url('images/preloader.gif') no-repeat center center
 }*/
 /*Took this out - Dave*/
+>>>>>>> 5e47674b8a4c41a79ab92fb866c288d0fa5c3cdb
 
 .owl-carousel .owl-refresh .owl-item { display:none }
 
@@ -11187,8 +11192,13 @@ body:not(.device-touch) #gotoTop {
 	display: block;
 	width: 100%;
 	height: 100%;
+<<<<<<< HEAD
+	background: url("/assets/preloader.gif") center center no-repeat #FFF;
+}
+=======
 	background: url("images/preloader.gif") center center no-repeat #FFF;
 }*/
+>>>>>>> 5e47674b8a4c41a79ab92fb866c288d0fa5c3cdb
 
 .preloader2 { background-color: transparent; }
 
