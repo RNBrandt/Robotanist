@@ -5,6 +5,7 @@ RSpec.describe Option, type: :model do
   let(:valid) do
     Option.new(text: 'Will I help you find plants?')
   end
+  after(:all) {valid.destroy}
 
   describe "option validations" do
     it 'saves with valid data' do
