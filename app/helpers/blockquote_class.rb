@@ -10,7 +10,6 @@ class BlockQuoteParser
   end
 
   def sanitize_blockquote
-    p @blockquote
     @blockquote.search('font').remove
   end
 
@@ -75,7 +74,6 @@ class BlockQuoteParser
         i += 1
       else
         parent_index = @dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
-        p parent_index
         text = @dichotomies.find {|dic| dic.match(non_prime_match)}
         parent = Option.find_by(page: @href, key: @dichotomies[parent_index][/^([^\s]+)/])
         child = create_option(text, "#{i}.")

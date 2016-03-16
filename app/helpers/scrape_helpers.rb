@@ -68,8 +68,6 @@ def recursive_scrape(parser)
   links = parser.create_link_obj
   links.each do |link|
     blockquote = get_blockquote(link.href)
-    p link.href
-    byebug
     new_parser = BlockQuoteParser.new(blockquote, link.href, {parent_page: link.parent_href, parent_key: link.parent_key})
     recursive_scrape(new_parser)
   end
