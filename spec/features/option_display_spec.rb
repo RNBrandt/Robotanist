@@ -19,7 +19,7 @@ describe Option, :js => true do
 
   context 'index page' do
     it 'displays page title' do
-      expect(page).to have_content("BOTANIST")
+      expect(page).to have_content("BEGIN")
     end
 
     describe 'left option display' do

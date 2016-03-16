@@ -38,6 +38,7 @@ class OptionsController < ApplicationController
     @image = ''
 
     if @option.child_obj != {}
+
       obj_type = @option.child_obj.keys[0]
       obj_id = @option.child_obj[obj_type]
       if obj_type == "Species"
