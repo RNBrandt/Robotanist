@@ -5,7 +5,7 @@ require_relative "../app/helpers/glossary_helpers"
 require_relative "../app/helpers/blockquote_class"
 
 Option.destroy_all
-# Glossary.destroy_all
+Glossary.destroy_all
 Species.destroy_all
 Family.destroy_all
 Genus.destroy_all

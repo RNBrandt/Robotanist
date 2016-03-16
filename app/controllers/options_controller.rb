@@ -35,17 +35,18 @@ class OptionsController < ApplicationController
     @children = @option.children
     @parent = @option.parent
     @col_width = 6
-    
+
     if @option.child_obj != {}
       obj_type = @option.child_obj.keys[0]
-      obj_id = @option.child_obj[obj_type] 
+      obj_id = @option.child_obj[obj_type]
+      @description = @option.child_obj.description
       if obj_type == "Species"
         @child_obj = Species.find(obj_id)
         @col_width = 4 if @child_obj.image_url
         caps = @child_obj.description.match(/^[A-Z]+/).to_s
-        
+
         if caps
-          @status = @child_obj.description[0...(caps.length-1)]
+          @status = "Status: " + @child_obj.description[0...(caps.length-1)]
           @description = @child_obj.description[(caps.length-1)..-1].html_safe
         end
 
@@ -58,7 +59,7 @@ class OptionsController < ApplicationController
 
     if request.xhr?
       if @child_obj
-        render partial: 'layouts/carousel_end', locals: { child_obj: @child_obj }, layout: false
+        render partial: 'layouts/carousel_end', locals: { child_obj: @child_obj, status: @status, description: @description, col_width: @col_width }, layout: false
       else
         render partial: 'layouts/carousel', locals: { options: @children }, layout: false
       end
