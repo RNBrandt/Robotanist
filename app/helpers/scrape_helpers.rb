@@ -60,7 +60,10 @@ def recursive_scrape(parser)
     new_url = get_redirect(BASE_URL + parser.href)
     parent_option = Option.find_by(page:parser.parent_page, key: parser.parent_key)
     child = assign_obj_type(new_url[0])
-    parent_option.child_obj[child.class.to_s] = child.id
+    byebug
+    parent_option.update_attribute(:child_obj, {child.class.to_s => child.id})
+    parent_option.save
+    byebug
     step_through_genus(parser)
   end
   parser.make_first_node
@@ -106,6 +109,7 @@ def step_through_genus(parser)
     else
       "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
       p "#{main_heading} no key_to"
+      # species_pulldown = doc.css('form select').
       "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
     end
 
