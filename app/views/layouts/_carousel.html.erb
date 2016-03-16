@@ -11,8 +11,10 @@
   <div class="col-md-5 nobottommargin">
     <h4>Dichotomous Tree</h4>
       <div id="panel-left" class="fslider testimonial">
-        <div class="testi-content" style="height: 90px;">
-          <p><%= child_left.text %></p>
+        <div class="testi-content" style="height: 190px;font-size: large;">
+          <p>
+            <%= child_left.text.html_safe %>
+          </p>
         </div>
       </div>
 
@@ -36,7 +38,11 @@
 
       <div id="panel-right" class="fslider testimonial">
         <div class="flexslider">
-          <div class="testi-content" style="height: 90px;"><p><a href="" data-toggle="tooltip" title="Similique fugit repellendus expedita excepturi iure perferendis provident quia eaque. Repellendus, vero numquam?">hover over me</a> <%= child_right.text %></p></div>
+          <div class="testi-content" style="height: 190px;font-size: large;">
+            <p>
+              <%= child_right.text.html_safe %>
+            </p>
+          </div>
         </div>
       </div>
     </a>
