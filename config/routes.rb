@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :families
     resources :species
     resources :genera
+    resources :glossary
     resources :api
 
 

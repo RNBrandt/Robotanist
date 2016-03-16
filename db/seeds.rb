@@ -10,6 +10,7 @@ Species.destroy_all
 Family.destroy_all
 Genus.destroy_all
 
+
 BASE_URL = "http://ucjeps.berkeley.edu"
 
 @root_href = "/IJM_fam_key.html"
@@ -60,9 +61,3 @@ def big_family_scraper(href)
     recursive_scrape(new_parser)
   end
 end
-
-
-
-
-
-
