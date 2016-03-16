@@ -5,7 +5,7 @@ require_relative "../app/helpers/glossary_helpers"
 require_relative "../app/helpers/blockquote_class"
 
 Option.destroy_all
-Glossary.destroy_all
+# Glossary.destroy_all
 Species.destroy_all
 Family.destroy_all
 Genus.destroy_all
@@ -31,25 +31,9 @@ def create_link_objs (url, current_href)
   return link_objs
 end
 
-
-  first_blockquote = get_blockquote("/IJM_fam_key.html")
-  parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
-
-
-big_family_hash = {"Asteraceae"=> "/cgi-bin/get_IJM.pl?key=58","Brassicaceae"=>"/cgi-bin/get_IJM.pl?key=70", "Fabaceae"=> "/cgi-bin/get_IJM.pl?key=134", "Poaceae"=> "/cgi-bin/get_IJM.pl?key=223"}
-
-recursive_scrape(parser)
-scrape_from_families
-big_family_hash.each do |name,href|
-  big_family_scraper(href, name)
-end
-
-
 def big_family_scraper(href)
-  p "Doing shhhhtuff"
   blockquotes = get_blockquote(href)
   blockquotes = blockquotes.select { |block| block.inner_text.match(/^1/)}
-  p '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'
   first_parser = FamilyParser.new(blockquotes.shift, href, {"family_name"=> "Poaceae"})
   first_parser
   first_parser.scrape_text
@@ -65,7 +49,11 @@ def big_family_scraper(href)
 
 end
 
-create_glossary
+big_family_hash = {"Asteraceae"=> "/cgi-bin/get_IJM.pl?key=58","Brassicaceae"=>"/cgi-bin/get_IJM.pl?key=70", "Fabaceae"=> "/cgi-bin/get_IJM.pl?key=134", "Poaceae"=> "/cgi-bin/get_IJM.pl?key=223"}
+
+first_blockquote = get_blockquote("/IJM_fam_key.html")
+parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
+# create_glossary
 recursive_scrape(parser)
 scrape_from_families
 big_family_hash.each do |name,href|
