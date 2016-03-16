@@ -15,8 +15,8 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(function(){ 
-    
+$(function(){
+
   $('body').on('click', function(e){
     $('#popover').popover("hide");
   });
@@ -109,10 +109,10 @@ $('#twitterDiv').hide();
         dataType: "json",
 
         success: function (data, textStatus, jqXHR) {
-          try { 
+          try {
             var markup = data.parse.text["*"];
             var blurb = $('<div></div>').html(markup);
-            
+
             // remove links as they will not work
             blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
 
@@ -133,7 +133,7 @@ $('#twitterDiv').hide();
             document.getElementById("div#wikipediaDiv").innerHTML = wikipediaData;
             // Handlebars Template Ends Here
           }
-          
+
           catch(err) {
             document.getElementById("wikipediaDiv").innerHTML = '<h4>Sorry, Wikipedia does not have an entry for this keyword...</h4>';
           }
@@ -207,7 +207,7 @@ $('#twitterDiv').hide();
   // ajax request ends
   });
 
- 
+
   $('#dataCarousel').on('click', '#arrowParent, #arrowLeft, #arrowStepLeft', function(e){
     e.preventDefault();
     var optionID = $(this).attr('data-id')
@@ -219,7 +219,7 @@ $('#twitterDiv').hide();
       url = "/options/" + optionID
     }
 
-    
+
     //Fade out once complete run ajax
     $('#panel-left').css('border', '4px dotted #1ABC9C');
     $("#dataCarousel").animate({opacity: '0'}, function(){
@@ -231,10 +231,11 @@ $('#twitterDiv').hide();
       .done(function(data) {
         $("#dataCarousel").html(data).animate({opacity: '1'});
       })
-      .fail(function() {
+      .fail(function(response) {
         console.log("fail")
+        console.log(response)
       })
-      // ajax request ends      
+      // ajax request ends
     });
     //Fade outAnimation Complete
   });
@@ -264,7 +265,7 @@ $('#twitterDiv').hide();
       .fail(function() {
         console.log("fail")
       })
-      // ajax request ends      
+      // ajax request ends
     });
     //Fade outAnimation Complete
   });

@@ -1,0 +1,45 @@
+<!-- <li>"You have reached
+<li><%= child_obj.class.to_s %>
+<li><%= child_obj.scientific_name %>
+<li><%= child_obj.common_name %>
+<li><%= child_obj.description %>
+ -->
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+
+      <div class="title-block">
+        <h1><span><%= child_obj.scientific_name %></span></h1><span><%= child_obj.common_name %></span>
+      </div>
+
+      <% if image %>
+        <div class="col-md-<%= col_width %>">
+          <img src="<%= image %>">
+        </div>
+      <% end %>
+
+      <p><%= status %></p>
+
+<% description.split('. ').each do |attr| %>
+  <div class="col-md-<%= col_width %> group-attr">
+    <div class="fancy-title title-border bottommargin-sm">
+      <h4><span><%= attr.split(': ')[0] %></span></h4>
+    </div>
+    <%= attr.split(': ')[1] %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+</section>

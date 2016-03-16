@@ -3,6 +3,7 @@ class FamiliesController < ApplicationController
 
   def index
     @families = Family.all
+    render layout: "detail"
   end
 
   def show
