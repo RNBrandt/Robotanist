@@ -1,0 +1,29 @@
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+
+      <div class="title-block">
+        <h1><span>Botanic Glossary</span></h1>
+        <span>A sentence goes here</span>
+      </div>
+
+
+
+        <div class="col-md-6">
+          <div class="accordion accordion-bg clearfix">
+
+            
+
+            <% @glossaries.each do |glossary| %>
+
+            <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= glossary.word %></div>
+            <div class="acc_content clearfix" style="display: block;">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+            
+            <% end %>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>

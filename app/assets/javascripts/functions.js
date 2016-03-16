@@ -725,7 +725,7 @@ var SEMICOLON = SEMICOLON || {};
 					var element = $(this),
 						elementImg = element.attr( 'data-lazyload' );
 
-					element.attr( 'src', 'images/blank.svg' ).css({ 'background': 'url(images/preloader.gif) no-repeat center center #FFF' });
+					element.attr( 'src', 'images/blank.svg' ).css({ 'background': 'url(assets/preloader.gif) no-repeat center center #FFF' });
 
 					element.appear(function () {
 						element.css({ 'background': 'none' }).removeAttr( 'width' ).removeAttr( 'height' ).attr('src', elementImg);
@@ -2608,7 +2608,6 @@ var SEMICOLON = SEMICOLON || {};
 				console.log('flickrFeed: jflickrfeed not Defined.');
 				return true;
 			}
-
 			var $flickrFeedEl = $('.flickr-feed');
 			if( $flickrFeedEl.length > 0 ){
 				$flickrFeedEl.each(function() {

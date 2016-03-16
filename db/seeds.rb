@@ -10,6 +10,7 @@ require_relative "../app/helpers/blockquote_class"
 # Family.destroy_all
 # Genus.destroy_all
 
+
 BASE_URL = "http://ucjeps.berkeley.edu"
 
 @root_href = "/IJM_fam_key.html"
@@ -59,10 +60,8 @@ def big_family_scraper(href)
     new_parser = BlockQuoteParser.new(blockquote, link.href, { parent_page: link.parent_href, parent_key: link.parent_key })
     recursive_scrape(new_parser)
   end
+
 end
 
 # create_glossary
-
-
-
 
