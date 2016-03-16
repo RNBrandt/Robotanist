@@ -25,7 +25,6 @@ def create_obj(url, klass)
     image_grab = doc.css("img")[4].attr('src')
     if image_grab.match(/^[^\/].*\.\w{1,4}$/)
       image_url = image_grab
-      p image_url
     end
   end
   if doc.css("div.bodyText").inner_text == ''
