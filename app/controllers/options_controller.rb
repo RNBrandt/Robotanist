@@ -35,6 +35,7 @@ class OptionsController < ApplicationController
     @children = @option.children
     @parent = @option.parent
     @col_width = 6
+    @image = ''
 
     if @option.child_obj != {}
       obj_type = @option.child_obj.keys[0]
@@ -42,7 +43,11 @@ class OptionsController < ApplicationController
       if obj_type == "Species"
         @child_obj = Species.find(obj_id)
         @description = @child_obj.description
-        @col_width = 4 if @child_obj.image_url
+        if @child_obj.image_url
+          @image = @child_obj.image_url
+          @col_width = 4
+        end
+
         caps = @description.match(/^[A-Z]+/).to_s
 
         if caps
@@ -52,17 +57,29 @@ class OptionsController < ApplicationController
 
       elsif obj_type == "Family"
         @child_obj = Family.find(obj_id)
+        @description = @child_obj.description
       else
         @child_obj = Genus.find(obj_id)
+        @description = @child_obj.description
       end
     end
 
     if request.xhr?
       if @child_obj
-        render partial: 'layouts/carousel_end', locals: { child_obj: @child_obj, status: @status, description: @description, col_width: @col_width }, layout: false
+        render partial: 'layouts/carousel_end', locals: { child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image }, layout: false
       else
         render partial: 'layouts/carousel', locals: { options: @children }, layout: false
       end
+    else
+      if obj_type == "Family"
+          redirect_to family_path(@family)
+        elsif obj_type == "Genus"
+          redirect_to genus_path(@genus)
+        elsif obj_type == "Species"
+          redirect_to species_path(@species)
+        else
+          console.log("TODO: fix this path for non-JS")
+        end
     end
 
   end

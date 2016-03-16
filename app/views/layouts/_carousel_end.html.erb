@@ -12,9 +12,9 @@
         <h1><span><%= child_obj.scientific_name %></span></h1><span><%= child_obj.common_name %></span>
       </div>
 
-      <% if child_obj.image_url %>
+      <% if image %>
         <div class="col-md-<%= col_width %>">
-          <img src="<%= child_obj.image_url %>">
+          <img src="<%= image %>">
         </div>
       <% end %>
 
