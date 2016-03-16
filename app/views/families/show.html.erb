@@ -1,17 +1,20 @@
-<h1><%= @family.scientific_name %></h1>
-<h2><%= @family.common_name %></h2>
-<!-- hr begins -->
-<div class="row"><div class="medium-12 large-12 columns"><hr></div></div>
-<!-- hr ends -->
-<div>
-  <!-- <ul> -->
-    <% @family.description.split('. ').each do |attr| %>
-      <p><%= attr %></p>
-    <% end %>
-  <!-- </ul> -->
-</div>
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
 
+      <div class="title-block">
+        <h1><span><%= @family.scientific_name %></span></h1>
+        <span><%= @family.common_name %></span>
+      </div>
 
+      <% @family.description.split('. ').each do |attr| %>
+        <div class="col-md-6 group-attr">
+          <div class="fancy-title title-border bottommargin-sm"><h4><span><%= attr.split(': ')[0] %></span></h4></div>
+          <%= attr.split(': ')[1] %>
+        </div>
+      <% end %>
 
-<!-- sample url for testing: -->
-<!-- families/56e6f0fec3b5a009e51bf425 -->
+      <div class="col-md-6 divider divider-center"><i class="icon-cloud"></i></div>
+    </div>
+  </div>
+</section>

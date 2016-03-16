@@ -83,6 +83,7 @@ class BlockQuoteParser
         parent.children << child_prime
         i += 1
       end
+
     end
   end
 
