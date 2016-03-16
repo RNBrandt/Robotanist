@@ -5,7 +5,7 @@ require_relative "../app/helpers/glossary_helpers"
 require_relative "../app/helpers/blockquote_class"
 
 Option.destroy_all
-# Glossary.destroy_all
+Glossary.destroy_all
 Species.destroy_all
 Family.destroy_all
 Genus.destroy_all
@@ -63,5 +63,10 @@ def big_family_scraper(href)
 
 end
 
-# create_glossary
+create_glossary
+recursive_scrape(parser)
+scrape_from_families
+big_family_hash.each do |name,href|
+  big_family_scraper(href, name)
+end
 
