@@ -1,111 +1,124 @@
-def scrape(url)
+require "pp"
+
+def get_doc(href)
+  url = BASE_URL + href
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
-  blockquote = doc.css('blockquote').inner_text
-  dichotomies = blockquote.split("\n")
-  dichotomies.delete('')
-  dichotomies
 end
+
+def get_blockquote(href)
+ doc = get_doc(href)
+ blockquote = doc.css("blockquote")
+end
+
 
 def create_option(dichotomy, current_href, head, key)
-  Option.create(text: add_tool_tip_span(dichotomy), page: current_href, head: head, key: key)
+  Option.create(text: add_tool_tip_span(dichotomy), page: current_href, head: head, key: key, child_obj:{})
 end
 
-def make_first_nodes(dichotomies, parent_page = nil, parent_key = nil, current_href)
-  dichotomies.each do |dichotomy|
-    if parent_key == nil
-      first_options_pair_assignment(dichotomy, current_href)
+def big_family_scraper(href, family_name)
+  p "Doing shhhhtuff"
+  blockquotes = get_blockquote(href)
+  blockquotes = blockquotes.select { |block| block.inner_text.match(/^1/)}
+  first_parser = KlassParser.new(blockquotes.shift, href, {"klass_name"=> family_name, "klass" => "Family"})
+  first_parser
+  first_parser.scrape_text
+  first_parser.dichotomies
+  key_to_groups = first_parser.group_key_hash
+  recursive_scrape(first_parser)
+  embedded_links = first_parser.embedded_group_links
+  if embedded_links.length > blockquotes.length
+    blockquotes[1] = blockquotes[1], blockquotes[1]
+    blockquotes.flatten!
+  end
+  embedded_link_hash = Hash[embedded_links.zip(blockquotes)]
+  embedded_link_hash.each do |link, blockquote|
+    new_parser = BlockQuoteParser.new(blockquote, link.href, { parent_page: link.parent_href, parent_key: link.parent_key })
+    recursive_scrape(new_parser)
+  end
+end
+
+
+def get_family_links
+  href = "/eflora/key_list.html"
+  doc = get_doc(href)
+  #blockquote = doc.css("blockquote")
+  table_data = doc.css("ol")
+  family_names = table_data.inner_text.split("\n").map! {|name| name.strip}
+  family_names.shift
+  links = doc.css("ol").css("a").map { |link| (link.attribute('href').to_s) }
+  family_link_hash = Hash[family_names.zip(links)]
+  to_delete = ["Asteraceae", "Fabaceae", "Poaceae", "Brassicaceae", "Myrsinaceae"]
+  family_link_hash.delete_if { |key, value| to_delete.include?(key)}
+end
+
+
+
+def recursive_scrape(parser)
+  parser.scrape_text
+  if parser.find_dichotomies_with_links == []
+    new_url = get_redirect(BASE_URL + parser.href)
+    parent_option = Option.find_by(page:parser.parent_page, key: parser.parent_key)
+    child = assign_obj_type(new_url[0])
+    parent_option.child_obj[child.class.to_s] = child.id
+    step_through_genus(parser)
+  end
+  parser.make_first_node
+  parser.fill_tree
+  links = parser.create_link_obj
+  links.each do |link|
+    blockquote = get_blockquote(link.href)
+    new_parser = BlockQuoteParser.new(blockquote, link.href, {parent_page: link.parent_href, parent_key: link.parent_key})
+    recursive_scrape(new_parser)
+  end
+end
+
+def scrape_from_families
+  link_hash = get_family_links
+  link_hash.each do |family_name, href|
+     blockquote = get_blockquote(href)
+     parser = KlassParser.new(blockquote, href, options= { "klass_name" => family_name })
+     recursive_scrape(parser)
+  end
+end
+
+def step_through_genus(parser)
+  new_url = get_redirect(BASE_URL + parser.href)
+  new_href = new_url[0][26..-1]
+  doc = get_doc(new_href)
+  tables = doc.css("table")
+  main_heading = doc.css("span.pageLargeHeading").inner_text
+  sub_heading = doc.css("span.pageMajorHeading").inner_text
+  if main_heading.split(" ").length == 1 && !sub_heading.match(/.+FAMILY/)
+    #check for key to button if it exists get link
+    a_tags =  doc.css('a')
+    key_to = a_tags.select { |a| a.inner_text.match(/^Key to .*/)}
+    if key_to[1]
+      p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      p "GENUS #{main_heading}"
+      p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      key_to_href = key_to[1].attribute('href').value[26..-1]
+      new_blockquote = get_blockquote(key_to_href)
+      # genus = Genus.find_by(scientific_name: main_heading)
+      # parent = Option.find_by(child_obj["Genus"] = genus.id)
+      new_parser = KlassParser.new(new_blockquote, key_to_href, {"klass_name" => main_heading, "klass" => "Genus"})
+      recursive_scrape(new_parser)
     else
-      top_of_new_pair_assignment(dichotomy, current_href, parent_page, parent_key)
+      "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+      p "#{main_heading} no key_to"
+      "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
     end
-  end
-end
 
-def make_family_head_nodes(dichotomy, family_name, current_href)
-  papa = Family.find_by(scientific_name: family_name)
-  if dichotomy[0] == "1" && dichotomy[1] == '.'
-    first_node = Option.create(dichotomy, current_href, scientific_name, "1.")
-    papa.children << first_node
-  elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-    first_node.siblings << create_option(dichotomy, current_href, scientific_name, "1'")
   end
-end
-
-def first_options_pair_assignment(dichotomy, current_href)
-  if dichotomy[0] == "1" && dichotomy[1] == '.'
-    @first = create_option(dichotomy, current_href, 'root', "1.")
-  elsif dichotomy[0] == "1" && dichotomy[1] == "'"
-    Option.first.siblings << create_option(dichotomy, current_href, 'root', "1'")
-  end
-end
-
-def top_of_new_pair_assignment(dichotomy, current_href, parent_page, parent_key)
-  @parent_option = Option.find_by(page: parent_page, key: parent_key)
-  if dichotomy[0] == '1' && dichotomy[1] == '.'
-    @parent_option.children << create_option(dichotomy, current_href, current_href, '1.')
-  elsif dichotomy[0] == '1' && dichotomy[1] == "'"
-    @parent_option.children << create_option(dichotomy, current_href, current_href, "1'")
-  end
-end
-
-def fill_tree(dichotomies, current_href)
-  i = 2
-  while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}'/)} != nil
-    prime_match = (/^#{Regexp.quote(i.to_s)}'/)
-    non_prime_match = (/^#{Regexp.quote(i.to_s)}\./)
-    parent_index = dichotomies.find_index {|dic| dic.match(non_prime_match)} - 1
-    @text = dichotomies.find {|dic| dic.match(non_prime_match)}
-    parent = Option.find_by(page: current_href, key: dichotomies[parent_index][/^([^\s]+)/])
-    parent.children << Option.create(text: add_tool_tip_span(@text),page: current_href, key: "#{i}.")
-    text_prime = dichotomies.find {|dic| dic.match(prime_match)}
-    parent.children << Option.create(text: text_prime, page: current_href, key: "#{i}'")
-    i += 1
-  end
-end
-
-def associate_links(url, current_href)
-  uri = URI(url)
-  doc = Nokogiri.parse(Net::HTTP.get(uri))
-  links = doc.css('blockquote').css('p')
-  lines_with_links = links.select{ |link| link.inner_text.match(/(?<=\.\.\.\.\.).*/) }
-  link_objs = []
-  lines_with_links.each do |line|
-    d_key = line.css('a')[0].inner_text
-    hrefs = line.css('a').map { |link| (link.attribute('href').to_s) }
-    actual_links = hrefs.select { |href| href.match(/^\/.*/) }
-    actual_links.each do |link|
-      link_objs << Link.new(link, current_href, d_key)
-    end
-  end
-  return link_objs
-end
-
-def big_family_scraper(url, family_name, current_href)
-  uri = URI(url)
-  doc = Nokogiri.parse(Net::HTTP.get(uri))
-  @blockquotes = doc.css('blockquote')
-  @nice_blocks = @blockquotes.select { |block| block.inner_text.match(/^1.*/) }
-  dichotomies = @nice_blocks[0].inner_text.split("\n")
-  # make_family_head_nodes(dichotomies, family_name, current_href)
-  # fill_tree(dichotomies, href)
-  linked_options = dichotomies.select { |dichotomy| dichotomy.match(/(?<=\.\.\.\.\.).*/) }
-  dichotomous_key_group = {}
-  linked_options.each do | dic |
-    key = dic.match(/^([^\s]+)/)[0]
-    group_name = dic.match(/(?<=\.\.\.\.\.).*/)[0]
-    dichotomous_key_group[key] = group_name
-  end
-  p dichotomous_key_group
 
 end
 
-def group_scrape
-  i = 1
-  while dichotomies.find {|dic| dic.match(/^#{Regexp.quote(i.to_s)}'/)} != nil
-    dichotomies = nice_blocks[i].inner_text.split("\n").reject { |text| text==""}
 
 
-    i += 1
-  end
-end
-#how do we find groups
+
+
+
+
+
+
+

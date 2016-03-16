@@ -7,6 +7,7 @@ class FamiliesController < ApplicationController
 
   def show
     @family = Family.find(params[:id])
+    render layout: "detail"
   end
 
   def search

@@ -1,15 +1,26 @@
-<h1><%= @species.scientific_name %></h1>
-<h2><%= @species.common_name %></h2>
-<div class="row"><div class="medium-12 large-12 columns"><hr></div></div>
-<!-- hr ends -->
-<div>
-  <!-- <ul> -->
-    <% @species.description.split('. ').each do |attr| %>
-      <p><%= attr %></p>
-    <% end %>
-  <!-- </ul> -->
-</div>
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
 
+      <div class="title-block">
+        <h1><span><%= @species.scientific_name %></span></h1>
+        <span><%= @species.common_name %></span>
+      </div>
 
-<!-- sample url for testing: -->
-<!-- species/56e6f01bc3b5a009e51bf1e5 -->
+      <% if @species.image_url %>
+        <div class="col-md-<%= @col_width %>">
+          <img src="<%= @species.image_url %>">
+        </div>
+      <% end %>
+
+      <% @species.description.split('. ').each do |attr| %>
+        <div class="col-md-<%= @col_width %> group-attr">
+          <div class="fancy-title title-border bottommargin-sm"><h4><span><%= attr.split(': ')[0] %></span></h4></div>
+          <%= attr.split(': ')[1] %>
+        </div>
+      <% end %>
+
+      <div class="col-md-6 divider divider-center"><i class="icon-cloud"></i></div>
+    </div>
+  </div>
+</section>
