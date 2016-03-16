@@ -68,6 +68,8 @@ def recursive_scrape(parser)
   links = parser.create_link_obj
   links.each do |link|
     blockquote = get_blockquote(link.href)
+    p link.href
+    byebug
     new_parser = BlockQuoteParser.new(blockquote, link.href, {parent_page: link.parent_href, parent_key: link.parent_key})
     recursive_scrape(new_parser)
   end
@@ -83,12 +85,12 @@ def scrape_from_families
 end
 
 def step_through_genus(parser)
-  "uuuuuuuuuuuuuuuuuuuuuuuuufffffffffff5555555555"
-  doc = get_doc(parser.href)
+  new_url = get_redirect(BASE_URL + parser.href)
+  new_href = new_url[0][26..-1]
+  doc = get_doc(new_href)
   tables = doc.css("table")
   main_heading = doc.css("span.pageLargeHeading").inner_text
   sub_heading = doc.css("span.pageMajorHeading").inner_text
-  byebug
   if main_heading.split(" ").length == 1 && !sub_heading.match(/.+FAMILY/)
     #check for key to button if it exists get link
     a_tags =  doc.css('a')
