@@ -39,15 +39,15 @@ class OptionsController < ApplicationController
     if @option.child_obj != {}
       obj_type = @option.child_obj.keys[0]
       obj_id = @option.child_obj[obj_type]
-      @description = @option.child_obj.description
       if obj_type == "Species"
         @child_obj = Species.find(obj_id)
+        @description = @child_obj.description
         @col_width = 4 if @child_obj.image_url
-        caps = @child_obj.description.match(/^[A-Z]+/).to_s
+        caps = @description.match(/^[A-Z]+/).to_s
 
         if caps
-          @status = "Status: " + @child_obj.description[0...(caps.length-1)]
-          @description = @child_obj.description[(caps.length-1)..-1].html_safe
+          @status = "Status: " + @description[0...(caps.length-1)]
+          @description = @description[(caps.length-1)..-1].html_safe
         end
 
       elsif obj_type == "Family"
