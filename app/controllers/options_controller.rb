@@ -7,6 +7,10 @@ class OptionsController < ApplicationController
       render partial: 'layouts/carousel', locals: { options: @options }, layout: false
     end
 
+    @family_count = Family.all.count
+    @species_count = Species.all.count
+    @genera_count = Genus.all.count
+
   end
 
   def twitter
@@ -29,8 +33,26 @@ class OptionsController < ApplicationController
     @option = Option.find(params[:id])
     @children = @option.children
     @parent = @option.parent
-    if request.xhr?
-      render partial: 'layouts/carousel', locals: { options: @children }, layout: false
+
+    if @option.child_obj != {}
+      obj_type = @option.child_obj.keys[0]
+      obj_id = @option.child_obj[obj_type] 
+      if obj_type == "Species"
+        @child_obj = Species.find(obj_id)
+      elsif obj_type == "Family"
+        @child_obj = Family.find(obj_id)
+      else
+        @child_obj = Genus.find(obj_id)
+      end
     end
+
+    if request.xhr?
+      if @child_obj
+        render partial: 'layouts/carousel_end', locals: { child_obj: @child_obj }, layout: false
+      else
+        render partial: 'layouts/carousel', locals: { options: @children }, layout: false
+      end
+    end
+
   end
 end
