@@ -36,6 +36,9 @@ def create_obj(url, klass)
 
   if klass.where(scientific_name: scientific_name) == []
     if klass == Species
+      p "================="
+      p scientific_name
+      p common_name
       return klass.create(scientific_name: scientific_name, common_name: common_name, description: add_tool_tip_span(description),
         image_url: image_url)
     else
