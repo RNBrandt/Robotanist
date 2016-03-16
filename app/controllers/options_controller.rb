@@ -34,12 +34,21 @@ class OptionsController < ApplicationController
     @option = Option.find(params[:id])
     @children = @option.children
     @parent = @option.parent
-
+    @col_width = 6
+    
     if @option.child_obj != {}
       obj_type = @option.child_obj.keys[0]
       obj_id = @option.child_obj[obj_type] 
       if obj_type == "Species"
         @child_obj = Species.find(obj_id)
+        @col_width = 4 if @child_obj.image_url
+        caps = @child_obj.description.match(/^[A-Z]+/).to_s
+        
+        if caps
+          @status = @child_obj.description[0...(caps.length-1)]
+          @description = @child_obj.description[(caps.length-1)..-1].html_safe
+        end
+
       elsif obj_type == "Family"
         @child_obj = Family.find(obj_id)
       else
