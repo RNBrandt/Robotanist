@@ -52,12 +52,15 @@ def get_family_links
   family_link_hash.delete_if { |key, value| to_delete.include?(key)}
 end
 
-
+# /eflora/eflora_display.php?tid=23856
 
 def recursive_scrape(parser)
+  p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+  p parser.href
   parser.scrape_text
   if parser.find_dichotomies_with_links == []
     new_url = get_redirect(BASE_URL + parser.href)
+    new_url = [BASE_URL + parser.href] if new_url == []
     parent_option = Option.find_by(page:parser.parent_page, key: parser.parent_key)
     child = assign_obj_type(new_url[0])
     parent_option.update_attribute(:child_obj, {child.class.to_s => child.id})
@@ -82,9 +85,10 @@ def scrape_from_families
      recursive_scrape(parser)
   end
 end
-
+# <a href="/cgi-bin/get_IJM.pl?tid=10270">.....&nbsp;ARACEAE ([<i>Peltandra</i>]) (2)</a>
 def step_through_genus(parser)
   new_url = get_redirect(BASE_URL + parser.href)
+  new_url = [BASE_URL + parser.href] if new_url == []
   new_href = new_url[0][26..-1]
   doc = get_doc(new_href)
   tables = doc.css("table")
@@ -95,20 +99,20 @@ def step_through_genus(parser)
     a_tags =  doc.css('a')
     key_to = a_tags.select { |a| a.inner_text.match(/^Key to .*/)}
     if key_to[1]
-      p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      p "GENUS #{main_heading}"
-      p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
       key_to_href = key_to[1].attribute('href').value[26..-1]
       new_blockquote = get_blockquote(key_to_href)
-      # genus = Genus.find_by(scientific_name: main_heading)
-      # parent = Option.find_by(child_obj["Genus"] = genus.id)
+
       new_parser = KlassParser.new(new_blockquote, key_to_href, {"klass_name" => main_heading, "klass" => "Genus"})
       recursive_scrape(new_parser)
     else
-      "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-      p "#{main_heading} no key_to"
-      # species_pulldown = doc.css('form select').
-      "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+      select_options = doc.css('option')
+      href_extention = select_options[1].attribute('value').value
+      species_href = "/eflora/#{href_extention}"
+      new_blockquote = get_blockquote(species_href)
+      genus = Genus.find_by(scientific_name: main_heading)
+      parent = Option.find_by(child_obj:{"Genus" => genus.id})
+      new_parser = KlassParser.new(new_blockquote, species_href, {"klass_name" => main_heading, "klass" => "Genus", parent_page: parent.page, parent_key: parent.key})
+      recursive_scrape(new_parser)
     end
 
   end

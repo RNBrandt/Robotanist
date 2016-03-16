@@ -15,11 +15,11 @@ end
 
 
 def create_obj(url, klass)
-  p '******************url**********************'
-  p url
+  p '******************create_obj**********************'
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   scientific_name = doc.css("span.pageLargeHeading").inner_text
+  p scientific_name
   common_name = doc.css("span.pageMajorHeading").inner_text
   if klass == Species
     image_grab = doc.css("img")[4].attr('src')
@@ -36,9 +36,6 @@ def create_obj(url, klass)
 
   if klass.where(scientific_name: scientific_name) == []
     if klass == Species
-      p "================="
-      p scientific_name
-      p common_name
       return klass.create(scientific_name: scientific_name, common_name: common_name, description: add_tool_tip_span(description),
         image_url: image_url)
     else
@@ -48,11 +45,3 @@ def create_obj(url, klass)
     return klass.find_by(scientific_name: scientific_name)
   end
 end
-
-
-
-# p assign_obj_type('http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=12633')
-
-# p assign_obj_type("http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=34")
-
-# # p assign_obj_type("http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=10193")
