@@ -45,7 +45,7 @@ def create_obj(url, klass)
     if klass == Species
       return klass.create(scientific_name: scientific_name, common_name: common_name, description: description, image_url: image_url, image_credit: image_credit)
     else
-      return klass.create(scientific_name: scientific_name, common_name: common_name, description: description)
+      return klass.create(scientific_name: scientific_name, common_name: common_name, description: description )
     end
   else
     return klass.find_by(scientific_name: scientific_name)
