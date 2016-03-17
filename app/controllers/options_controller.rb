@@ -2,7 +2,7 @@
 class OptionsController < ApplicationController
 
   def index
-    @options = Option.where(head:'root')
+    @options = Option.where(head:'root', page:"/IJM_fam_key.html")
     @families = Family.all
     if request.xhr?
       render partial: 'layouts/carousel', locals: { options: @options }, layout: false
@@ -38,6 +38,7 @@ class OptionsController < ApplicationController
     @image = ''
 
     if @option.child_obj != {}
+
       obj_type = @option.child_obj.keys[0]
       obj_id = @option.child_obj[obj_type]
       if obj_type == "Species"
@@ -52,7 +53,7 @@ class OptionsController < ApplicationController
 
         if caps
           @status = "Status: " + @description[0...(caps.length-1)]
-          @description = @description[(caps.length-1)..-1].html_safe
+          @description = @description[(caps.length-1)..-1]
         end
 
       elsif obj_type == "Family"
@@ -66,21 +67,25 @@ class OptionsController < ApplicationController
 
     if request.xhr?
       if @child_obj
-        render partial: 'layouts/carousel_end', locals: { child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image }, layout: false
+        render partial: 'layouts/carousel_end', locals: { option: @option, child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image, image_credit: @child_obj.image_credit }, layout: false
       else
         render partial: 'layouts/carousel', locals: { options: @children }, layout: false
       end
     else
       if obj_type == "Family"
           redirect_to family_path(@family)
-        elsif obj_type == "Genus"
-          redirect_to genus_path(@genus)
-        elsif obj_type == "Species"
-          redirect_to species_path(@species)
-        else
-          console.log("TODO: fix this path for non-JS")
-        end
+      elsif obj_type == "Genus"
+        redirect_to genus_path(@genus)
+      elsif obj_type == "Species"
+        redirect_to species_path(@species)
+      end
     end
 
+  end
+
+  def continue
+    @option = Option.find(params[:id])
+    @children = @option.children
+    render partial: 'layouts/carousel', locals: { options: @children }, layout: false
   end
 end

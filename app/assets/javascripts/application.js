@@ -229,6 +229,7 @@ $('#twitterDiv').hide();
         url: "/options/" + optionID
       })
       .done(function(data) {
+        console.log(data)
         $("#dataCarousel").html(data).animate({opacity: '1'});
       })
       .fail(function(response) {
