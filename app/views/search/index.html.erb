@@ -1,0 +1,150 @@
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="title-block">
+        <h1>Botanic <span>Search</span></h1>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+      </div>
+
+      <div class="col-md-12 bottommargin-sm">
+        <form class="nobottommargin" action="" method="get" novalidate="novalidate">
+          
+          <div class="form-process"></div>
+
+          <div class="col-md-6">
+            <input type="text" name="q" value="" class="sm-form-control required" aria-required="true">
+          </div>
+
+          <div class="col-md-6">
+            <button class="button button-3d nomargin" type="submit" value="submit">Search</button>
+          </div>
+        </form>      
+      </div>
+
+      <div class="col-md-8 bottommargin-lg">
+        <h4>Search Results For <span><%= @q %></span></h4>
+
+        <% if @family_results.size > 0 %>
+        <div class="fancy-title title-double-border">
+          <h4><span>Families <span class="badge"><%= @family_results.size %></span></span></h4>
+        </div>
+
+            
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Common Name</th>
+              <th>Scientific Name</th>
+              <th>Detail Page</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% i = 1 %>
+            <% @family_results.each do |r| %>
+              <tr>
+                <td><%= i %></td>
+                <td><%= r.common_name %></td>
+                <td><%= r.scientific_name %></td>
+                <td><a href="/families/<%= r.id %>" class="button button-mini button-3d button-rounded button-dirtygreen">More Details <i class="icon-arrow-right"></i></a></td>
+              </tr>
+              <% i += 1 %>
+            <% end %>
+          </tbody>
+        </table>
+        <% end %>
+
+        <% if @genus_results.size > 0 %>
+        <div class="fancy-title title-double-border">
+          <h4><span>Genus <span class="badge"><%= @genus_results.size %></span></span></h4>
+        </div>
+            
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Common Name</th>
+              <th>Scientific Name</th>
+              <th>Detail Page</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% i = 1 %>
+            <% @genus_results.each do |r| %>
+              <tr>
+                <td><%= i %></td>
+                <td><%= r.common_name %></td>
+                <td><%= r.scientific_name %></td>
+                <td><a href="/genus/<%= r.id %>" class="button button-mini button-3d button-rounded button-dirtygreen">More Details <i class="icon-arrow-right"></i></a></td>
+              </tr>
+              <% i += 1 %>
+            <% end %>
+          </tbody>
+        </table>
+        <% end %>
+
+        <% if @species_results.size > 0 %>
+        <div class="fancy-title title-double-border">
+          <h4><span>Species <span class="badge"><%= @species_results.size %></span></span></h4>
+        </div>
+            
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Common Name</th>
+              <th>Scientific Name</th>
+              <th>Detail Page</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% i = 1 %>
+            <% @species_results.each do |r| %>
+              <tr>
+                <td><%= i %></td>
+                <td><%= r.common_name %></td>
+                <td><%= r.scientific_name %></td>
+                <td><a href="/species/<%= r.id %>" class="button button-mini button-3d button-rounded button-dirtygreen">More Details <i class="icon-arrow-right"></i></a></td>
+              </tr>
+              <% i += 1 %>
+            <% end %>
+          </tbody>
+        </table>
+        <% end %>
+
+        <% if @glossary_results.size > 0 %>
+        <div class="fancy-title title-double-border">
+          <h4><span>Glossary <span class="badge"><%= @glossary_results.size %></span></span></h4>
+        </div>
+            
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Common Name</th>
+              <th>Scientific Name</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% i = 1 %>
+            <% @glossary_results.each do |r| %>
+              <tr>
+                <td><%= i %></td>
+                <td><%= r.word %></td>
+                <td><%= r.definition   %></td>
+              </tr>
+              <% i += 1 %>
+            <% end %>
+          </tbody>
+        </table>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</section>
+

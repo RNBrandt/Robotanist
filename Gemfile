@@ -13,17 +13,15 @@ gem 'mongoid-tree'
 gem 'nokogiri'
 gem 'rails_12factor'
 gem 'twitter'
-gem 'foundation-rails'
-gem 'foundation-icons-sass-rails', '~> 3.0.0'
 gem 'hirb'
 gem 'jquery-turbolinks'
-
 gem 'dotenv-rails'
 gem 'rubocop', require: false
 gem 'rspec-rails'
 gem 'capybara'
 gem 'selenium-webdriver'
 gem 'httpclient'
+gem 'mongoid_search'
 
 
 group :development, :test do
