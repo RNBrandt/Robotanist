@@ -2,35 +2,70 @@ $(function(){
   bindListners();
 })
 
+
+
 var bindListners = function(){
   $("#dataCarousel").on("click", '#arrowParent, #arrowRight, i.i-circled.i-small.icon-arrow-right', clickRight),
   $("#dataCarousel").on("click",'#arrowParent, #arrowLeft, i.i-circled.i-small.icon-arrow-left', clickLeft),
   $("#dataCarousel").on("click", '#arrowStepRight, #arrowStepLeft', goBack),
-  $("#dataCarousel").on("click", "a", stopReload)
+  $("#dataCarousel").on("click", "a", stopReload),
+  $("body").tooltip({selector: '[data-toggle=tooltip]'});
 }
 
 var clickRight = function(e){
   e.preventDefault();
   optionId = ($(this).attr('data-id'));
   url = "/options/" + optionId
-  console.log(url)
+  $('#panel-right').css('border', '4px dotted #1ABC9C');
+  $("#dataCarousel").animate({opacity: '0'}, function(){
+      // ajax request starts
+    $.ajax({
+      method: "get",
+      url: "/options/" + optionId
+    }).done(function(response){
+      console.log(response)
+      $("#dataCarousel").html(response).animate({opacity: '1'});
+    })
+  });
+//Fade outAnimation Complete
 }
 
 var clickLeft = function(e){
   e.preventDefault();
-  optionId = ($(this).attr('data-id'));
+  var optionId = $(this).attr('data-id');
   url = "/options/" + optionId
-  console.log(url)
+  $('#panel-left').css('border', '4px dotted #1ABC9C');
+  $("#dataCarousel").animate({opacity: '0'}, function(){
+      // ajax request starts
+    $.ajax({
+      method: "get",
+      url: "/options/" + optionId
+    }).done(function(response){
+      console.log(response)
+      $("#dataCarousel").html(response).animate({opacity: '1'});
+    })
+  });
+//Fade outAnimation Complete
 }
 
 
 var goBack = function(e){
   e.preventDefault();
   optionId = ($(this).attr('data-id'));
-  url = "/options/"
+  $('#panel-left').css('border', '4px dotted #1ABC9C');
+  $('#panel-right').css('border', '4px dotted #1ABC9C');
+  $("#dataCarousel").animate({opacity: '0'}, function(){
+      // ajax request starts
+    $.ajax({
+      method: "get",
+      url: "/options/" + optionId
+    }).done(function(response){
+      console.log(response)
+      $("#dataCarousel").html(response).animate({opacity: '1'});
+    })
+  });
 }
 
 var stopReload = function(e){
   e.preventDefault();
-  // console.log(e)
 }

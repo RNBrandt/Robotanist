@@ -21,6 +21,18 @@
   height: 14em;
  }
 
+.fslider.testimonial{
+  overflow:visible;
+}
+
+.flexslider{
+  overflow: visible;
+}
+
+.testi-content{
+  overflow:visible;
+}
+
 .panel {
   border-style: solid;
   border-width: 1px;
