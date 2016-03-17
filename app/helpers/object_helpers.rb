@@ -25,6 +25,12 @@ def create_obj(url, klass)
     image_grab = doc.css("img")[4].attr('src')
     if image_grab.match(/^[^\/].*\.\w{1,4}$/)
       image_url = image_grab
+      # image_credit = ''
+      # if image_url.match(/jpeg/)
+      #   image_credit = doc.css('td').inner_text.match(/(©[\w\d\s]+[^\"])/)[0]
+      # end
+      p image_url
+      # p image_credit
     end
   end
   if doc.css("div.bodyText").inner_text == ''
@@ -36,10 +42,10 @@ def create_obj(url, klass)
 
   if klass.where(scientific_name: scientific_name) == []
     if klass == Species
-      return klass.create(scientific_name: scientific_name, common_name: common_name, description: add_tool_tip_span(description),
+      return klass.create(scientific_name: scientific_name, common_name: common_name, description: description,
         image_url: image_url)
     else
-      return klass.create(scientific_name: scientific_name, common_name: common_name, description: add_tool_tip_span(description))
+      return klass.create(scientific_name: scientific_name, common_name: common_name, description: description)
     end
   else
     return klass.find_by(scientific_name: scientific_name)
