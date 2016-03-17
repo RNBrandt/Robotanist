@@ -5,11 +5,8 @@
   <% parent = Option.find(current).parent_id %>
 <% end %>
 
-
-<div id="dataCarousel">
-
   <div class="col-md-5 nobottommargin">
-    <h2><%=child_left.text[0..1]%></h2>
+    <h2><%=child_left.text[/^([^\s]+)/]%></h2>
       <div id="panel-left" class="fslider testimonial">
         <div class="testi-content" style="height: 190px;font-size: large;">
           <p>
@@ -34,7 +31,7 @@
   </div>
 
   <div class="col-md-5 col_last nobottommargin tright">
-    <h2><%=child_right.text[0..1]%></h2>
+    <h2><%=child_right.text[/^([^\s]+)/]%></h2>
 
       <div id="panel-right" class="fslider testimonial">
         <div class="flexslider">
@@ -53,4 +50,3 @@
       <div class="col-md-6 tleft"><a href="#" data-id="<%= child_right.id %>" id="arrowRight" class="topmargin-sm button button-3d button-rounded button-green"> Continue <i class="icon-circle-arrow-right"></i></a></div>
     </div>
   </div>
-</div>
