@@ -114,10 +114,15 @@ class KlassParser < BlockQuoteParser
     @klass = options["klass"]
   end
 
-  def top_pair_node(dichotomy)
+  def first_option_pair(dichotomy)
 
     @klass_id = @klass.find_by(scientific_name: @klass_name).id
-    @parent_option = Option.find_by( child_obj['@klass'] = "@family_id" )
+
+    p "++++++++++++++++++++"
+    p @klass
+    p @klass_name
+
+    @parent_option = Option.find_by(child_obj: {"#{@klass}" => @klass_id.to_s})
     if dichotomy[0] == '1' && dichotomy[1] =='.'
       @parent_option.children << create_option(dichotomy, @href, '1.')
     elsif dichotomy[0] == '1' && dichotomy[1] == "'"

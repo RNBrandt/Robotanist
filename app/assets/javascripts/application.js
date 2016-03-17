@@ -17,6 +17,58 @@
 
 $(function(){
 
+
+
+  $("#wiki-button").click(function(e){
+    e.preventDefault();
+
+    // var $wikipediaKeyword = "pizza"
+    // var url = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + $wikipediaKeyword + "&callback=?&redirects"
+    //     console.log(url)
+    //  $.ajax({
+    //     type: "GET",
+    //     url: url,
+    //     contentType: "application/json; charset=utf-8",
+    //     async: false,
+    //     dataType: "json",
+
+    //     success: function (data, textStatus, jqXHR) {
+    //       try {
+    //         var markup = data.parse.text["*"];
+    //         var blurb = $('<div></div>').html(markup);
+
+    //         // remove links as they will not work
+    //         blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+
+    //         // remove any references
+    //         blurb.find('sup').remove();
+
+    //         // remove cite error
+    //         blurb.find('.mw-ext-cite-error').remove();
+    //         blurb = ($(blurb).find('p'));
+
+    //         // Handlebars Template Starts Here
+    //         var wikipediaInfo = document.getElementById("wikipedia-template").innerHTML;
+    //         var template = Handlebars.compile(wikipediaInfo)
+    //         var wikipediaData = template({
+    //           title: $wikipediaKeyword,
+    //           info: blurb
+    //         });
+    //         document.getElementById("div#wikipediaDiv").innerHTML = wikipediaData;
+    //         $("#wikipedia").show();
+    //         // Handlebars Template Ends Here
+    //       }
+
+    //       catch(err) {
+    //         document.getElementById("wikipediaDiv").innerHTML = '<h4>Sorry, Wikipedia does not have an entry for this keyword...</h4>';
+    //       }
+    //     },
+
+    //     error: function (errorMessage) {
+    //     }
+    //   });
+  })
+
   $('body').on('click', function(e){
     $('#popover').popover("hide");
   });
@@ -76,76 +128,76 @@ $(function(){
 
 
 
-$('#div-search').show();
-$('#div-tabs').hide();
-$('#wikipediaDiv').hide();
-$('#flickrDiv').hide();
-$('#twitterDiv').hide();
+// $('#div-search').show();
+// $('#div-tabs').hide();
+// $('#wikipediaDiv').hide();
+// $('#flickrDiv').hide();
+// $('#twitterDiv').hide();
 
   // Capture tooltip click
-  $('[data-toggle=tooltip], #tab-wikipedia').on('click', function(e){
-      $('#div-search').hide();
-      $('#div-tabs').show();
-      $('#wikipediaDiv').show();
-      $('#flickrDiv').hide();
-      $('#tab-flickr').removeClass('alert');
-      $('#tab-twitter').removeClass('alert');
-      $('#tab-wikipedia').addClass('alert');
+  // $('[data-toggle=tooltip], #tab-wikipedia').on('click', function(e){
+  //     $('#div-search').hide();
+  //     $('#div-tabs').show();
+  //     $('#wikipediaDiv').show();
+  //     $('#flickrDiv').hide();
+  //     $('#tab-flickr').removeClass('alert');
+  //     $('#tab-twitter').removeClass('alert');
+  //     $('#tab-wikipedia').addClass('alert');
 
 
-      var $wikipediaKeyword = $(this).attr('data-keyword');
-      $('#tab-wikipedia').attr("data-keyword", $wikipediaKeyword)
-      $('#tab-flickr').attr("data-keyword", $wikipediaKeyword)
-      $('#tab-twitter').attr("data-keyword", $wikipediaKeyword)
+  //     var $wikipediaKeyword = $(this).attr('data-keyword');
+  //     $('#tab-wikipedia').attr("data-keyword", $wikipediaKeyword)
+  //     $('#tab-flickr').attr("data-keyword", $wikipediaKeyword)
+  //     $('#tab-twitter').attr("data-keyword", $wikipediaKeyword)
 
 
-      $wikipediaKeyword = $wikipediaKeyword.toLocaleLowerCase().replace(/ /g,"_");
-      // API Request to Wikipedia
-      $.ajax({
-        type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + $wikipediaKeyword + "&callback=?&redirects",
-        contentType: "application/json; charset=utf-8",
-        async: false,
-        dataType: "json",
+  //     $wikipediaKeyword = $wikipediaKeyword.toLocaleLowerCase().replace(/ /g,"_");
+  //     // API Request to Wikipedia
+  //     $.ajax({
+  //       type: "GET",
+  //       url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + $wikipediaKeyword + "&callback=?&redirects",
+  //       contentType: "application/json; charset=utf-8",
+  //       async: false,
+  //       dataType: "json",
 
-        success: function (data, textStatus, jqXHR) {
-          try {
-            var markup = data.parse.text["*"];
-            var blurb = $('<div></div>').html(markup);
+  //       success: function (data, textStatus, jqXHR) {
+  //         try {
+  //           var markup = data.parse.text["*"];
+  //           var blurb = $('<div></div>').html(markup);
 
-            // remove links as they will not work
-            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+  //           // remove links as they will not work
+  //           blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
 
-            // remove any references
-            blurb.find('sup').remove();
+  //           // remove any references
+  //           blurb.find('sup').remove();
 
-            // remove cite error
-            blurb.find('.mw-ext-cite-error').remove();
-            blurb = ($(blurb).find('p'));
+  //           // remove cite error
+  //           blurb.find('.mw-ext-cite-error').remove();
+  //           blurb = ($(blurb).find('p'));
 
-            // Handlebars Template Starts Here
-            var wikipediaInfo = document.getElementById("wikipedia-template").innerHTML;
-            var template = Handlebars.compile(wikipediaInfo)
-            var wikipediaData = template({
-              title: $wikipediaKeyword,
-              info: blurb
-            });
-            document.getElementById("div#wikipediaDiv").innerHTML = wikipediaData;
-            // Handlebars Template Ends Here
-          }
+  //           // Handlebars Template Starts Here
+  //           var wikipediaInfo = document.getElementById("wikipedia-template").innerHTML;
+  //           var template = Handlebars.compile(wikipediaInfo)
+  //           var wikipediaData = template({
+  //             title: $wikipediaKeyword,
+  //             info: blurb
+  //           });
+  //           document.getElementById("div#wikipediaDiv").innerHTML = wikipediaData;
+  //           // Handlebars Template Ends Here
+  //         }
 
-          catch(err) {
-            document.getElementById("wikipediaDiv").innerHTML = '<h4>Sorry, Wikipedia does not have an entry for this keyword...</h4>';
-          }
-        },
+  //         catch(err) {
+  //           document.getElementById("wikipediaDiv").innerHTML = '<h4>Sorry, Wikipedia does not have an entry for this keyword...</h4>';
+  //         }
+  //       },
 
-        error: function (errorMessage) {
-        }
-      });
-      // API Request to Wikipedia
+  //       error: function (errorMessage) {
+  //       }
+  //     });
+  //     // API Request to Wikipedia
 
 
-  });
+  // });
   // Capture tooltip click
 
   // Capture flickr click
