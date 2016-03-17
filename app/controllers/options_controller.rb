@@ -88,4 +88,15 @@ class OptionsController < ApplicationController
     @children = @option.children
     render partial: 'layouts/carousel', locals: { options: @children }, layout: false
   end
+
+  def about
+    render layout: "detail"
+  end
+
+  def contact
+    render layout: "detail"
+  end
+
+
+
 end
