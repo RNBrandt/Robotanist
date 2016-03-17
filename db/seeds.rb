@@ -5,7 +5,7 @@ require_relative "../app/helpers/glossary_helpers"
 require_relative "../app/helpers/blockquote_class"
 
 Option.destroy_all
-# Glossary.destroy_all
+Glossary.destroy_all
 Species.destroy_all
 Family.destroy_all
 Genus.destroy_all
@@ -53,7 +53,7 @@ big_family_hash = {"Asteraceae"=> "/cgi-bin/get_IJM.pl?key=58","Brassicaceae"=>"
 
 first_blockquote = get_blockquote("/IJM_fam_key.html")
 parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
-# create_glossary
+create_glossary
 recursive_scrape(parser)
 scrape_from_families
 big_family_hash.each do |name,href|

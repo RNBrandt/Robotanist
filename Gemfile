@@ -14,7 +14,7 @@ gem 'nokogiri'
 gem 'rails_12factor'
 gem 'twitter'
 gem 'hirb'
-gem 'jquery-turbolinks'
+# gem 'jquery-turbolinks'
 gem 'dotenv-rails'
 gem 'rubocop', require: false
 gem 'rspec-rails'
