@@ -19,20 +19,20 @@ describe Option, :js => true do
 
   context 'index page' do
     it 'displays page title' do
-      expect(page).to have_content("BOTANIST")
+      expect(page).to have_content("BEGIN")
     end
 
     describe 'left option display' do
       before(:each) {(page).find('#arrowLeft').click}
 
       it "renders the option template upon navigation" do
-        expect(page.find("#dataCarousel")).to have_content("cleistogamous")
+        expect(page.find("#dataCarousel")).to have_content("Bulblets")
       end
       it "does not render incorrect tree navigation" do
-        expect(page.find("#dataCarousel")).to_not have_content("Bulblets")
+        expect(page.find("#dataCarousel")).to_not have_content("cleistogamous")
       end
       it "reloads the previous data when 'step back' button is clicked" do
-        (page).find('#arrowStepLeft').click
+        within('#dataCarousel') {(page).find('#arrowStepLeft').click}
         expect(page).to have_content('examination')
       end
     end
@@ -41,10 +41,10 @@ describe Option, :js => true do
       before(:each) {(page).find('#arrowRight').click}
 
       it "renders the option template upon navigation" do
-        expect(page.find("#dataCarousel")).to have_content("Bulblets")
+        expect(page.find("#dataCarousel")).to have_content("cleistogamous")
       end
       it "does not render incorrect tree navigation" do
-        expect(page.find("#dataCarousel")).to_not have_content("cleistogamous")
+        expect(page).to_not have_content("Bulblets")
       end
       it "reloads the previous data when 'step back' button is clicked" do
         (page).find('#arrowStepRight').click
@@ -93,3 +93,5 @@ describe Option, :js => true do
   end
 
 end
+
+

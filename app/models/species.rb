@@ -5,5 +5,6 @@ class Species
   field :common_name, type: String
   field :description, type: String
   field :image_url, type: String
+  field :image_credit, type: String
   # belongs_to :option
 end

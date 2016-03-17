@@ -51,7 +51,7 @@ def get_family_links
   family_link_hash.delete_if { |key, value| to_delete.include?(key)}
 end
 
-# /eflora/eflora_display.php?tid=23856
+
 
 def recursive_scrape(parser)
   p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
@@ -86,7 +86,7 @@ def scrape_from_families
      recursive_scrape(parser)
   end
 end
-# <a href="/cgi-bin/get_IJM.pl?tid=10270">.....&nbsp;ARACEAE ([<i>Peltandra</i>]) (2)</a>
+
 def step_through_genus(parser)
   new_url = get_redirect(BASE_URL + parser.href)
   new_url = [BASE_URL + parser.href] if new_url == []

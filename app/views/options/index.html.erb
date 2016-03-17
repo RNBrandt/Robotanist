@@ -4,23 +4,28 @@
       <div id="section-features" class="heading-block title-center page-section">
         <h4>Intuitive Jepson Manual functionality</h4>
 
-        <span>Welcome to the RoBotanist. We believe anyone should be able to identify plants regardless of their botanical experience.  This website begins with the authoritative Jepson Manual of vascular plants, adds intuitive navigation, integrated glossary definitions, and  easily accessible web-tools to make this remarkable resource available to anyone.</span>
+        <span>Welcome to RoBotanist. We believe anyone should be able to identify plants regardless of their botanical experience.  This website begins with the authoritative Jepson Manual of vascular plants, adds intuitive navigation, integrated glossary definitions, and  easily accessible web-tools to make this remarkable resource available to anyone.</span>
       </div>
 
       <div class="divider divider-rounded divider-center">
         <i class="icon-map-marker"></i>
 
       </div>
+      <div id="dataCarousel">
 
       <%= render partial: "layouts/carousel", locals: {options: @options} %>
 
+      </div>
       <div class="clearfix"></div>
       <div class="divider divider-rounded divider-center"><i class="icon-map-marker"></i></div>
-
+      </div>
+      <div class="col-md-6 nobottommargin">
+        <div class="fancy-title title-double-border">
+            <h3>Flickr <span>Plant Family Recognition</span> Feed</h3>
+        </div>
+        <div id="flickr-widget" class="flickr-feed masonry-thumbs" data-id="58729682@N00" data-count="8" data-type="group" data-lightbox="gallery"></div>
+      </div>
        <%= render partial: 'layouts/info_tabs'%>
-
-
-
     </div>
   </div>
 </section><!-- #content end -->

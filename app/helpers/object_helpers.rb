@@ -25,6 +25,13 @@ def create_obj(url, klass)
     image_grab = doc.css("img")[4].attr('src')
     if image_grab.match(/^[^\/].*\.\w{1,4}$/)
       image_url = image_grab
+      image_credit = 'Image courtesy of Jepson Herbarium, UC Berkeley'
+      if image_url.match(/jpeg/)
+        credit = doc.inner_text.match(/©[\w\d\s\p\'@\&\(\)\+\-\*]+(\p{Ll}(?=\p{Lu}))/)
+        image_credit = credit[0] if credit
+      end
+      p image_url
+      p image_credit
     end
   end
   if doc.css("div.bodyText").inner_text == ''
@@ -36,8 +43,7 @@ def create_obj(url, klass)
 
   if klass.where(scientific_name: scientific_name) == []
     if klass == Species
-      return klass.create(scientific_name: scientific_name, common_name: common_name, description: description,
-        image_url: image_url)
+      return klass.create(scientific_name: scientific_name, common_name: common_name, description: description, image_url: image_url, image_credit: image_credit)
     else
       return klass.create(scientific_name: scientific_name, common_name: common_name, description: description )
     end
