@@ -5,50 +5,48 @@
   <% parent = Option.find(current).parent_id %>
 <% end %>
 
-  <div class="col-md-5 nobottommargin">
-    <h2><%=child_left.text[0..1]%></h2>
-      <div id="panel-left" class="fslider testimonial">
+<div class="col-md-5 nobottommargin">
+  <h2><%=child_left.text[/^([^\s]+)/]%></h2>
+    <div id="panel-left" class="fslider testimonial">
+      <div class="testi-content" style="height: 190px;font-size: large;">
+        <p>
+          <%= child_left.text.html_safe %>
+        </p>
+      </div>
+    </div>
+
+
+  <div class="col-md-12 nobottommargin">
+    <div class="col-md-6 tleft"><a data-id="<%= child_left.id %>" id="arrowLeft" href="#" class="topmargin-sm button button-3d button-rounded button-green"><i class="icon-circle-arrow-left"></i> Continue</a></div>
+
+    <div class="col-md-6"><a href="#" data-id="<%= parent %>" id="arrowStepLeft" class="button topmargin-sm button-3d button-rounded button-teal">Step Back <i class="icon-circle-arrow-right"></i></a></div>
+
+  </div>
+</div>
+
+<div class="center col-md-2 topmargin-lg">
+  <div class="col-md-4"><i class="i-circled i-small icon-arrow-left"></i></div>
+  <div class="col-md-4"><h2>OR</h2></div>
+  <div class="col-md-4"><i class="i-circled i-small icon-arrow-right"></i></div>
+</div>
+
+<div class="col-md-5 col_last nobottommargin tright">
+  <h2><%=child_right.text[/^([^\s]+)/]%></h2>
+
+    <div id="panel-right" class="fslider testimonial">
+      <div class="flexslider">
         <div class="testi-content" style="height: 190px;font-size: large;">
           <p>
-            <%= child_left.text.html_safe %>
+            <%= child_right.text.html_safe %>
           </p>
         </div>
       </div>
-
-
-    <div class="col-md-12 nobottommargin">
-      <div class="col-md-6 tleft"><a data-id="<%= child_left.id %>" id="arrowLeft" href="#" class="topmargin-sm button button-3d button-rounded button-green"><i class="icon-circle-arrow-left"></i> Continue</a></div>
-
-      <div class="col-md-6"><a href="#" data-id="<%= parent %>" id="arrowStepLeft" class="button topmargin-sm button-3d button-rounded button-teal">Step Back <i class="icon-circle-arrow-right"></i></a></div>
-
     </div>
+  </a>
+
+  <div class="col-md-12 nobottommargin">
+    <div class="col-md-6"><a href="#" data-id="<%= parent %>" id="arrowStepRight" class="button topmargin-sm button-3d button-rounded button-teal"><i class="icon-circle-arrow-left"></i> Step Back</a></div>
+
+    <div class="col-md-6 tleft"><a href="#" data-id="<%= child_right.id %>" id="arrowRight" class="topmargin-sm button button-3d button-rounded button-green"> Continue <i class="icon-circle-arrow-right"></i></a></div>
   </div>
-
-  <div class="center col-md-2 topmargin-lg">
-    <div class="col-md-4"><i class="i-circled i-small icon-arrow-left"></i></div>
-    <div class="col-md-4"><h2>OR</h2></div>
-    <div class="col-md-4"><i class="i-circled i-small icon-arrow-right"></i></div>
-  </div>
-
-  <div class="col-md-5 col_last nobottommargin tright">
-    <h2><%=child_right.text[0..1]%></h2>
-
-      <div id="panel-right" class="fslider testimonial">
-        <div class="flexslider">
-          <div class="testi-content" style="height: 190px;font-size: large;">
-            <p>
-              <%= child_right.text.html_safe %>
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <div class="col-md-12 nobottommargin">
-      <div class="col-md-6"><a href="#" data-id="<%= parent %>" id="arrowStepRight" class="button topmargin-sm button-3d button-rounded button-teal"><i class="icon-circle-arrow-left"></i> Step Back</a></div>
-
-      <div class="col-md-6 tleft"><a href="#" data-id="<%= child_right.id %>" id="arrowRight" class="topmargin-sm button button-3d button-rounded button-green"> Continue <i class="icon-circle-arrow-right"></i></a></div>
-    </div>
-  </div>
-
-
+</div>
