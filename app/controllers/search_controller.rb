@@ -1,10 +1,12 @@
 class SearchController < ApplicationController
 
   def index
-    @family_results = Family.full_text_search(params[:q], match: :any, allow_empty_search: :true)
-    @genus_results = Genus.full_text_search(params[:q], match: :any, allow_empty_search: :true)
-    @species_results = Species.full_text_search(params[:q], match: :any, allow_empty_search: :true)
-    @glossary_results = Glossary.full_text_search(params[:q], match: :any, allow_empty_search: :true)
+    if params[:q] != ''
+      @family_results = Family.full_text_search(params[:q], match: :any, allow_empty_search: :false)
+      @genus_results = Genus.full_text_search(params[:q], match: :any, allow_empty_search: :false)
+      @species_results = Species.full_text_search(params[:q], match: :any, allow_empty_search: :false)
+      @glossary_results = Glossary.full_text_search(params[:q], match: :any, allow_empty_search: :false)
+    end
     @q = params[:q]
     render layout: "detail"
   end
