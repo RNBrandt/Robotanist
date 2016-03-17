@@ -67,7 +67,7 @@ class OptionsController < ApplicationController
 
     if request.xhr?
       if @child_obj
-        render partial: 'layouts/carousel_end', locals: { child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image }, layout: false
+        render partial: 'layouts/carousel_end', locals: { children: @option.children, child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image }, layout: false
       else
         render partial: 'layouts/carousel', locals: { options: @children }, layout: false
       end
@@ -79,7 +79,7 @@ class OptionsController < ApplicationController
         elsif obj_type == "Species"
           redirect_to species_path(@species)
         else
-          console.log("TODO: fix this path for non-JS")
+          p ("TODO: fix this path for non-JS")
         end
     end
 
