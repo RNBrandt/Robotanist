@@ -36,6 +36,7 @@ class OptionsController < ApplicationController
     @parent = @option.parent
     @col_width = 6
     @image = ''
+    @credit = nil
 
     if @option.child_obj != {}
 
@@ -46,6 +47,7 @@ class OptionsController < ApplicationController
         @description = @child_obj.description
         if @child_obj.image_url
           @image = @child_obj.image_url
+          @credit = @child_obj.image_credit
           @col_width = 4
         end
 
@@ -67,7 +69,7 @@ class OptionsController < ApplicationController
 
     if request.xhr?
       if @child_obj
-        render partial: 'layouts/carousel_end', locals: { option: @option, child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image, image_credit: @child_obj.image_credit }, layout: false
+        render partial: 'layouts/carousel_end', locals: { option: @option, child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image, image_credit: @credit }, layout: false
       else
         render partial: 'layouts/carousel', locals: { options: @children }, layout: false
       end
@@ -89,3 +91,5 @@ class OptionsController < ApplicationController
     render partial: 'layouts/carousel', locals: { options: @children }, layout: false
   end
 end
+
+Option.find_by(child_obj: { "Family" => BSON::ObjectId("56eacfd0c3b5a0f173c413fc")})

@@ -263,8 +263,9 @@ $('#twitterDiv').hide();
       .done(function(data) {
         $("#dataCarousel").html(data).animate({opacity: '1'});
       })
-      .fail(function() {
+      .fail(function(response) {
         console.log("fail")
+        console.log(response)
       })
       // ajax request ends
     });
