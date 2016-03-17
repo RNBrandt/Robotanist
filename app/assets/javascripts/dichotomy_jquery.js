@@ -27,6 +27,9 @@ var clickRight = function(e){
       console.log(response)
       $("#dataCarousel").html(response).animate({opacity: '1'});
     })
+    .fail(function(response){
+      console.log(response)
+    })
   });
 //Fade outAnimation Complete
 }
@@ -44,6 +47,9 @@ var clickLeft = function(e){
     }).done(function(response){
       console.log(response)
       $("#dataCarousel").html(response).animate({opacity: '1'});
+    })
+    .fail(function(response){
+      console.log(response)
     })
   });
 //Fade outAnimation Complete
@@ -64,6 +70,9 @@ var goBack = function(e){
       console.log(response)
       $("#dataCarousel").html(response).animate({opacity: '1'});
     })
+    .fail(function(response){
+      console.log(response)
+    })
   });
 }
 
@@ -80,9 +89,10 @@ var continueThroughGroup = function(e){
       url: route
     })
     .done(function(response){
-      $("dataCarousel").html(response).animate({opacity: '1'});
+      $("#dataCarousel").html(response).animate({opacity: '1'});
     })
     .fail(function(response){
+      console.log("fail");
       console.log(response);
     });
   });

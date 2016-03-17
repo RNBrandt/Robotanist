@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require_tree .
 
+
 // $(function(){
 
 //   $('body').on('click', function(e){
