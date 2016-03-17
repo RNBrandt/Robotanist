@@ -2,7 +2,7 @@
 class OptionsController < ApplicationController
 
   def index
-    @options = Option.where(head:'root')
+    @options = Option.where(head:'root', page:"/IJM_fam_key.html")
     @families = Family.all
     if request.xhr?
       render partial: 'layouts/carousel', locals: { options: @options }, layout: false
@@ -67,7 +67,7 @@ class OptionsController < ApplicationController
 
     if request.xhr?
       if @child_obj
-        render partial: 'layouts/carousel_end', locals: { option: @option, child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image }, layout: false
+        render partial: 'layouts/carousel_end', locals: { option: @option, child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image, image_credit: @child_obj.image_credit }, layout: false
       else
         render partial: 'layouts/carousel', locals: { options: @children }, layout: false
       end

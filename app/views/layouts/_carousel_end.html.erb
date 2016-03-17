@@ -15,6 +15,9 @@
       <% if image %>
         <div class="col-md-<%= col_width %>">
           <img src="<%= image %>">
+          <% if image_credit %>
+            <div><%= image_credit %></div>
+          <% end %>
         </div>
       <% end %>
 
