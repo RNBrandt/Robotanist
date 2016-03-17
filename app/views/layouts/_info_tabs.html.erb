@@ -2,36 +2,36 @@
 
   <ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
     <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-5" aria-labelledby="ui-id-5" aria-selected="true" aria-expanded="true"><a href="#tabs-5" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5"><i class="icon-home2 norightmargin"></i></a></li>
-    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-6" aria-labelledby="ui-id-6" aria-selected="false" aria-expanded="false"><a href="#tabs-6" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">Wikpedia</a></li>
+    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-6" aria-labelledby="ui-id-6" aria-selected="false" aria-expanded="false"><a href="#tabs-6" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">Glossary</a></li>
+    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-7" aria-labelledby="ui-id-7" aria-selected="false" aria-expanded="false"><a href="#tabs-7" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-7">Calflora</a></li>
+    <li class="hidden-phone ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-8" aria-labelledby="ui-id-8" aria-selected="false" aria-expanded="false"><a href="#tabs-8" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-8">Calphotos</a></li>
 
   </ul>
 
   <div class="tab-container">
 
     <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-5" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="false">
-    <div class="col-md-6 nobottommargin">
-      <div class="fancy-title title-double-border">
-        <h3>Flickr <span>Plant Family Recognition</span> Feed</h3>
-      </div>
-      <div id="flickr-widget" class="flickr-feed masonry-thumbs" data-id="58729682@N00" data-count="8" data-type="group" data-lightbox="gallery"></div>
-    </div>
-    <div class="col-md-6 nobottommargin">
-      <div class="fancy-title title-double-border">
-        <h3>Jardim Botanico <span>Botanical</span> Garden</h3>
-      </div>
-      <div id="instagram-photos" class="instagram-photos masonry-thumbs col-4" data-user="1932176062" data-count="8" data-type="user"></div>
+    <%= render 'search/tab_partial', layout: false %>
 
     </div>
-   </div>
 
 
    <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-6" aria-labelledby="ui-id-6" role="tabpanel" aria-hidden="true" style="display: none;">
-<!--      <iframe width='100%' height='600' src="http://www.wikipedia.com"></iframe> -->
-      <a id="wiki-button" href="">Search Wikipedia</a>
-      <div id="wikipediaDiv"></div>
 
+    <% @glossaries = Glossary.all %>
+    <%= render 'glossary/tab_partial', layout: false %>
   </div>
 
+  <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-7" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true" style="display: none;">
+   <iframe src="http://www.calflora.org/" width="100%" height="600em" ></iframe>
+ </div>
+
+ <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-8" aria-labelledby="ui-id-8" role="tabpanel" aria-hidden="true" style="display: none;">
+    <iframe src="http://calphotos.berkeley.edu/" width="100%" height="600em" ></iframe>
+</div>
+
+
+  </div>
 </div>
 
 </div>
