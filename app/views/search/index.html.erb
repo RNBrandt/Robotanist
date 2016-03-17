@@ -1,0 +1,171 @@
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="title-block">
+        <h1>Botanic <span>Search</span></h1>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+      </div>
+
+      <div class="col-md-12 bottommargin-sm">
+        <form class="nobottommargin" action="" method="get" novalidate="novalidate">
+          
+          <div class="form-process"></div>
+
+          <div class="col-md-6">
+            <input type="text" name="q" value="" class="sm-form-control required" aria-required="true">
+          </div>
+
+          <div class="col-md-6">
+            <button class="button button-3d nomargin" type="submit" value="submit">Search</button>
+          </div>
+        </form>      
+      </div>
+      
+      <% if @q %>
+        <div class="tabs clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-1">
+
+          <ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+            <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1"><i class="icon-home2 norightmargin"></i></a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Families <span class="badge"><%= @family_results.size %></span></a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">Genus <span class="badge"><%= @genus_results.size %></span></a></li>
+            <li class="hidden-phone ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-4" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false"><a href="#tabs-4" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">Species <span class="badge"><%= @species_results.size %></span></a></li>
+            <li class="hidden-phone ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-5" aria-labelledby="ui-id-5" aria-selected="false" aria-expanded="false"><a href="#tabs-5" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5">Glossary <span class="badge"><%= @glossary_results.size %></span></a></li>
+          </ul>
+
+          <div class="tab-container">
+
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-1" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
+              Please click on above tabs to see your search results:
+            </div>
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-2" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="true" style="display: none;">
+              <% if @family_results.size > 0 %>
+                <div class="fancy-title title-double-border">
+                  <h4><span>Families <span class="badge"><%= @family_results.size %></span></span></h4>
+                </div>
+
+                    
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Common Name</th>
+                      <th>Scientific Name</th>
+                      <th>Detail Page</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% i = 1 %>
+                    <% @family_results.each do |r| %>
+                      <tr>
+                        <td><%= i %></td>
+                        <td><%= r.common_name %></td>
+                        <td><%= r.scientific_name %></td>
+                        <td><a href="/families/<%= r.id %>" class="button button-mini button-3d button-rounded button-dirtygreen">More Details <i class="icon-arrow-right"></i></a></td>
+                      </tr>
+                      <% i += 1 %>
+                    <% end %>
+                  </tbody>
+                </table>
+              <% end %>
+
+
+            </div>
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-3" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;">
+              <% if @genus_results.size > 0 %>
+                <div class="fancy-title title-double-border">
+                  <h4><span>Genus <span class="badge"><%= @genus_results.size %></span></span></h4>
+                </div>
+                    
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Common Name</th>
+                      <th>Scientific Name</th>
+                      <th>Detail Page</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% i = 1 %>
+                    <% @genus_results.each do |r| %>
+                      <tr>
+                        <td><%= i %></td>
+                        <td><%= r.common_name %></td>
+                        <td><%= r.scientific_name %></td>
+                        <td><a href="/genus/<%= r.id %>" class="button button-mini button-3d button-rounded button-dirtygreen">More Details <i class="icon-arrow-right"></i></a></td>
+                      </tr>
+                      <% i += 1 %>
+                    <% end %>
+                  </tbody>
+                </table>
+              <% end %>
+            </div>
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-4" aria-labelledby="ui-id-4" role="tabpanel" aria-hidden="true" style="display: none;">
+              <% if @species_results.size > 0 %>
+                <div class="fancy-title title-double-border">
+                  <h4><span>Species <span class="badge"><%= @species_results.size %></span></span></h4>
+                </div>
+                    
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Common Name</th>
+                      <th>Scientific Name</th>
+                      <th>Detail Page</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% i = 1 %>
+                    <% @species_results.each do |r| %>
+                      <tr>
+                        <td><%= i %></td>
+                        <td><%= r.common_name %></td>
+                        <td><%= r.scientific_name %></td>
+                        <td><a href="/species/<%= r.id %>" class="button button-mini button-3d button-rounded button-dirtygreen">More Details <i class="icon-arrow-right"></i></a></td>
+                      </tr>
+                      <% i += 1 %>
+                    <% end %>
+                  </tbody>
+                </table>
+              <% end %>                
+            </div>
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-5" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true" style="display: none;">
+              <% if @glossary_results.size > 0 %>
+                <div class="fancy-title title-double-border">
+                  <h4><span>Glossary <span class="badge"><%= @glossary_results.size %></span></span></h4>
+                </div>
+                    
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Common Name</th>
+                      <th>Scientific Name</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% i = 1 %>
+                    <% @glossary_results.each do |r| %>
+                      <tr>
+                        <td><%= i %></td>
+                        <td><%= r.word %></td>
+                        <td><%= r.definition   %></td>
+                      </tr>
+                      <% i += 1 %>
+                    <% end %>
+                  </tbody>
+                </table>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
