@@ -1,29 +1,252 @@
 <section id="content">
   <div class="content-wrap">
     <div class="container clearfix">
-
       <div class="title-block">
-        <h1><span>Botanic Glossary</span></h1>
-        <span>A sentence goes here</span>
+        <h1><span>Glossary</span></h1>
+        <span>All glossary entries from the Jepson Manual can be found here</span>
       </div>
+      <div class="glossary-text">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#a" role="tab" data-toggle="tab" aria-controls="a">A</a>
+          </li>
+          <li role="presentation">
+            <a href="#b" role="tab" data-toggle="tab" aria-controls="b">B</a>
+          </li>
+          <li role="presentation">
+            <a href="#c"  role="tab" data-toggle="tab" aria-controls="c">C</a>
+          </li>
+          <li role="presentation">
+            <a href="#d"  role="tab" data-toggle="tab" aria-controls="d">D</a>
+          </li>
+          <li role="presentation">
+            <a href="#e"  role="tab" data-toggle="tab" aria-controls="e">E</a>
+          </li>
+          <li role="presentation">
+            <a href="#f"  role="tab" data-toggle="tab" aria-controls="f">F</a>
+          </li>
+          <li role="presentation">
+            <a href="#g"  role="tab" data-toggle="tab" aria-controls="g">G</a>
+          </li>
+          <li role="presentation">
+            <a href="#h"  role="tab" data-toggle="tab" aria-controls="h">H</a>
+          </li>
+          <li role="presentation">
+            <a href="#o"  role="tab" data-toggle="tab" aria-controls="o">I</a>
+          </li>
+          <li role="presentation">
+            <a href="#k" role="tab" data-toggle="tab" aria-controls="k">K</a>
+          </li>
+          <li role="presentation">
+            <a href="#l" role="tab" data-toggle="tab" aria-controls="l">L</a>
+          </li>
+          <li role="presentation">
+            <a href="#m" role="tab" data-toggle="tab" aria-controls="m">M</a>
+          </li>
+          <li role="presentation">
+            <a href="#n" role="tab" data-toggle="tab" aria-controls="n">N</a>
+          </li>
+          <li role="presentation">
+            <a href="#o" role="tab" data-toggle="tab" aria-controls="o">O</a>
+          </li>
+          <li role="presentation">
+            <a href="#p" role="tab" data-toggle="tab" aria-controls="p">P</a>
+          </li>
+          <li role="presentation">
+            <a href="#r" role="tab" data-toggle="tab" aria-controls="r">R</a>
+          </li>
+          <li role="presentation">
+            <a href="#s" role="tab" data-toggle="tab" aria-controls="s">S</a>
+          </li>
+          <li role="presentation">
+            <a href="#t" role="tab" data-toggle="tab" aria-controls="t">T</a>
+          </li>
+          <li role="presentation">
+            <a href="#u" role="tab" data-toggle="tab" aria-controls="u">U</a>
+          </li>
+          <li role="presentation">
+            <a href="#v" role="tab" data-toggle="tab" aria-controls="v">V</a>
+          </li>
+          <li role="presentation">
+            <a href="#w" role="tab" data-toggle="tab" aria-controls="w">W</a>
+          </li>
+        </ul>
+        <div class="tab-content">
 
-
-
-        <div class="col-md-6">
-          <div class="accordion accordion-bg clearfix">
-
-            
-
-            <% @glossaries.each do |glossary| %>
-
-            <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= glossary.word %></div>
-            <div class="acc_content clearfix" style="display: block;">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
-            
+          <div role="tabpanel" class="tab-pane fade in active" id="a">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'a'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
             <% end %>
-
-          </div>
-        </div>
-
-      </div>
+          </div><!-- closing the a tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="b">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'b'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the b tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="c">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'c'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the c tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="d">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'd'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the d tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="e">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'e'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the e tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="f">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'f'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the f tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="g">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'g'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the g tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="h">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'h'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the h tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="i">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'i'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the i tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="k">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'k'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the k tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="l">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'l'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the l tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="m">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'm'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the m tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="n">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'n'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the n tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="o">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'o'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the o tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="p">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'p'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the p tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="r">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'r'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the r tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="s">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 's'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the s tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="t">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 't'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the t tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="u">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'u'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the u tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="v">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'v'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the v tab-content div -->
+          <div role="tabpanel" class="tab-pane fade" id="w">
+            <% @glossaries.each do |word|%>
+              <% if word.word[0] == 'v'%>
+                <div class="acctitle acctitlec"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i><%= word.word %></div>
+                <div class="acc_content clearfix" style="display: block;"><%= word.definition %></div>
+              <% end %>
+            <% end %>
+          </div><!-- closing the w tab-content div -->
+        </div><!-- closing the tab-content div -->
+      </div><!-- closing the glossary-text div -->
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+
