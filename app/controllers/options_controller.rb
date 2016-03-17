@@ -32,7 +32,7 @@ class OptionsController < ApplicationController
 
   def show
     @option = Option.find(params[:id])
-    @children = @option.children
+    @children = [@option.children[1], @option.children[0]]
     @parent = @option.parent
     @col_width = 6
     @image = ''

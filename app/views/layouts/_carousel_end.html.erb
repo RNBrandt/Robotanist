@@ -8,6 +8,10 @@
   <div class="content-wrap">
     <div class="container clearfix">
 
+      <% unless child_obj.scientific_name.split(' ').length >= 2 %>
+        <h3><a id="re-carousel" href="/options/<%= option.id %>/continue">- Continue down the tree -</a></h3>
+      <% end %>
+
       <div class="title-block">
         <h1><span><%= child_obj.scientific_name %></span></h1><span><%= child_obj.common_name %></span>
       </div>
@@ -19,10 +23,6 @@
             <div><%= image_credit %></div>
           <% end %>
         </div>
-      <% end %>
-
-      <% unless child_obj.scientific_name.split(' ').length >= 2 %>
-        <h3><a id="re-carousel" href="/options/<%= option.id %>/continue">Continue down the tree...</a></h3>
       <% end %>
 
       <p><%= status %></p>
