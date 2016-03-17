@@ -9,7 +9,8 @@ var bindListners = function(){
   $("#dataCarousel").on("click",'#arrowParent, #arrowLeft, i.i-circled.i-small.icon-arrow-left', clickLeft),
   $("#dataCarousel").on("click", '#arrowStepRight, #arrowStepLeft', goBack),
   $("#dataCarousel").on("click", "a", stopReload),
-  $("body").tooltip({selector: '[data-toggle=tooltip]'});
+  $("body").tooltip({selector: '[data-toggle=tooltip]'}),
+  $("#dataCarousel").on("click", "#re-carousel", continueThroughGroup);
 }
 
 var clickRight = function(e){
@@ -68,4 +69,21 @@ var goBack = function(e){
 
 var stopReload = function(e){
   e.preventDefault();
+}
+
+var continueThroughGroup = function(e){
+  e.preventDefault();
+  route = $(this).attr('href');
+  $("#dataCarousel").animate({opacity: '0'}, function(){
+    $.ajax({
+      method: "get",
+      url: route
+    })
+    .done(function(response){
+      $("dataCarousel").html(response).animate({opacity: '1'});
+    })
+    .fail(function(response){
+      console.log(response);
+    });
+  });
 }
