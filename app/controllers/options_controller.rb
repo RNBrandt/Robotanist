@@ -3,7 +3,7 @@ class OptionsController < ApplicationController
 
   def index
     @options = Option.where(head:'root', page:"/IJM_fam_key.html")
-    @families = Family.all
+    @species = Species.all
     if request.xhr?
       render partial: 'layouts/carousel', locals: { options: @options }, layout: false
     end
