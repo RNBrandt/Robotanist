@@ -2,8 +2,6 @@ $(function(){
   bindListners();
 })
 
-
-
 var bindListners = function(){
   $("#dataCarousel").on("click", '#arrowParent, #arrowRight, i.i-circled.i-small.icon-arrow-right', clickRight),
   $("#dataCarousel").on("click",'#arrowParent, #arrowLeft, i.i-circled.i-small.icon-arrow-left', clickLeft),
@@ -47,7 +45,6 @@ var clickLeft = function(e){
   });
 //Fade outAnimation Complete
 }
-
 
 var goBack = function(e){
   e.preventDefault();
