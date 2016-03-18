@@ -33,7 +33,9 @@ class OptionsController < ApplicationController
   def show
     @option = Option.find(params[:id])
     @children = @option.children
-    @parent = @option.parent
+    if @option.parent
+      @parent = @option.parent.id
+    end
     @col_width = 6
     @image = ''
     @credit = nil
@@ -69,7 +71,7 @@ class OptionsController < ApplicationController
 
     if request.xhr?
       if @child_obj
-        render partial: 'layouts/carousel_end', locals: { option: @option, child_obj: @child_obj, status: @status, description: @description, col_width: @col_width, image: @image, image_credit: @credit }, layout: false
+        render partial: 'layouts/carousel_end', locals: { option: @option, child_obj: @child_obj, obj_type: obj_type, status: @status, description: @description, col_width: @col_width, image: @image, image_credit: @credit, back_id: @parent }, layout: false
       else
         render partial: 'layouts/carousel', locals: { options: @children }, layout: false
       end

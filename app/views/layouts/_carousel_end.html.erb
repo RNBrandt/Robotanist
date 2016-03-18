@@ -8,7 +8,18 @@
   <div class="content-wrap">
     <div class="container clearfix">
 
-      <div class="title-block">
+
+      <div class="col-md-10"><a href="#" data-id="<%= back_id %>" id="arrowStepRight" class="button topmargin-sm button-3d button-rounded button-teal"><i class="icon-circle-arrow-left"></i> Step Back</a></div>
+
+      <div class="col-md-2">
+        <% unless obj_type == "Species" %>
+          <a id="re-carousel" class="button topmargin-sm button-3d button-rounded button-teal" href="/options/<%= option.id %>/continue"> Continue <i class="icon-circle-arrow-right"></i></a>
+        <% end %>
+      </div>
+
+      <div class="col-md-12"><br><br></div>
+
+      <div class="title-block col-md-12">
         <h1><span><%= child_obj.scientific_name %></span></h1><span><%= child_obj.common_name %></span>
       </div>
 
@@ -18,14 +29,10 @@
           <% if image_credit %>
             <div><%= image_credit %></div>
           <% end %>
+          <h4><%= status %></h4>
         </div>
       <% end %>
 
-      <% unless child_obj.scientific_name.split(' ').length >= 2 %>
-        <h3><a id="re-carousel" href="/options/<%= option.id %>/continue">Continue down the tree...</a></h3>
-      <% end %>
-
-      <p><%= status %></p>
 
       <% description.split('. ').each do |attr| %>
         <div class="col-md-<%= col_width %> group-attr">

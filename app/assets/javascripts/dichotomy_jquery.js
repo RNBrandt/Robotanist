@@ -56,6 +56,7 @@ var clickLeft = function(e){
 var goBack = function(e){
   e.preventDefault();
   optionId = ($(this).attr('data-id'));
+  console.log(optionId);
   $('#panel-left').css('border', '4px dotted #1ABC9C');
   $('#panel-right').css('border', '4px dotted #1ABC9C');
   $("#dataCarousel").animate({opacity: '0'}, function(){
