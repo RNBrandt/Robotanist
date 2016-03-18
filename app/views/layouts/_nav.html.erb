@@ -11,12 +11,12 @@
 
       <nav id="primary-menu">
         <ul class="one-page-menu">
-          <li class="current"><a href="/"><div>Home</div></a></li>
-          <li><a href="#" data-href="#section-features"><div>Family Keys</div></a></li>
-          <li><a href="/glossary/"><div>Glossary</div></a></li>
-          <li><a href="/search/"><div>Search</div></a></li>
-          <li><a href="/about/"><div>About</div></a></li>
-          <li><a href="/contact/"><div>Contact</div></a></li>
+          <li class="current"><a href="/" data-href="#header"><div>Home</div></a></li>
+          <li><a href="/families/" data-href="#section-features"><div>Family Keys</div></a></li>
+          <li><a href="/glossary/" data-href="/glossary/"><div>Glossary</div></a></li>
+          <li><a href="/search/" data-href="/search/"><div>Search</div></a></li>
+          <li><a href="/about/" data-href="/about/"><div>About</div></a></li>
+          <li><a href="/contact/" data-href="/contact/"><div>Contact</div></a></li>
         </ul>
       </nav>
     </div>
@@ -27,37 +27,39 @@
 <section id="slider" class="slider-parallax full-screen dark" style="background: url(/assets/landing/static.jpg) center center no-repeat; background-size: cover">
   <div class="slider-parallax-inner">
     <div class="container vertical-middle clearfix">
-      <div class="heading-block title-center nobottomborder">
-        <h2> With Robotanist you can identify
-          <div class="text-rotater" data-separator="|" data-rotate="bounceIn" data-speed="2500">
+      <div class="col-md-12 row">
+        <div class="heading-block title-center nobottomborder">
+          <h2> With Robotanist you can identify
+            <div class="text-rotater" data-separator="|" data-rotate="bounceIn" data-speed="2500">
               <span class="t-rotate color">
-
-                <% @species.each do |species| species.scientific_name  %> <%= species.scientific_name %> | <% end  %>
-              </span>
+              <% @species.each do |species| species.scientific_name  %>
+              <%= species.scientific_name %> |
+              <% end  %>!
+            </span>
             </div>
           </h2>
         </div>
         <div class="allmargin"></div>
       </div>
 
-      <div class="col-md-12 title-center row nobottommargin">
-        <ul class="one-page-menu nobottommargin">
+      <div class="col-md-12 title-center row">
+        <ul class="one-page-menu">
           <a href="#" data-href="#section-features" class="button button-3d button-teal button-xlarge nobottommargin">
-          <i class="icon-star3"></i> Begin with Key to Families  <i class="icon-star3"></i></a>
+          <i class="icon-star3"></i> Begin with Key to Families  <i class="icon-star3"></i></a> - OR -
         </ul>
+        <div class="allmargin"></div>
       </div>
 
-      <div class="col-md-12 title-center row topmargin-sm"><h3>OR</h3></div>
-
-      <div class="col-sm-2 col-md-2 col-lg-3 center"></div>
-      <div class="col-sm-8 col-md-8 col-lg-6 center">
+      <div class="col-md-4 col-lg-4 center"></div>
+      <div class="col-md-4 col-lg-5 center">
       <form class="nobottommargin" action="/search" method="get" novalidate="novalidate">
-        <div class="col-sm-10 col-md-10 col-md-10">
+        <div class="col-md-8">
           <input
             style="background-color: floralwhite; border-color: #1ABC9C; color: black;"
-            type="text" name="q" value="" placeholder="Search Families, Species, Genus & Glossary" class="sm-form-control required" aria-required="true">
+            type="text" name="q" value="" class="sm-form-control required" aria-required="true">
         </div>
-        <div class="col-sm-2 col-md-2 col-md-2">
+
+        <div class="col-md-4 col-lg-3">
           <button class="button button-3d nomargin" type="submit" value="submit">Search</button>
         </div>
       </form>

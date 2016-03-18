@@ -10,43 +10,13 @@ require_relative "../app/helpers/blockquote_class"
 #Family.destroy_all
 #Genus.destroy_all
 
-
 BASE_URL = "http://ucjeps.berkeley.edu"
 
 @root_href = "/IJM_fam_key.html"
 
-def scrape_and_make_options(current_href, parent_page=nil, parent_key=nil)
-  url = BASE_URL + current_href
-  dichotomies = scrape(url)
-  make_first_nodes(dichotomies, parent_page, parent_key, current_href )
-  fill_tree(dichotomies, current_href)
-end
+# big_family_hash = {"Asteraceae"=> "/cgi-bin/get_IJM.pl?key=58","Brassicaceae"=>"/cgi-bin/get_IJM.pl?key=70", "Fabaceae"=> "/cgi-bin/get_IJM.pl?key=134", "Poaceae"=> "/cgi-bin/get_IJM.pl?key=223"}
 
-def create_link_objs (url, current_href)
-  link_hash = make_link_hash(url)
-  link_objs = []
-  link_hash.each do |key,href|
-    link_objs << Link.new(href, current_href, key)
-  end
-  return link_objs
-end
-
-def big_family_scraper(href)
-  blockquotes = get_blockquote(href)
-  blockquotes = blockquotes.select { |block| block.inner_text.match(/^1/)}
-  first_parser = FamilyParser.new(blockquotes.shift, href, {"family_name"=> "Poaceae"})
-  first_parser
-  first_parser.scrape_text
-  first_parser.dichotomies
-  key_to_groups = first_parser.group_key_hash
-  recursive_scrape(first_parser)
-  p embedded_links = first_parser.embedded_group_links
-  embedded_link_hash = Hash[embedded_links.zip(blockquotes)]
-  embedded_link_hash.each do |link, blockquote|
-    new_parser = BlockQuoteParser.new(blockquote, link.href, { parent_page: link.parent_href, parent_key: link.parent_key })
-    recursive_scrape(new_parser)
-  end
-
+<<<<<<< HEAD
 end
 
 #big_family_hash = {"Asteraceae"=> "/cgi-bin/get_IJM.pl?key=58","Brassicaceae"=>"/cgi-bin/get_IJM.pl?key=70", "Fabaceae"=> "/cgi-bin/get_IJM.pl?key=134", "Poaceae"=> "/cgi-bin/get_IJM.pl?key=223"}
@@ -60,3 +30,14 @@ big_family_hash.each do |name,href|
   big_family_scraper(href, name)
 end
 
+=======
+# first_blockquote = get_blockquote("/IJM_fam_key.html")
+# parser = BlockQuoteParser.new(first_blockquote, "/IJM_fam_key.html")
+create_glossary
+# recursive_scrape(parser)
+# scrape_from_families
+# big_family_hash.each do |name,href|
+#   big_family_scraper(href, name)
+# end
+p add_tool_tip_span("8' Specimens with bisexual flowers or with both staminate and pistillate flowers on same or different individuals; plants bisexual, dioecious, or monoecious (occasionally with mixture of bisexual and unisexual flowers)")
+>>>>>>> 193f8738dd31ddb6a84d4d0391b011b2a2a054cf

@@ -13,8 +13,6 @@ class GlossaryController < ApplicationController
     else
       render layout: "detail"
     end
-
-    
   end
 
 end

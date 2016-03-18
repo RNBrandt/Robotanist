@@ -3,10 +3,10 @@ def assign_obj_type(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   main_heading = doc.css("span.pageLargeHeading").inner_text
   sub_heading = doc.css("span.pageMajorHeading").inner_text
-  if main_heading.split(" ").length >= 2
-    return create_obj(url, Species)
-  elsif sub_heading.match(/.+FAMILY/)
+  if sub_heading.match(/.+FAMILY/)
     return create_obj(url, Family)
+  elsif main_heading.split(" ").length >= 2
+    return create_obj(url, Species)
   else
     return create_obj(url, Genus)
   end
@@ -15,11 +15,9 @@ end
 
 
 def create_obj(url, klass)
-  p '******************create_obj**********************'
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   scientific_name = doc.css("span.pageLargeHeading").inner_text
-  p scientific_name
   common_name = doc.css("span.pageMajorHeading").inner_text
   if klass == Species
     image_grab = doc.css("img")[4].attr('src')

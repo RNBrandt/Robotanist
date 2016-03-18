@@ -3,12 +3,12 @@
     <div class="container clearfix">
       <div class="title-block">
         <h1>Botanic <span>Search</span></h1>
-        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+        <span>Simply type the term you are looking for in the box below:</span>
       </div>
 
       <div class="col-md-12 bottommargin-sm">
         <form class="nobottommargin" action="" method="get" novalidate="novalidate">
-          
+
           <div class="form-process"></div>
 
           <div class="col-md-6">
@@ -18,9 +18,11 @@
           <div class="col-md-6">
             <button class="button button-3d nomargin" type="submit" value="submit">Search</button>
           </div>
-        </form>      
+        </form>
       </div>
+
       <div class="clear"></div>
+
       <% if @q %>
         <div class="tabs clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-1">
 
@@ -46,7 +48,7 @@
                   <h4><span>Families <span class="badge"><%= @family_results.size %></span></span></h4>
                 </div>
 
-                    
+
                 <table class="table table-hover">
                   <thead>
                     <tr>
@@ -79,7 +81,7 @@
                 <div class="fancy-title title-double-border">
                   <h4><span>Genus <span class="badge"><%= @genus_results.size %></span></span></h4>
                 </div>
-                    
+
                 <table class="table table-hover">
                   <thead>
                     <tr>
@@ -110,7 +112,7 @@
                 <div class="fancy-title title-double-border">
                   <h4><span>Species <span class="badge"><%= @species_results.size %></span></span></h4>
                 </div>
-                    
+
                 <table class="table table-hover">
                   <thead>
                     <tr>
@@ -134,14 +136,14 @@
                     <% end %>
                   </tbody>
                 </table>
-              <% end %>                
+              <% end %>
             </div>
             <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-5" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true" style="display: none;">
               <% if @glossary_results.size > 0 %>
                 <div class="fancy-title title-double-border">
                   <h4><span>Glossary <span class="badge"><%= @glossary_results.size %></span></span></h4>
                 </div>
-                    
+
                 <table class="table table-hover">
                   <thead>
                     <tr>
