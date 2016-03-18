@@ -15,11 +15,9 @@ end
 
 
 def create_obj(url, klass)
-  p '******************create_obj**********************'
   uri = URI(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   scientific_name = doc.css("span.pageLargeHeading").inner_text
-  p scientific_name
   common_name = doc.css("span.pageMajorHeading").inner_text
   if klass == Species
     image_grab = doc.css("img")[4].attr('src')

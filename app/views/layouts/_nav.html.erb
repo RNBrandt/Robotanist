@@ -32,7 +32,7 @@
           <h2>
             <div class="text-rotater" data-separator="|" data-rotate="bounceIn" data-speed="2500">
               <span class="t-rotate color">
-                <% @families.each do |family| family.scientific_name  %> <%= family.scientific_name %> | <% end  %>
+                <% @families.try(:each) do |family| family.scientific_name  %> <%= family.scientific_name %> | <% end  %>
               </span>
             </div>
           </h2>
@@ -60,7 +60,7 @@
         <div class="col-md-4">
           <button class="button button-3d nomargin" type="submit" value="submit">Search</button>
         </div>
-      </form>      
+      </form>
       <div class="allmargin"></div>
       </div>
       <div class="col-md-4 center"></div>
