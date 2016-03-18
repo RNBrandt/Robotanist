@@ -3,10 +3,10 @@ def assign_obj_type(url)
   doc = Nokogiri.parse(Net::HTTP.get(uri))
   main_heading = doc.css("span.pageLargeHeading").inner_text
   sub_heading = doc.css("span.pageMajorHeading").inner_text
-  if main_heading.split(" ").length >= 2
-    return create_obj(url, Species)
-  elsif sub_heading.match(/.+FAMILY/)
+  if sub_heading.match(/.+FAMILY/)
     return create_obj(url, Family)
+  elsif main_heading.split(" ").length >= 2
+    return create_obj(url, Species)
   else
     return create_obj(url, Genus)
   end
