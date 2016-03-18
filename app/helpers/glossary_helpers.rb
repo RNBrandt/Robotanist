@@ -25,21 +25,28 @@ def create_glossary_record
     Glossary.create(word: word, definition: definition)
   end
 end
-
+# adds tooltip tags to words from glossarygiut
 def add_tool_tip_span(text)
   text_array = text.split(' ')
+   p text_array
+   words_to_replace = {}
   text_array.each do |word|
-    search_word = word.chomp(',').chomp('.')
+    search_word = word.chomp(',').chomp('.').chomp(')').chomp(';').downcase
     if Glossary.where(word: search_word)[0]
-      entry = Glossary.find_by(word: search_word)
-      text.gsub!(/#{Regexp.quote(word)}/, "<a href='' data-toggle='tooltip' title='#{entry.definition}'>#{word}</a>")
+      words_to_replace[word] = search_word
     elsif Glossary.where(word: search_word.chomp('s'))[0]
-      entry = Glossary.find_by(word: search_word.chomp('s'))
-      text.gsub!(/#{Regexp.quote(word)}/, "<a href='' data-toggle='tooltip' title='#{entry.definition}'>#{word}</a>")
+      words_to_replace[word] = search_word.chomp('s')
     end
   end
-
-  return text
+  words_to_replace.each do |word , search_word|
+    entry = Glossary.find_by(word: search_word)
+      text_array.each_with_index do |array_word, index|
+        if array_word == word
+          text_array[index] = "<a href='' data-toggle='tooltip' title='#{entry.definition}'>#{word}</a>"
+        end
+      end
+  end
+  return text_array.join(" ")
 end
 
 def create_glossary

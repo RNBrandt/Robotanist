@@ -9,6 +9,10 @@ class SearchController < ApplicationController
     end
     @q = params[:q]
     render layout: "detail"
+    # respond_to do |format|
+      # format.html {  render :json => render_to_string('_tab_partial.html.erb', layout: false) }
+      # render :partial => 'search/tab_partial', content_type: 'text/html', layout: false }
+    # end
   end
 
   private
@@ -18,4 +22,4 @@ class SearchController < ApplicationController
 end
 
 
-   
+

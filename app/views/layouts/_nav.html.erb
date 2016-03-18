@@ -32,16 +32,16 @@
           <div class="text-rotater" data-separator="|" data-rotate="bounceIn" data-speed="2500">
               <span class="t-rotate color">
 
-                <% @families.each do |family| family.scientific_name  %> <%= family.scientific_name %> | <% end  %>
-              </span>
-            </div>
-          </h2>
-        </div>
-        <div class="allmargin"></div>
-      </div>
 
-      <div class="col-md-12 title-center row nobottommargin">
-        <ul class="one-page-menu nobottommargin">
+              <% @species.each do |species| species.scientific_name  %>
+              <%= species.scientific_name %> |
+              <% end  %>!</span>
+          </div>
+        </h2>
+
+      <div class="col-md-12 title-center row">
+        <ul class="one-page-menu">
+
           <a href="#" data-href="#section-features" class="button button-3d button-teal button-xlarge nobottommargin">
           <i class="icon-star3"></i> Begin with Key to Families  <i class="icon-star3"></i></a>
         </ul>
