@@ -1,19 +1,14 @@
 <section id="content">
   <div class="content-wrap">
     <div class="container clearfix">
-      <div id="section-features" class="heading-block title-center page-section">
+      <div id="section-features" class="heading-block title-center page-section nobottommargin">
         <h4>Intuitive Jepson Manual functionality</h4>
 
         <span>Welcome to RoBotanist. We believe anyone should be able to identify plants regardless of their botanical experience.  This website begins with the authoritative Jepson Manual of vascular plants, adds intuitive navigation, integrated glossary definitions, and  easily accessible web-tools to make this remarkable resource available to anyone.</span>
       </div>
 
-      <div class="divider divider-rounded divider-center">
-        <i class="icon-map-marker"></i>
-      </div>
-      <div id="dataCarousel">
-
-      <%= render partial: "layouts/carousel", locals: {options: @options} %>
-
+      <div id="dataCarousel" class="nomargin">
+        <%= render partial: "layouts/carousel", locals: {options: @options} %>
       </div>
       <div class="clearfix"></div>
       <div class="divider divider-rounded divider-center"><i class="icon-map-marker"></i></div>
