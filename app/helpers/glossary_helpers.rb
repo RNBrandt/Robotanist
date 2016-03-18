@@ -25,7 +25,7 @@ def create_glossary_record
     Glossary.create(word: word, definition: definition)
   end
 end
-
+# adds tooltip tags to words from glossarygiut
 def add_tool_tip_span(text)
   text_array = text.split(' ')
    p text_array

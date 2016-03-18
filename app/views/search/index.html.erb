@@ -20,6 +20,8 @@
         </form>
       </div>
 
+      <div class="clear"></div>
+
       <% if @q %>
         <div class="tabs clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-1">
 
@@ -34,7 +36,10 @@
           <div class="tab-container">
 
             <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-1" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
-              Please click on above tabs to see your search results:
+              <h5><span>Family</span>: <%= @family_results.size %> results</h5>
+              <h5><span>Genus</span>: <%= @genus_results.size %> results</h5>
+              <h5><span>Species</span>: <%= @species_results.size %> results</h5>
+              <h5><span>Glossary</span>: <%= @glossary_results.size %> results</h5>
             </div>
             <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-2" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="true" style="display: none;">
               <% if @family_results.size > 0 %>
