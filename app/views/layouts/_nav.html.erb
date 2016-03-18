@@ -27,18 +27,16 @@
 <section id="slider" class="slider-parallax full-screen dark" style="background: url(/assets/landing/static.jpg) center center no-repeat; background-size: cover">
   <div class="slider-parallax-inner">
     <div class="container vertical-middle clearfix">
-      <div class="col-md-12 row">
-        <div class="heading-block title-center nobottomborder">
-          <h2>
-            <div class="text-rotater" data-separator="|" data-rotate="bounceIn" data-speed="2500">
+      <div class="heading-block title-center nobottomborder">
+        <h2> With Robotanist you can identify
+          <div class="text-rotater" data-separator="|" data-rotate="bounceIn" data-speed="2500">
               <span class="t-rotate color">
-                <% @families.try(:each) do |family| family.scientific_name  %> <%= family.scientific_name %> | <% end  %>
-              </span>
-            </div>
-          </h2>
-        </div>
-        <div class="allmargin"></div>
-      </div>
+
+              <% @species.each do |species| species.scientific_name  %>
+              <%= species.scientific_name %> |
+              <% end  %>!</span>
+          </div>
+        </h2>
 
       <div class="col-md-12 title-center row">
         <ul class="one-page-menu">

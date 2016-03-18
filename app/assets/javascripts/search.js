@@ -8,7 +8,7 @@ $(function() {
       method: 'GET',
       data: data,
     }).done(function(response){
-      $('.search-tab').html(response);
+      $('#search-tab').append(response);
     }).fail(function(response){
       console.log(response);
     })

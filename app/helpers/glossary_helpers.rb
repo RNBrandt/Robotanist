@@ -29,7 +29,7 @@ end
 def add_tool_tip_span(text)
   text_array = text.split(' ')
   text_array.each do |word|
-    search_word = word.chomp(',').chomp('.')
+    search_word = word.chomp(',').chomp('.').downcase
     if Glossary.where(word: search_word)[0]
       entry = Glossary.find_by(word: search_word)
       text.gsub!(/#{Regexp.quote(word)}/, "<a href='' data-toggle='tooltip' title='#{entry.definition}'>#{word}</a>")

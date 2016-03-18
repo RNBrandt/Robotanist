@@ -22,7 +22,7 @@
       <% end %>
 
       <% unless child_obj.scientific_name.split(' ').length >= 2 %>
-        <a href="/options/<%= option.id %>/continue">Continue your journey!</a>
+        <h3><a id="re-carousel" href="/options/<%= option.id %>/continue">Continue down the tree...</a></h3>
       <% end %>
 
       <p><%= status %></p>
