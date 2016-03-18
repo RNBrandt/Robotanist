@@ -42,7 +42,6 @@ end
 def get_family_links
   href = "/eflora/key_list.html"
   doc = get_doc(href)
-  #blockquote = doc.css("blockquote")
   table_data = doc.css("ol")
   family_names = table_data.inner_text.split("\n").map! {|name| name.strip}
   family_names.shift
@@ -63,7 +62,9 @@ def recursive_scrape(parser)
     new_url = [BASE_URL + parser.href] if new_url == []
     parent_option = Option.find_by(page:parser.parent_page, key: parser.parent_key)
     child = assign_obj_type(new_url[0])
-    parent_option.update_attribute(:child_obj, {child.class.to_s => child.id})
+    p '_____________________________'
+    p child.id.to_s
+    parent_option.update_attribute(:child_obj, {child.class.to_s => child.id.to_s})
     parent_option.save
     step_through_genus(parser)
   end
@@ -81,7 +82,7 @@ def scrape_from_families
   link_hash = get_family_links
   link_hash.each do |family_name, href|
      blockquote = get_blockquote(href)
-     parser = KlassParser.new(blockquote, href, options= { "klass_name" => family_name })
+     parser = KlassParser.new(blockquote, href, options= { "klass_name" => family_name, "klass" => Family })
      recursive_scrape(parser)
   end
 end
@@ -102,7 +103,7 @@ def step_through_genus(parser)
       key_to_href = key_to[1].attribute('href').value[26..-1]
       new_blockquote = get_blockquote(key_to_href)
 
-      new_parser = KlassParser.new(new_blockquote, key_to_href, {"klass_name" => main_heading, "klass" => "Genus"})
+      new_parser = KlassParser.new(new_blockquote, key_to_href, {"klass_name" => main_heading, "klass" => Genus})
       recursive_scrape(new_parser)
     else
       select_options = doc.css('option')
@@ -110,8 +111,8 @@ def step_through_genus(parser)
       species_href = "/eflora/#{href_extention}"
       new_blockquote = get_blockquote(species_href)
       genus = Genus.find_by(scientific_name: main_heading)
-      parent = Option.find_by(child_obj:{"Genus" => genus.id})
-      new_parser = KlassParser.new(new_blockquote, species_href, {"klass_name" => main_heading, "klass" => "Genus", parent_page: parent.page, parent_key: parent.key})
+      parent = Option.find_by(child_obj:{"Genus" => genus.id.to_s})
+      new_parser = KlassParser.new(new_blockquote, species_href, {"klass_name" => main_heading, "klass" => Genus, parent_page: parent.page, parent_key: parent.key})
       recursive_scrape(new_parser)
     end
 
