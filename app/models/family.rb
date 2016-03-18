@@ -8,4 +8,4 @@ class Family
   search_in :scientific_name, :common_name
 end
 
-# Index Mongoid::Search by running be rake mongoid_search:index
+#Index Mongoid::Search by running be rake mongoid_search:index
