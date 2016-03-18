@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
     get 'options/twitter/:keyword' => 'options#twitter'
     get 'options/:id/continue' => 'options#continue'
+    get 'about/' => 'options#about'
+    get 'contact/' => 'options#contact'
     post 'families/search' => 'families#search'
 
     resources :options

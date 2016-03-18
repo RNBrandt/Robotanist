@@ -94,6 +94,17 @@ class OptionsController < ApplicationController
       p ("Fix this for non JS")
     end
   end
+
+  def about
+    render layout: "detail"
+  end
+
+  def contact
+    render layout: "detail"
+  end
+
+
+
 end
 
 # Option.find_by(child_obj: { "Family" => "56eacfd0c3b5a0f173c413fc"})
