@@ -8,9 +8,12 @@ class OptionsController < ApplicationController
       render partial: 'layouts/carousel', locals: { options: @options }, layout: false
     end
 
-    @family_count = Family.all.count
-    @species_count = Species.all.count
-    @genera_count = Genus.all.count
+    @family_count = 118
+    # @family_count = Family.all.count
+    @species_count = 7342
+    # @species_count = Species.all.count
+    @genera_count = 971
+    # @genera_count = Genus.all.count
 
   end
 
