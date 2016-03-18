@@ -31,33 +31,29 @@
         <h2> With Robotanist you can identify
           <div class="text-rotater" data-separator="|" data-rotate="bounceIn" data-speed="2500">
               <span class="t-rotate color">
-
-                <% @families.each do |family| family.scientific_name  %> <%= family.scientific_name %> | <% end  %>
-              </span>
-            </div>
-          </h2>
-        </div>
+              <% @species.each do |species| species.scientific_name  %>
+              <%= species.scientific_name %> |
+              <% end  %>!</span>
+          </div>
+        </h2>
+      <div class="col-md-12 title-center row">
+        <ul class="one-page-menu">
+          <a href="#" data-href="#section-features" class="button button-3d button-teal button-xlarge nobottommargin">
+          <i class="icon-star3"></i> Begin with Key to Families  <i class="icon-star3"></i></a> - OR -
+        </ul>
         <div class="allmargin"></div>
       </div>
 
-      <div class="col-md-12 title-center row nobottommargin">
-        <ul class="one-page-menu nobottommargin">
-          <a href="#" data-href="#section-features" class="button button-3d button-teal button-xlarge nobottommargin">
-          <i class="icon-star3"></i> Begin with Key to Families  <i class="icon-star3"></i></a>
-        </ul>
-      </div>
-
-      <div class="col-md-12 title-center row topmargin-sm"><h3>OR</h3></div>
-
-      <div class="col-sm-2 col-md-2 col-lg-3 center"></div>
-      <div class="col-sm-8 col-md-8 col-lg-6 center">
+      <div class="col-md-4 center"></div>
+      <div class="col-md-4 center">
       <form class="nobottommargin" action="/search" method="get" novalidate="novalidate">
-        <div class="col-sm-10 col-md-10 col-md-10">
+        <div class="col-md-8">
           <input
             style="background-color: floralwhite; border-color: #1ABC9C; color: black;"
-            type="text" name="q" value="" placeholder="Search Families, Species, Genus & Glossary" class="sm-form-control required" aria-required="true">
+            type="text" name="q" value="" class="sm-form-control required" aria-required="true">
         </div>
-        <div class="col-sm-2 col-md-2 col-md-2">
+
+        <div class="col-md-4">
           <button class="button button-3d nomargin" type="submit" value="submit">Search</button>
         </div>
       </form>
