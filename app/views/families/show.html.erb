@@ -6,7 +6,6 @@
         <h1><span><%= @family.scientific_name %></span></h1>
         <span><%= @family.common_name %></span>
       </div>
-
       <% @family.description.split('. ').each do |attr| %>
         <div class="col-md-6 group-attr">
           <div class="fancy-title title-border bottommargin-sm"><h4><span><%= attr.split(': ')[0] %></span></h4></div>
@@ -14,7 +13,10 @@
         </div>
       <% end %>
 
-      <div class="col-md-6 divider divider-center"><i class="icon-cloud"></i></div>
+      <% @family.description.split('. ').each do |attr| %>
+        <%= attr %>
+      <% end %>
+
     </div>
   </div>
 </section>
