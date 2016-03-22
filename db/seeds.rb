@@ -26,4 +26,4 @@ big_family_hash.each do |name,href|
 end
 scrape_from_families
 
-p add_tool_tip_span("8' Specimens with bisexual flowers or with both staminate and pistillate flowers on same or different individuals; plants bisexual, dioecious, or monoecious (occasionally with mixture of bisexual and unisexual flowers)")
+# p add_tool_tip_span("8' Specimens with bisexual flowers or with both staminate and pistillate flowers on same or different individuals; plants bisexual, dioecious, or monoecious (occasionally with mixture of bisexual and unisexual flowers)")
