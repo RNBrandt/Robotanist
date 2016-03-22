@@ -1,3 +1,36 @@
-<% @families.each do |family| %>
-  <li><%= family %>
-<% end %>
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="title-block">
+        <h1>Family <span>Keys</span></h1>
+        <span>Citation for the whole project: Jepson Flora Project (eds.) [year] Jepson eFlora, http://ucjeps.berkeley.edu/IJM.html [accessed on month, day, year] </span>
+      </div>
+
+      <div class="col-md-12 bottommargin-sm">
+      
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Family Common Name</th>
+              <th>Family Scientific Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% i = 1 %>
+        <% @families.each do |family| %>
+          <tr>
+            <td><%= i %></td>
+            <td><a href="/families/<%= family.id %>"><%= family.common_name %></a></td>
+            <td><%= family.scientific_name %></td>
+          </tr>
+        <% i += 1 %>
+        <% end %>        
+        </table>
+
+      </div>
+
+      <div class="clear"></div>
+    </div>
+  </div>
+</section>
